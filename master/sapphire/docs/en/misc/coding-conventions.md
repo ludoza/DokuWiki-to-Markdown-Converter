@@ -310,7 +310,7 @@ The following examples demonstrate proper formatting for `if` statements with `e
 
 Statements with `if` can be written without braces on a single line as the block, as long as no `else` statement exists.
 
-	:::
+	:::php
 	// good
 	if($a == $b) doThis();
 	

@@ -84,7 +84,6 @@ and colons instead of the more verbose XML tags, and because of this much better
 
 We will begin with a sample file and talk our way through it.
 
-	:::yaml
 	Page:
 	    home:
 	        Title: Home

@@ -162,7 +162,7 @@ You can have custom scripting called when a Page is loaded by clicking on the Si
 This can be used to set up event handlers, or populate dropdowns, etc.
 You could insert this code using Requirements from a custom page class.
 
-	:::javascript
+	:::js
 	Behaviour.register({
 		'#Form_EditForm' : {
 			initialize : function() {

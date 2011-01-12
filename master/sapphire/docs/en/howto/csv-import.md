@@ -28,7 +28,6 @@ You can use the CsvBulkLoader without subclassing or other customizations, if th
 in your CSV file match `$db` properties in your dataobject. E.g. a simple import for the
 `[api:Member]` class could have this data in a file:
 
-	:::csv
 	FirstName,LastName,Email
 	Donald,Duck,donald@disney.com
 	Daisy,Duck,daisy@disney.com
@@ -113,7 +112,6 @@ We're going to use our knowledge from the previous example to import a more soph
 
 Sample CSV Content
 
-	:::csv
 	"SpielerNummer","Name","Geburtsdatum","Gruppe"
 	11,"John Doe",1982-05-12,"FC Bayern"
 	12,"Jane Johnson", 1982-05-12,"FC Bayern"

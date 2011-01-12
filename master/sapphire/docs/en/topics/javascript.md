@@ -57,7 +57,7 @@ development, most importantly:
 Example: A plugin to highlight a collection of elements with a configurable foreground and background colour
 (abbreviated example from [learningjquery.com](http://www.learningjquery.com/2007/10/a-plugin-development-pattern)).
 
-	:::javascript
+	:::js
 	// create closure
 	(function($) {
 	  // plugin definition
@@ -87,7 +87,7 @@ Example: A plugin to highlight a collection of elements with a configurable fore
 
 Usage: 
 
-	:::javascript
+	:::js
 	(function($) {
 	  // Highlight all buttons with default colours
 	  jQuery(':button').highlight();
@@ -117,7 +117,7 @@ See the [official developer guide](http://jqueryui.com/docs/Developer_Guide) and
 
 Example: Highlighter
 
-	:::javascript
+	:::js
 	(function($) {
 	  $.widget("ui.myHighlight", {
 	    getBlink: function () { 
@@ -147,7 +147,7 @@ Example: Highlighter
 
 Usage:
 
-	:::javascript
+	:::js
 	(function($) {
 	  // call with default options
 	  $(':button').myHighlight();
@@ -179,7 +179,7 @@ It is also suited for more complex applications beyond a single-purpose plugin.
 
 Example: Highlighter
 
-	:::javascript
+	:::js
 	(function($) {
 	  $(':button').entwine({
 	    Foreground: 'red',
@@ -194,7 +194,7 @@ Example: Highlighter
 
 Usage:
 
-	:::javascript
+	:::js
 	(function($) {
 	  // call with default options
 	  $(':button').entwine().highlight();
@@ -222,7 +222,7 @@ jQuery with a few lines of code.  Your jQuery code will normally end up as a ser
 
 Global properties are evil. They are accesible by other scripts, might be overwritten or mis-used. A popular case is the `$` shortcut in different libraries: in PrototypeJS it stands for `document.getElementByID()`, in jQuery for `jQuery()`. 
 
-	:::javascript
+	:::js
 	// you can't rely on '$' being defined outside of the closure
 	(function($) {
 	  var myPrivateVar; // only available inside the closure
@@ -238,7 +238,7 @@ NoConflict mode is enabled by default in the SilverStripe CMS javascript.
 You have to ensure that DOM elements you want to act on are loaded before using them. jQuery provides a wrapper around
 the `window.onload` and `document.ready` events.
 
-	:::javascript
+	:::js
 	// DOM elements might not be available here
 	$(document).ready(function() {
 	  // The DOM is fully loaded here
@@ -257,7 +257,7 @@ Caution: Only applies to certain events, see the [jQuery.live() documentation](h
 
 Example: Add a 'loading' classname to all pressed buttons
 
-	:::javascript
+	:::js
 	// manual binding, only applies to existing elements
 	$('input[[type=submit]]').bind('click', function() {
 	  $(this).addClass('loading');
@@ -279,7 +279,7 @@ makes sense). Encapsulate your code by nesting your jQuery commands inside a `jQ
 
 Example: ComplexTableField implements a paginated table with a pop-up for displaying 
 
-	:::javascript
+	:::js
 	$('div.ComplexTableField').each(function() {
 	  // This is the over code for the tr elements inside a ComplexTableField.
 	  $(this).find('tr').hover(
@@ -297,7 +297,7 @@ Example: Simple form change tracking to prevent submission of unchanged data
 
 Through CSS properties
 
-	:::javascript
+	:::js
 	$('form :input').bind('change', function(e) {
 	  $(this.form).addClass('isChanged');
 	});
@@ -308,7 +308,7 @@ Through CSS properties
 
 Through jQuery.data()
 
-	:::javascript
+	:::js
 	$('form :input').bind('change', function(e) {
 	  $(this.form).data('isChanged', true);
 	});
@@ -330,7 +330,7 @@ Example: Restricted numeric value field
 	<input type="text" class="restricted-text {min:4,max:10}" />
 
 
-	:::javascript
+	:::js
 	$('.restricted-text').bind('change', function(e) {
 	  if(
 	    e.target.value < $(this).metadata().min
@@ -405,7 +405,7 @@ HTML
 
 JavaScript:
 
-	:::javascript
+	:::js
 	$('.autocomplete input').live('change', function() {
 	  var resultsEl = $(this).siblings('.results');
 	  resultsEl.load(
@@ -445,7 +445,7 @@ events](http://docs.jquery.com/Namespaced_Events).
 
 Example: Trigger custom 'validationfailed' event on form submission for each empty element
 
-	:::javascript
+	:::js
 	$('form').bind('submit', function(e) {
 	  // $(this) refers to form
 	  $(this).find(':input').each(function() {
@@ -502,7 +502,7 @@ JSDoc-toolkit is a commandline utility, see [usage](http://code.google.com/p/jsd
 
 Example: jQuery.entwine
 
-	:::javascript
+	:::js
 	/**
 	
 	 * Available Custom Events:
@@ -561,7 +561,7 @@ start with JSpec, as it provides a much more powerful testing framework.
 
 Example: QUnit test (from [jquery.com](http://docs.jquery.com/QUnit#Using_QUnit)):
 
-	:::javascript
+	:::js
 	test("a basic test example", function() {
 	  ok( true, "this test is fine" );
 	  var value = "hello";

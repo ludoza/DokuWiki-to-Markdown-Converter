@@ -79,7 +79,6 @@ ability to set rewriting rules in .htaccess files via "Allow Override".
 
 * The following is an example of the Directory directive from the Apache configuration file:
 
-	:::apache
 	    <Directory "/location/of/silverstripe">
 	        Options FollowSymLinks SymLinksifOwnerMatch
 	        AllowOverride All
