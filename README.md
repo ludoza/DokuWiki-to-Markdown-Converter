@@ -72,6 +72,10 @@ Here is a minimal one.  Alter the database settings to suit your set-up.
 
 If you have check out silverstripe-doc-restructuring into your webroot, you should be able to visit a URL such as http://localhost/silverstripe-doc-restructuring/preview/ to preview your changes.
 
+To add your own module preview, add the following to `preview/mysite/_config.php`:
+
+	DocumentationService::register("mymodule", realpath("../../master/mymodule/docs/"));
+
 ### Contributing your changes
 
 After **pushing your changes** to your own github fork, you can send us **pull requests**.
