@@ -1,9 +1,5 @@
-# Welcome to the SilverStripe developer documentation wiki
-
-This wiki documents high-level features of the [SilverStripe open source platform](http://www.silverstripe.org), aimed
-at developers. 
-If you would like to contribute, you can [register](http://doc.silverstripe.com/doku.php?id=start&do=register) and then
-[login](http://doc.silverstripe.com/doku.php?do=login&id=start).
+This website documents high-level features of the [SilverStripe open source platform](http://www.silverstripe.org), aimed
+at developers. Please read our [guide to contributing documentation](misc/contributing#Writing-Documentation) if you want to help out!
 
 
 ###  Getting support
@@ -49,11 +45,11 @@ interface
 ### Level 1: Building your first SilverStripe website
 
 *  **[Tutorials](tutorials):**
-    - [Building a basic site](tutorials/1-building-a-basic-site)
-    - [Extending a basic site](tutorials/2-extending-a-basic-site)
-    - [Forms](tutorials/3-forms)
-    - [Site Search](tutorials/4-site-search)
-    - [Relationships](tutorials/5-dataobject-relationship-management)
+    - [1. Building a basic site](tutorials/1-building-a-basic-site)
+    - [2. Extending a basic site](tutorials/2-extending-a-basic-site)
+    - [3. Forms](tutorials/3-forms)
+    - [4. Site Search](tutorials/4-site-search)
+    - [5. Relationships](tutorials/5-dataobject-relationship-management)
 
 *  [Introduction to PHP5](http://devzone.zend.com/node/view/id/627)
 *  [Common Problems](topics/common-problems)
@@ -88,19 +84,10 @@ interface
 *  [Testing Guide](testing/testing-guide): Framework for automated testing like Unittests
 *  [Security](topics/security)
 *  [Built-in Page Controls](reference/built-in-page-controls)
-
+*  [Modules](topics/modules)
 
 
 ### Level 4: Contributing to the SilverStripe core
 
-*  Share your [Recipes](http://doc.silverstripe.org/recipes)
+*  Share your [Recipes](howtos/)
 *  [Coding Conventions](http://doc.silverstripe.org/coding-conventions)
-
-### Modules
-
-*  [Overview](topics/modules)
-
-If you're interested in how work is being done on the SilverStripe documentation, you can see a [high-level view of the
-number of changes here](http://doc.silverstripe.com/changegraph.php). If you are a customer of SilverStripe and are
-looking for our company website, please visit [www.silverstripe.com](http://www.silverstripe.com). [Contact
-us](http://www.silverstripe.com/contact).
