@@ -124,7 +124,7 @@ as "related content" on other resource (e.g. [topics/search](/topics/search) mig
 documenting, there shouldn't be any "frequently asked questions" left ;)
 * Commit early and often: You don't need to completely finish documentation, as long as you mark areas needing refinement.
 * Every file should have exactly one `<h1>` headline, roughly matching the filename. It should be short enough to be
-	used in table of content lists.
+used in table of content lists.
 
 ### Writing Style
 
@@ -132,6 +132,48 @@ documenting, there shouldn't be any "frequently asked questions" left ;)
 * Its okay to address the reader: For example "First you'll install a webserver" is good style.
 * Write in an active and direct voice
 * Mark up correctly: Use preformatted text, emphasis and bold to make technical writing more "scannable".
+
+### Highlighted blocks ###
+
+There are several built-in block styles for highlighting a paragraph of text. 
+Please use these graphical elements sparingly.
+
+<div class="hint" markdown='1'>
+"Tip box": Adds, deepens or accents information in the main text.
+Can be used for background knowledge, or "see also" links.
+</div>
+
+Code:
+
+	<div class="hint" markdown='1'>
+	...
+	</div>
+
+<div class="notice" markdown='1'>
+"Notification box": Technical notifications relating to the main text.
+For example, notifying users about a deprecated feature.
+</div>
+
+Code:
+
+	<div class="notice" markdown='1'>
+	...
+	</div>
+
+<div class="warning" markdown='1'>
+"Warning box": Highlight a severe bug or technical issue requiring
+a users attention. For example, a code block with destructive functionality 
+might not have its URL actions secured to keep the code shorter.
+</div>
+
+Code:
+
+	<div class="warning" markdown='1'>
+	...
+	</div>
+
+See [Markdown Extra Documentation](http://michelf.com/projects/php-markdown/extra/#html) for more restriction
+on placing HTML blocks inside Markdown.
 
 ### Further reading
 
