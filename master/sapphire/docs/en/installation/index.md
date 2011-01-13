@@ -9,7 +9,7 @@ The installation instructions below will take you through setting up an appropri
 installation instructions will set you up with a SilverStripe website very similar to our [our demo
 site](http://demo.silverstripe.com/) uses. 
 
-You can [download](http://silverstripe.org/download) SilverStripe as a *.tar.gz archive or from subversion.
+You can [download](http://silverstripe.org/download) SilverStripe as an archive or from version control.
 
 If you already have an installed version of SilverStripe, please see our [upgrading](upgrading) guide.
 
@@ -36,6 +36,7 @@ If you run Linux/Unix, we generally assume that you know how to get a web-server
 If you run into trouble, see [common-problems](common-problems) or post to the 
 [SilverStripe forums](http://silverstripe.com/silverstripe-forum/).
 
-## Module Installation
+## Related
 
-See [modules](../topics/modules).
+ * [Module installation](../topics/modules)
+ * [Suggested web hosts](http://doc.silverstripe.org/suggested-web-hosts)
