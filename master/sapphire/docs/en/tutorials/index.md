@@ -1,33 +1,32 @@
 # Written Tutorials
 
-*  [Tutorial 1: Building a basic site](1-building-a-basic-site): An introduction to building a site with
+ * [Tutorial 1: Building a basic site](1-building-a-basic-site): An introduction to building a site with
 SilverStripe
-*  [Tutorial 2: Extending a basic site](2-extending-a-basic-site): A tutorial that builds on "Building a basic
+ * [Tutorial 2: Extending a basic site](2-extending-a-basic-site): A tutorial that builds on "Building a basic
 site"
-*  [Tutorial 3: Forms](3-forms): An introduction to forms in SilverStripe.
-*  [Tutorial 4: Site Search](4-site-search): Learn how to add search to your site.
-*  [Tutorial 5: Dataobject Relationship Management](5-dataobject-relationship-management): Learn how to create
+ * [Tutorial 3: Forms](3-forms): An introduction to forms in SilverStripe.
+ * [Tutorial 4: Site Search](4-site-search): Learn how to add search to your site.
+ * [Tutorial 5: Dataobject Relationship Management](5-dataobject-relationship-management): Learn how to create
 a simple data relationships
 
 
 Please suggest improvements or further tutorials by [registering to our issue
-tracker](http://open.silverstripe.com/register) and [adding a concise and clear request, with "Documentation" listed as
-the category](http://open.silverstripe.com/newticket).
+tracker](http://open.silverstripe.com/register) and [adding a concise and clear request](http://open.silverstripe.com/newticket/?component=Documentation).
 
-#  Brief video tutorials
+#  Video tutorials
 
-*  [Installing on linux](http://silverstripe.org/assets/screencasts/Tutorial-InstallingLinux-DM08.swf)
-*  [Installing on Apple Macintosh (using
+ * [Installing on Linux](http://silverstripe.org/assets/screencasts/Tutorial-InstallingLinux-DM08.swf)
+ * [Installing on OSX (using
 MAMP)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingMAMP-SW08.swf)
-*  [Installing a module (e.g. a
+ * [Installing a module (e.g. a
 blog)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingBlogModule-DM08.swf)
-*  [Customising the CMS (Adding new
+ * [Customising the CMS (adding new
 fields)](http://silverstripe.org/assets/screencasts/Tutorial-ChangingFields-DM08.swf)
 
 # Help
 
 If you get stuck;
 
-*  [Common Problems](/topics/common-problems): Review some existing solutions to common problems.
-*  [SilverStripe Forums](http://www.silverstripe.com/silverstripe-forum/): Head over to the forums and ask the community
+ * [Common Problems](/topics/common-problems): Review some existing solutions to common problems.
+ * [SilverStripe Forums](http://www.silverstripe.com/silverstripe-forum/): Head over to the forums and ask the community
 for help
