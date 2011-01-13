@@ -8,6 +8,7 @@ Please read our [guide to contributing documentation](misc/contributing#Writing-
  * [Download and Installation](installation/) | [Upgrading](upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
  * [API documentation](http://api.silverstripe.org/current) | [Official english book](http://www.silverstripe.org/silverstripe-book) | [Official german book](http://www.silverstripe.org/das-silverstripe-buch)  
 
+
 ###  Getting support
 
 [Forum](http://www.silverstripe.org/forums/) | [IRC channel](http://silverstripe.org/irc) | [End user docs](http://userhelp.silverstripe.com) | [Core mailinglist](https://groups.google.com/forum/#!forum/silverstripe-dev)

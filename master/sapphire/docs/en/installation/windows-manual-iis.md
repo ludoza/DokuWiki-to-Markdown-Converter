@@ -74,7 +74,7 @@ To fix this, [follow this guide on best practise
 setup](http://learn.iis.net/page.aspx/246/using-fastcgi-to-host-php-applications-on-iis-70/#PHP_Recycling_Behavior) for
 FastCGI applications on IIS.
 
-IMPORTANT: You should ensure you are using the latest version of the sqlsrv driver. sqlsrv 1.1 is the latest, and works
+**IMPORTANT:** You should ensure you are using the latest version of the sqlsrv driver. sqlsrv 1.1 is the latest, and works
 considerably better than 1.0. If possible, use PHP 5.3 as well.
 
 ## Performance

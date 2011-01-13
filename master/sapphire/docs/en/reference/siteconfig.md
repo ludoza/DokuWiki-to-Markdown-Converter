@@ -38,7 +38,7 @@ Create a mysite/code/CustomSiteConfig.php file.
 	:::php
 	<?php
 	
-	class CustomSiteConfig extends Extension {
+	class CustomSiteConfig extends DataObjectDecorator {
 		
 		function extraStatics() {
 			return array(
@@ -49,7 +49,7 @@ Create a mysite/code/CustomSiteConfig.php file.
 		}
 	
 		public function updateCMSFields(FieldSet $fields) {
-			$fields->addFieldToTab("Root.Main", new HTMLEditorField("FooterContact", "Footer Contact Info"));
+			$fields->addFieldToTab("Root.Main", new HTMLEditorField("FooterContent", "Footer Content"));
 		}
 	}
 

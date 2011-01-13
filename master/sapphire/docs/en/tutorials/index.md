@@ -15,13 +15,10 @@ tracker](http://open.silverstripe.com/register) and [adding a concise and clear 
 
 #  Video tutorials
 
- * [Installing on Linux](http://silverstripe.org/assets/screencasts/Tutorial-InstallingLinux-DM08.swf)
- * [Installing on OSX (using
-MAMP)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingMAMP-SW08.swf)
- * [Installing a module (e.g. a
-blog)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingBlogModule-DM08.swf)
- * [Customising the CMS (adding new
-fields)](http://silverstripe.org/assets/screencasts/Tutorial-ChangingFields-DM08.swf)
+*  [Installing on Linux](http://silverstripe.org/assets/screencasts/Tutorial-InstallingLinux-DM08.swf)
+*  [Installing on Mac OSX (using MAMP)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingMAMP-SW08.swf)
+*  [Installing a module (e.g. a blog)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingBlogModule-DM08.swf)
+*  [Customising the CMS (adding new fields)](http://silverstripe.org/assets/screencasts/Tutorial-ChangingFields-DM08.swf)
 
 # Help
 

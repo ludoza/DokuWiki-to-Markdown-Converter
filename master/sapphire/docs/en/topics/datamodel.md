@@ -1,17 +1,17 @@
 # Datamodel
 
-Silverstripe uses an [object-relational model](http://en.wikipedia.org/wiki/Object-relational_model) that assumes the
+SilverStripe uses an [object-relational model](http://en.wikipedia.org/wiki/Object-relational_model) that assumes the
 following connections:
 
 *  Each database-table maps to a php-class
 *  Each database-row maps to a php-object
 *  Each database-column maps to a property on a php-object
  
-All data tables in Silverstripe are defined as subclasses of `[api:DataObject]`. Inheritance is supported in the data
+All data tables in SilverStripe are defined as subclasses of `[api:DataObject]`. Inheritance is supported in the data
 model: seperate tables will be linked together, the data spread across these tables. The mapping and saving/loading
 logic is handled by sapphire, you don't need to worry about writing SQL most of the time. 
 
-The advanced object-relational layer in Silverstripe is one of the main reasons for requiring PHP5. Most of its
+The advanced object-relational layer in SilverStripe is one of the main reasons for requiring PHP5. Most of its
 customizations are possible through [PHP5 Object
 Overloading](http://www.onlamp.com/pub/a/php/2005/06/16/overloading.html) handled in the `[api:Object]`-class.
 
@@ -19,11 +19,10 @@ See [database-structure](/reference/database-structure) for in-depth information
 
 ## Generating the database-schema
 
-The Silverstripe database-schema is generated automatically by visiting the URL.
+The SilverStripe database-schema is generated automatically by visiting the URL.
 `http://`<mysite>`/dev/build`
-Or, for older versions of SilverStripe:
-`http://`<mysite>`/db/build`
-Note: You need to be logged in as an administrator to perform this command.
+
+> Note: You need to be logged in as an administrator to perform this command.
 
 ## Querying Data
 
@@ -39,8 +38,8 @@ so they are very helpful. In case you need to fall back to plain-jane SQL, have 
 	:::php
 	$record = DataObject::get_by_id($obj, $id);
 
-CAUTION: Please make sure to properly escape your SQL-snippets (see [security](/topics/security) and
-[escape-types](escape-types)).
+**CAUTION: Please make sure to properly escape your SQL-snippets (see [security](/topics/security) and
+[escape-types](escape-types)).**
 
 ## Joining 
 
@@ -106,7 +105,7 @@ default behaviour by making a function called "get`<fieldname>`" or "set`<fieldn
 ### Customizing
 
 We can create new "virtual properties" which are not actually listed in *static $db* or stored in the database-row.
-Here we combined a Player's first- and surname, accessible through $myPlayer->Title.
+Here we combined a Player's first name and surname, accessible through $myPlayer->Title.
 
 	:::php
 	class Player extends DataObject {
@@ -123,10 +122,11 @@ Here we combined a Player's first- and surname, accessible through $myPlayer->Ti
 	  }
 	}
 
-CAUTION: It is common practice to make sure that pairs of custom getters/setter deal with the same data, in a consistent
-format. \\
-CAUTION: Custom setters can be hard to debug: Please doublecheck if you could transform your data in more
-straight-forward logic embedded to your custom controller or form-saving.
+**CAUTION: It is common practice to make sure that pairs of custom getters/setter deal with the same data, in a consistent
+format.**
+
+**CAUTION: Custom setters can be hard to debug: Please double check if you could transform your data in more
+straight-forward logic embedded to your custom controller or form-saving.**
 
 ### Default Values
 
@@ -140,7 +140,7 @@ new object is created.
 	  );
 	}
 
-Note: Alternatively you can set defaults directly in the database-schema (rather than the object-model). See
+> Note: Alternatively you can set defaults directly in the database-schema (rather than the object-model). See
 [data-types](data-types) for details.
 
 ### Casting
@@ -188,7 +188,7 @@ on the "Player"-table.
 	  );
 	}
 
-Silverstripe's `[api:SiteTree]` base-class for content-pages uses a 1-to-1 relationship to link to its
+SilverStripe's `[api:SiteTree]` base-class for content-pages uses a 1-to-1 relationship to link to its
 parent element in the tree:
 
 	:::php
@@ -203,8 +203,8 @@ parent element in the tree:
 
 Defines 1-to-many joins. A database-column named ""`<relationship-name>`ID"" will to be created in the child-class.
 
-**CAUTION:** Please specify a $has_one-relationship on the related child-class as well, in order to have the necessary
-accessors available on both ends.
+**CAUTION: Please specify a $has_one-relationship on the related child-class as well, in order to have the necessary
+accessors available on both ends.**
 
 	:::php
 	// access with $myTeam->Players() or $player->Team()
@@ -262,8 +262,8 @@ Multiple $has_one relationships are okay if they aren't linking to the same obje
 
 Defines many-to-many joins. A new table, (this-class)_(relationship-name), will be created with a pair of ID fields.
 
-CAUTION: Please specify a $belongs_many_many-relationship on the related class as well, in order to have the necessary
-accessors available on both ends.
+**CAUTION: Please specify a $belongs_many_many-relationship on the related class as well, in order to have the necessary
+accessors available on both ends.**
 
 	:::php
 	// access with $myTeam->Categories() or $myCategory->Teams()
@@ -416,7 +416,7 @@ Example: Disallow creation of new players if the currently logged-in player is n
 	}
 
 
-Note: There are no separate methods for *onBeforeCreate* and *onBeforeUpdate*. Please check for the existence of
+> Note: There are no separate methods for *onBeforeCreate* and *onBeforeUpdate*. Please check for the existence of
 $this->ID to toggle these two modes, as shown in the example above.
 
 ### onBeforeDelete

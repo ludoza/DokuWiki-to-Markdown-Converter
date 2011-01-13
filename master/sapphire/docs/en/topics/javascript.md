@@ -39,6 +39,16 @@ jQuery allows you to write complex behaviour in a couple of lines of JavaScript.
 be reused can be custom code without further encapsulation. For example, a button rollover effect doesn't require a full
 plugin. See "[How jQuery Works](http://docs.jquery.com/How_jQuery_Works)" for a good introduction.
 
+You should write all your custom jQuery code in a closure. This will prevent jQuery from conflicting from any prototype
+code or any other framework code.
+
+	:::javascript
+	(function($) {
+		$(document).ready(function(){
+			// your code here.
+		})
+	})(jQuery);
+
 ### jQuery Plugins
 
 A jQuery Plugin is essentially a method call which can act on a collection of DOM elements. It is contained within the `jQuery.fn` namespace, and attaches itself automatically to all jQuery collections. The basics for are outlined in the
@@ -571,7 +581,6 @@ Example: QUnit test (from [jquery.com](http://docs.jquery.com/QUnit#Using_QUnit)
 
 Example: JSpec Shopping cart test (from [visionmedia.github.com](http://visionmedia.github.com/jspec/))
 
-	
 	describe 'ShoppingCart'
 	  before_each 
 	    cart = new ShoppingCart
@@ -583,7 +592,48 @@ Example: JSpec Shopping cart test (from [visionmedia.github.com](http://visionme
 	      cart.should.have 2, 'products'   
 	    end
 	  end
-	end 
+	end
+
+### Javascript in the CMS	{#javascript-cms}
+
+The CMS has a number of Observer-pattern hooks you can access: (The elements which are notified are listed in brackets.)
+
+  * Close -- when 'folder' in SiteTree is closed. (form?)
+  * BeforeSave -- after user clicks 'Save', before AJAX save-request (#Form_EditForm)
+  * PageLoaded -- after new SiteTree page is loaded. (#Form_EditForm)
+  * PageSaved -- after AJAX save-request is successful (#Form_EditForm)
+  * SelectionChanged -- when new item is chosen from SiteTree (#sitetree)
+
+Here's an example of hooking the 'PageLoaded' and 'BeforeSave' methods:
+
+	:::javascript
+	/*
+	* Observe the SiteTree 'PageLoaded' event, called whenever a SiteTree page is
+	* opened or reloaded in the CMS.
+	*
+	* Also observe 'BeforeSave' which is called when the Save button is pressed,
+	* before the AJAX call to save the page is sent.
+	*/
+	Behaviour.register({
+		'#Form_EditForm' : {
+			initialize : function() {
+				this.observeMethod('PageLoaded', this.pageLoaded);
+				this.observeMethod('BeforeSave', this.beforeSave);
+				this.pageLoaded(); // call pageload initially too.
+			},
+
+			pageLoaded : function() {
+				alert("You loaded a page");
+			},
+
+			beforeSave: function() {
+				alert("You clicked save");
+			}
+		} // #Form_EditForm
+	});
+
+
+See ['onload' javascript in the CMS](/reference/leftandmain#onload-javascript)
 
 
 ### Break the rules!
@@ -595,5 +645,4 @@ afraid to experiment with using other approaches.
 
 *  [Unobtrusive Javascript](http://www.onlinetools.org/articles/unobtrusivejavascript/chapter1.html)
 *  [Quirksmode: In-depth Javascript Resources](http://www.quirksmode.org/resources.html)
-*  [behaviour.js
-documentation](http://open.silverstripe.org/browser/modules/sapphire/branches/2.4/thirdparty/behaviour/README.md)
+*  [behaviour.js documentation](http://open.silverstripe.org/browser/modules/sapphire/branches/2.4/thirdparty/behaviour/README.md)

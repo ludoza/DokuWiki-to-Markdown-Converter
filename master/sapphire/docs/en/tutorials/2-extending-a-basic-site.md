@@ -230,8 +230,8 @@ named "News", and create some *ArticlePage*s inside it.
 
 ##  Modifing the date field
 
-When creating your Article pages in the CMS, you are given a text box by default. This makes it confusing and doesn't give
-the user much help when adding a date. 
+**Please note:** As of version 2.4, the DateField type no longer automatically adds a javascript datepicker. Your date field will look just like a text field. 
+This makes it confusing and doesn't give the user much help when adding a date. 
 
 To make the date field a bit more user friendly, you can add a dropdown calendar, set the date format and add better title.
 

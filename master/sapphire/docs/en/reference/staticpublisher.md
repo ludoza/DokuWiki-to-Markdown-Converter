@@ -2,11 +2,15 @@
 
 ## Introduction
 
-Many sites get too much traffic to justify dynamically sending every request.  Caching is needed.  The static
-publication system will generate static versions of your content that can be served without ever hitting PHP.
+Many sites get too much traffic to justify dynamically sending every request.  Caching is needed. Static Publishing
+will generate static versions of your content (HTML) that can be served without ever hitting PHP or the Database.
 
 See `[api:StaticExporter]` for a less flexible, but easier way of building a local static cache from all of
 your pages.
+
+See [Partial-Caching](partial-caching) for a much more flexible way of building in caching without statically delivering 
+content. Partial Caching is recommended as a basic enhancement to any SilverStripe site however if your site is planning
+a vast amount of traffic (eg an article is being dug) then Static Publisher will be appropriate.
 
 ## Requirements
 
@@ -69,12 +73,41 @@ publisher to generate folders and HTML-files.
 	  }
 	}
 
+## Excluding Pages
 
+The allPagesToCache function returns all the URLs needed to cache. So if you want to exclude specific pages from the
+cache then you unset these URLs from the returned array. If you do not want to cache a specific class (eg UserDefinedForms)
+you can also add an exclusion
 
+	:::php
+	function allPagesToCache() {
+		$urls = array();
+		$pages = DataObject::get("SiteTree");
+
+		// ignored page types
+		$ignored = array('UserDefinedForm');
+
+		foreach($pages as $page) {
+			// check to make sure this page is not in the classname
+			if(!in_array($page->ClassName, $ignored)) {
+				$urls = array_merge($urls, (array)$page->subPagesToCache());
+			}
+		}
+
+		return $urls;
+	}
+
+You can also pass the filtering to the original DataObject::get("SiteTree");
+
+	:::php
+	function allPagesToCache() {
+		$urls = array();
+		$pages = DataObject::get("SiteTree", "ClassName != 'UserDefinedForm'");
+		...
 
 ## Single server Caching
 
-This setup will store the cached content on the same server as the CMS.  This is good for performance enhancement.
+This setup will store the cached content on the same server as the CMS.  This is good for a basic performance enhancement.
 
 ### Setup
 
@@ -255,6 +288,7 @@ the cache.
 ## Related
 
 *  `[api:StaticExporter]`
+*  [Partial-Caching](partial-caching)
 
 ## API Documentation
 *  `[api:StaticPublisher]`

@@ -54,7 +54,7 @@ incomplete - please add to it** *Try to keep it in alphabetical order too! :)*
  | Security::setDefaultAdmin('admin','password'); |                     | Set default admin email and password, helpful for recovering your password |        
  | SSAkismet::setAPIKey(string $key)  |                                 | Enables use of the Akismet spam filter. The key must be a valid WordPress API key. |        
  | SSViewer::set_theme(string $themename) |                             | Choose the default theme for your site |   
-     
+
 ## Constants
 
 Some constants are user-defineable within *_ss_environment.php*.
@@ -71,3 +71,7 @@ All user-related preferences are stored as a property of the `[api:Member]`-clas
 ## Permissions
 
 See [security](/topics/security) and [permission](/reference/permission)
+
+## See Also
+
+[Config Cheat sheet](http://www.ssbits.com/a-config-php-cheatsheet/)

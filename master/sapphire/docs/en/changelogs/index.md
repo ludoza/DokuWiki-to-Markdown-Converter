@@ -6,7 +6,13 @@ For information on how to upgrade to newer versions consult the [upgrading](upgr
 
 ## Stable Releases
 
+ * [2.4.3](2.4.3)
+ * [2.4.2](2.4.2)
+ * [2.4.1](2.4.1)
  * [2.4.0](2.4.0)
+ * [2.3.10](2.3.10)
+ * [2.3.9](2.3.9)
+ * [2.3.8](2.3.8)
  * [2.3.7](2.3.7)
  * [2.3.6](2.3.6)
  * [2.3.5](2.3.5)

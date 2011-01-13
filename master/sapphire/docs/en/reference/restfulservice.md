@@ -143,7 +143,8 @@ If you want to bypass error handling on your sub-classes you could define that i
 ## Other Uses
 
 ### How to use RestfulService to easily embed an RSS feed
-[RestfulService](RestfulService) can be used to easily embed an RSS feed (since it's also an xml response) from a site
+
+`[api:RestfulService]` can be used to easily embed an RSS feed (since it's also an xml response) from a site
 such as del.icio.us
 
 Put something like this code in mysite/code/Page.php inside class Page_Controller

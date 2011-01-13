@@ -1,12 +1,9 @@
 # Contributing
 
-Any open source product is only as good as the 
-community behind it. You can participate by sharing 
-code, ideas, or simply helping others. No matter what 
-your skill level is, every contribution counts.
+Any open source product is only as good as the community behind it. You can participate by sharing 
+code, ideas, or simply helping others. No matter what your skill level is, every contribution counts.
 
-See http://silverstripe.org/contributing-to-silverstripe for a highlevel overview
-on how you can help out.
+See http://silverstripe.org/contributing-to-silverstripe for a high level overview on how you can help out.
 
 ## Sharing your Opinion
 
@@ -21,8 +18,7 @@ If you have created a patch to fix a bug in one the modules - thank you so much!
 comment the revision number that the patch is applicable for and a brief outline of what you fixed and how. 
 Only use the provided link to submit patches, as it prefills information about owner and ticket-type:
 
-[Submit a patch (requires account on
-open.silverstripe.org)](http://open.silverstripe.com/newticket?field_type=patch&field_owner=ischommer&attachment=1)
+[Submit a patch (requires account on open.silverstripe.org)](http://open.silverstripe.com/newticket?field_type=patch&field_owner=ischommer&attachment=1)
 
 The core team is responsible for reviewing the patches and deciding if they will make it into core.  If
 there are any problems they will assign the ticket back to you, so make sure you have an email address loaded into Trac
@@ -44,7 +40,7 @@ Please not that the latest stable release will often not be sufficient! (of all 
 *  If your patch is extensive, discuss it first on the [silverstripe
 forum]([[http///www.silverstripe.com/silverstripe-forum/) (optimally before doing any serious coding)
 
-*  Adhere to our [coding conventions](http://doc.silverstripe.com/doku.php?id=coding-conventions)
+*  Adhere to our [coding conventions](coding-conventions)
 *  Provide complete [unit test coverage](/topics/testing) - depending on the complexity of your work, this is a required
 step.
 *  Do not set milestones. If you think your patch should be looked at with priority, mark it as "critical".
@@ -53,11 +49,11 @@ step.
 changes
 
 *  If your patch involves new files, create a compressed archive for them (including any required directory-structures)
-*  Create patches relative to the working copy (//sapphire/main.php// instead of */Users/myuser/sapphire/main.php*)
-*  Document your code inline through [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) syntax. See our [API
-documentation](http://api.silverstripe.org/trunk) for good examples.
+*  Create patches relative to the working copy (*sapphire/main.php* instead of */Users/myuser/sapphire/main.php*)
+*  Document your code inline through [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) syntax. See our 
+[API documentation](http://api.silverstripe.org/trunk) for good examples.
 
-*  Also check and refer to wiki documentation on [doc.silverstripe.com](http://doc.silverstripe.com ) which needs
+*  Also check and refer to wiki documentation on [doc.silverstripe.com](http://doc.silverstripe.com) which needs
 changes. Check for any references to functionality deprecated or extended through your patch. Please don't alter the
 documentation before your patch is integrated.
 
@@ -66,7 +62,7 @@ document moved files and created/deleted directories separately
 
 ## Reporting Security Issues
 
-Report security issues to [security@silverstripe.com](mailto/security@silverstripe.com). Please don't file security
+Report security issues to [security@silverstripe.com](mailto:security@silverstripe.com). Please don't file security
 issues in our [bugtracker](http://open.silverstripe.org). In the event of a confirmed vulnerability in SilverStripe
 core, we will take the following actions:
 

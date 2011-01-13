@@ -50,7 +50,7 @@ Enabling Translatable through *Object::add_extension()* in your *mysite/_config.
 	Object::add_extension('SiteConfig', 'Translatable'); // 2.4 or newer only
 
 
-#### Through$extensions
+#### Through $extensions
 
 	:::php
 	class Page extends SiteTree {
@@ -64,7 +64,7 @@ Make sure to rebuild the database through /dev/build after enabling translatable
 Use the correct set_default_locale() before building the database
 for the first time, as this locale will be written on all new records.
 
-#### Setting the defaultlocale
+#### Setting the default locale
 
 Important: If the "default language" of your site is not english (en_US), 
 please ensure to set the appropriate default language for
@@ -79,6 +79,8 @@ your content before building the database with Translatable enabled:
 For the Translatable class, a "locale" consists of a language code plus a region code separated by an underscore, 
 for example "de_AT" for German language ("de") in the region Austria ("AT").
 See http://www.w3.org/International/articles/language-tags/ for a detailed description.
+
+To ensure that your template declares the correct content language, please see [i18n](i18n#declaring_the_content_language_in_html).
 
 ### Usage
 
@@ -169,9 +171,9 @@ attach this behaviour to custom fields by using Translatable_Transformation as s
 			// If a translation exists, exchange them with 
 			// original/translation field pairs
 			$translation = $this->getTranslation(Translatable::default_locale());
-			if($translation) {
+			if($translation && $this->Locale != Translatable::default_locale()) {
 				$transformation = new Translatable_Transformation($translation);
-				$fields->replaceByName(
+				$fields->replaceField(
 					'AdditionalProperty',
 					$transformation->transformFormField($additionalField)
 				);

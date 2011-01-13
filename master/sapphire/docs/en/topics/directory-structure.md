@@ -37,7 +37,7 @@ existing modules or the directories listes in "Core Structure".
 
 See [themes](/topics/themes)
 
-## Module Structure
+## Module Structure		{#module_structure}
 
 Modules are currently top-level folders that need to have a *_config.php*-file present.
 They should follow the same conventions as posed in "Custom Site Structure"

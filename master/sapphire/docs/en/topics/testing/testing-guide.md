@@ -8,7 +8,7 @@ If you are familiar with PHP coding but new to unit testing, you should read the
 check out Mark's presentation [Getting to Grips with SilverStripe
 Testing](http://www.slideshare.net/maetl/getting-to-grips-with-silverstripe-testing).
 
-You should also read over [the PHPUnit manual](http://www.phpunit.de/pocket_guide/3.2/). It provides a lot of
+You should also read over [the PHPUnit manual](http://www.phpunit.de/manual/current/en/index.html). It provides a lot of
 fundamental concepts that we build on in this documentation.
 
 If you're more familiar with unit testing, but want a refresher of some of the concepts and terminology, you can browse
@@ -30,8 +30,8 @@ instructions](http://www.phpunit.de/pocket_guide/3.3/en/installation.html)).
 
 The PHPUnit installation via PEAR is very straightforward.
 You might have to perform the following commands as root or super user (sudo).
-We need a specific version of PHPUnit (3.3.x), as 3.4 or higher breaks our test runner (see
-[#4573](http://open.silverstripe.com/ticket/4573))
+
+<del>We need a specific version of PHPUnit (3.3.x), as 3.4 or higher breaks our test runner (see [#4573](http://open.silverstripe.com/ticket/4573))</del>
 
 At your prompt, type the following commands:
 	

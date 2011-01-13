@@ -156,7 +156,8 @@ Override the function getMenuTitle() to create a translated menu title name. Eg:
 
 
 
-## 'onload' javascript in the CMS
+## 'onload' javascript in the CMS	{#onload-javascript}
+
 
 You can have custom scripting called when a Page is loaded by clicking on the Site Content Tree.
 This can be used to set up event handlers, or populate dropdowns, etc.
@@ -174,7 +175,8 @@ You could insert this code using Requirements from a custom page class.
 			}
 		}
 	});
-	
+
+See [Javascript in the CMS](/topics/javascript#javascript-cms)
 
 
 ## Related

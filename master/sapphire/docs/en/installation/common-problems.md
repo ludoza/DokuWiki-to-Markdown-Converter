@@ -11,7 +11,8 @@ If you can log-in to the CMS as an administrator, append `?isDev=1` to any URL t
 	:::php
 	Director::set_environment_type('dev'); // temporary debugging statement
 
-Note: On "live" environments, the `?isDev=1` solution is preferred, as it means that your other visitors don't see ugly (and potentially security sensitive) PHP errors as well.
+Note: On "live" environments, the `?isDev=1` solution is preferred, as it means that your other visitors don't see ugly
+(and potentially security sensitive) PHP errors as well.
 
 ## My templates don't update on page refresh
 
@@ -49,6 +50,9 @@ Please make sure all code inside '*.php' files is wrapped in classes. Due to the
 includes all files with this extension, any **procedural code will be executed on every call**. Most common error here
 is putting a test.php/phpinfo.php file in the document root. See [datamodel](/topics/datamodel) and [controllers](/topics/controllers)
 for ways how to structure your code.
+
+Also, please check that you have PHP enabled on the webserver, and you're at least running PHP 5.1.
+The web-based [SilverStripe installer](/installation) can help you with this.
 
 ## I've got file permission problems during installation
 
