@@ -2,16 +2,16 @@ This website documents high-level features of the [SilverStripe open source plat
 at developers.  
 Please read our [guide to contributing documentation](misc/contributing#Writing-Documentation) if you want to help out!
 
+### Overview
+
+ * [Why SilverStripe?](http://silverstripe.com/overview/) | [Feature Overview](http://silverstripe.com/overview/) | [Demo](http://demo.silverstripe.org/)
+ * [Download and Installation](installation/) | [Upgrading](upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
+ * [API documentation](http://api.silverstripe.org/current) | [Official english book](http://www.silverstripe.org/silverstripe-book) | [Official german book](http://www.silverstripe.org/das-silverstripe-buch)  
 
 ###  Getting support
 
 [Forum](http://www.silverstripe.org/forums/) | [IRC channel](http://silverstripe.org/irc) | [End user docs](http://userhelp.silverstripe.com) | [Core mailinglist](https://groups.google.com/forum/#!forum/silverstripe-dev)
 
-### Overview
-
- * [Why SilverStripe?](http://silverstripe.com/overview/) | [Feature Overview](http://silverstripe.com/overview/)
- * [Installation](installation/) | [Upgrading](upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
- * [API documentation](http://api.silverstripe.org/current) | [Official english book](http://www.silverstripe.org/silverstripe-book) | [Official german book](http://www.silverstripe.org/das-silverstripe-buch)  
 
 ### Level 1: Building your first SilverStripe website
 
@@ -54,5 +54,5 @@ Please read our [guide to contributing documentation](misc/contributing#Writing-
 
 ### Level 4: Contributing to the SilverStripe core
 
-* [Contributing](http://www.silverstripe.com/how-to-contribute/)
-* [Coding Conventions](http://doc.silverstripe.org/coding-conventions)
+* [Contributing](http://www.silverstripe.org/contributing-to-silverstripe/)
+* [Coding Conventions](misc/coding-conventions)
