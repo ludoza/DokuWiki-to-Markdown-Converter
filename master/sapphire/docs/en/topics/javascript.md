@@ -641,8 +641,9 @@ See ['onload' javascript in the CMS](/reference/leftandmain#onload-javascript)
 The guidelines are not intended to be hard and fast rules; they cover the most common cases but not everything. Don't be
 afraid to experiment with using other approaches.
 
-## Links
+## Related
 
-*  [Unobtrusive Javascript](http://www.onlinetools.org/articles/unobtrusivejavascript/chapter1.html)
-*  [Quirksmode: In-depth Javascript Resources](http://www.quirksmode.org/resources.html)
-*  [behaviour.js documentation](http://open.silverstripe.org/browser/modules/sapphire/branches/2.4/thirdparty/behaviour/README.md)
+* [css](css)
+* [Unobtrusive Javascript](http://www.onlinetools.org/articles/unobtrusivejavascript/chapter1.html)
+* [Quirksmode: In-depth Javascript Resources](http://www.quirksmode.org/resources.html)
+* [behaviour.js documentation](http://open.silverstripe.org/browser/modules/sapphire/branches/2.4/thirdparty/behaviour/README.md)

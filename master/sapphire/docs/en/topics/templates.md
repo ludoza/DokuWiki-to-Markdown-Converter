@@ -67,7 +67,9 @@ a variable is true
 
 TODO
 
-## CSS and JavaScript files
+## Including CSS and JavaScript files
+
+See [css](css) and [javascript](javascript) topics.
 
 TODO Using `<% require %>` vs Requirements class in Controller::init(), combine_files, different media types,
 typography.css
