@@ -9,10 +9,6 @@ site"
  * [Tutorial 5: Dataobject Relationship Management](5-dataobject-relationship-management): Learn how to create
 a simple data relationships
 
-
-Please suggest improvements or further tutorials by [registering to our issue
-tracker](http://open.silverstripe.com/register) and [adding a concise and clear request](http://open.silverstripe.com/newticket/?component=Documentation).
-
 #  Video tutorials
 
 *  [Installing on Linux](http://silverstripe.org/assets/screencasts/Tutorial-InstallingLinux-DM08.swf)
@@ -20,9 +16,7 @@ tracker](http://open.silverstripe.com/register) and [adding a concise and clear 
 *  [Installing a module (e.g. a blog)](http://silverstripe.org/assets/screencasts/Tutorial-InstallingBlogModule-DM08.swf)
 *  [Customising the CMS (adding new fields)](http://silverstripe.org/assets/screencasts/Tutorial-ChangingFields-DM08.swf)
 
-# Help
-
-If you get stuck;
+# Help: If you get stuck
 
  * [Common Problems](/topics/common-problems): Review some existing solutions to common problems.
  * [SilverStripe Forums](http://www.silverstripe.com/silverstripe-forum/): Head over to the forums and ask the community
