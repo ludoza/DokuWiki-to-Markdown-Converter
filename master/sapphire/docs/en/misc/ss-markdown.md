@@ -107,3 +107,7 @@ Currently this is not supported, as all HTML is generated on the fly.
 ### Can I contribute to the parser and rendering project?
 
 Of course, the `sapphiredocs` code is BSD licensed - we're looking forward to your contributions!
+
+## Related ##
+
+ * [contributing](contributing#Writing-Documentation): The doc.silverstripe.org website has certain styling and writing conventions
