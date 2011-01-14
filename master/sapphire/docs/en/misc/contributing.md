@@ -3,13 +3,19 @@
 Any open source product is only as good as the community behind it. You can participate by sharing 
 code, ideas, or simply helping others. No matter what your skill level is, every contribution counts.
 
-See http://silverstripe.org/contributing-to-silverstripe for a high level overview on how you can help out.
+See our [high level overview on silverstripe.org](http://silverstripe.org/contributing-to-silverstripe) on how you can help out.
 
 ## Sharing your Opinion
 
 *  [silverstripe.org/forums](http://silverstripe.org/forums): Forums on silverstripe.org
 *  [silverstripe-dev](http://groups.google.com/group/silverstripe-dev): Core development mailinglist
 *  [silverstripe-documentation](http://groups.google.com/group/silverstripe-documentation): Documentation team mailinglist
+
+## Reporting Bugs ##
+
+If you have discovered a bug in SilverStripe, we'd be glad to hear about it -
+well written bug reports can be half of the solution already!
+Our bugtracker is located on [open.silverstripe.org](http://open.silverstripe.org/) (create a [new ticket](http://open.silverstripe.org/newticket)).
 
 ## Submiting Patches, Bugfixes and Enhancements ##
 
@@ -116,6 +122,11 @@ Example: Good commit message
 
 	ENHANCEMENT Added prepValueForDB() which is called on DBField->writeToManipulation() to ensure formatting of value before insertion to DB on a per-DBField type basis (see #1234)
 	MINOR Added documentation for DBField->writeToManipulation() (see r55555)
+	
+<div class="hint" markdown="1">
+Note: By supplying code in patches, tickets and pull requests, 
+you agree that is can be used in distributions and derivative works of SilverStripe CMS and associated modules, under the BSD license.
+</div>
 
 ## Reporting Security Issues
 
@@ -140,7 +151,8 @@ Documentation for a software project is a continued and collaborative effort,
 we encourage everybody to contribute, from simply fixing spelling mistakes, to writing recipes/howtos,
 reviewing existing documentation, and translating the whole thing.
 Modifying documentation requires basic [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) and
-[SSMarkdown][ss-markdown] knowledge. If you have downloaded SilverStripe or a module, chances
+[Markdown](http://daringfireball.net/projects/markdown/)/[SSMarkdown][ss-markdown] knowledge. 
+If you have downloaded SilverStripe or a module, chances
 are that you already have the documentation files - they are kept alongside the source code.
 
 ### Repositories
