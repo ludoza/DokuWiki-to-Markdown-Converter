@@ -1,12 +1,9 @@
 # Member
 
-**This is partially deprecated - see the `[api:DataObject]` page for more information**
-
 ## Introduction
 
 The Member class is used to represent user accounts on a SilverStripe site (including newsletter recipients).
  
-
 ## Testing For Logged In Users
 
 The Member class comes with 2 static methods for getting information about the current logged in user.
@@ -40,14 +37,14 @@ Returns the full *Member* Object for the current user, returns *null* if user is
 
 ## Subclassing
 
-[note]
+<div class="warning" markdown="1">
 This is the least desirable way of extending the Member class. It's better to use DataObjectDecorator (see below).
-[/note]
+</div>
 
 You can defined subclasses of member to add extra fields or functionality to the built-in membership system.
 
 	:::php
-	class ParishouseMember extends Member {
+	class MyMember extends Member {
 		static $db = array(
 			"Age" => "Int",
 			"Address" => "Text",
@@ -55,11 +52,11 @@ You can defined subclasses of member to add extra fields or functionality to the
 	}
 
 
-To ensure that all new members are created using this class, put a call to Object::useCustomClass in
+To ensure that all new members are created using this class, put a call to `[api:Object::useCustomClass()]` in
 (project)/_config.php:
 
 	:::php
-	Object::useCustomClass("Member", "ParishouseMember");
+	Object::useCustomClass("Member", "MyMember");
 
 Note that if you want to look this class-name up, you can call Object::getCustomClass("Member")
 
@@ -88,7 +85,7 @@ For persons without login-capabilities (e.g. for an address-database), you shoul
 with the Member-database. This enables us to have a different subclass of Member for an email-address with login-data,
 and another subclass for the same email-address in the address-database.
 
-## New Idea: Member Role Decorator
+## Member Role Decorator
 
 Using inheritance to add extra behaviour or data fields to a member is limiting, because you can only inherit from 1
 class.  A better way is to use role decorators to add this behaviour.
@@ -98,10 +95,9 @@ class.  A better way is to use role decorators to add this behaviour.
 	// OR
 	Member::add_role('ForumRole');
 
-
-A role decorator is simply a subclass of DataObjectDecorator that is designed to be used to add behaviour to Member. 
+A role decorator is simply a subclass of `[api:DataObjectDecorator]` that is designed to be used to add behaviour to Member. 
 The roles affect the entire class - all members will get the additional behaviour.  However, if you want to restrict
-things, you should add appropriate Permission::checkMember() calls to the role's methods.
+things, you should add appropriate `[api:Permission::checkMember()]` calls to the role's methods.
 
 	:::php
 	class ForumRole extends DataObjectDecorator {
@@ -125,15 +121,6 @@ things, you should add appropriate Permission::checkMember() calls to the role's
 	  }
 	}
 
-
-Sam is going to implement this change; Romain will be using it to create a ForumRole for the new forum module.
-
-## TODO
-
-*  MemberTableField has to determine which fields is should display based on the subclass of the requested record
-*  MemberTableField needs to have a switch for creating new Members with different fields
-*  We should add a getOverviewFields() to each Member-class which specifiy which fields to use in the overview (and
-accordingly have different tables for each subclass of members)
 
 ## API Documentation
 
