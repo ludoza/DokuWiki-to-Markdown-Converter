@@ -27,7 +27,7 @@ class.
 		$form->dataFieldByName('MyRequiredField)->addExtraClass('required');
 		return $form;
 	}
-	
+
 ### Subclassing Validator
 
 To create your own validator, you need to subclass validator and define two methods:

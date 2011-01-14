@@ -326,13 +326,11 @@ For this case place the following function in your Page_Controller:
 
 So, for example if you have a german page "Kontakt", which should be translated to english as "Contact", you may use:
 
-	
 	<% control PageByLang(Kontakt,de_DE) %>
 
 The control displays the link in the right language, depending on the current locale.\\
 Example:
 
-	
 	<% control PageByLang(Kontakt,de_DE) %>
 	 <h2><a href="$Link" title="$Title">$Title</a></h2>
 	<% end_control %>

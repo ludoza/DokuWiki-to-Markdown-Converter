@@ -115,7 +115,7 @@ This is not recommended for most cases, but you can also use the Silverstripe da
 	DB::query("UPDATE Player SET Status='Active'");
 
 One example for using a raw DB::query is when you are wanting to order twice in the database:
-	
+
 	:::php
 	$records = DB::query('SELECT *, CASE WHEN "ThumbnailID" = 0 THEN 2 ELSE 1 END AS "HasThumbnail" FROM "TempDoc" ORDER BY "HasThumbnail", "Name" ASC');
 	$items = singleton('TempDoc')->buildDataObjectSet($records);

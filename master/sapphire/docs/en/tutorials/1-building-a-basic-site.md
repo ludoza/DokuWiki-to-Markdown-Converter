@@ -316,7 +316,6 @@ Create a new file *HomePage.php* in *mysite/code*. Copy the following code into 
 	:::php
 	<?php
 	/**
-	
 	 * Defines the HomePage page type
 	 */
 	
@@ -325,7 +324,6 @@ Create a new file *HomePage.php* in *mysite/code*. Copy the following code into 
 	   );
 	   static $has_one = array(
 	   );
-	
 	}
 	
 	class HomePage_Controller extends Page_Controller {

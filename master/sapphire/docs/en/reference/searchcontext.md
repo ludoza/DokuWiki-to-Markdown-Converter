@@ -60,11 +60,6 @@ and `MyDate`. The attribute `HiddenProperty` should not be searchable, and `MyDa
 			);
 		}
 	}
-		
-
-
-
-
 
 ### Generating a search form from the context
 

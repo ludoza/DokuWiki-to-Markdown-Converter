@@ -48,9 +48,7 @@ code in your *mysite/_config.php*:
 After activating nested URLs on an existing database, you'll have to run a migration task to rewrite internal URL
 references in the *SiteTree.Content* field.
 
-	
 	http://<yourdomain.tld>/dev/tasks/MigrateSiteTreeLinkingTask
-
 
 ## Limiting Children/Parent
 
@@ -83,7 +81,6 @@ used to set up restrictions that will preserve the integrity of the page hierarc
 	  static $allowed_children = array("*Page,", "BlogHolder");
 	  
 	}
-	
 
 
 *  **allowed_children:** This can be an array of allowed child classes, or the string "none" - indicating that this page
@@ -141,7 +138,6 @@ it is a good starting point, for choosing your customisation.
 			$fields = parent::getCMSFields();
 			return $fields;
 		}
-	
 
 
 ## Recipes

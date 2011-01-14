@@ -39,7 +39,7 @@ Class and filenames are in `UpperCamelCase` format:
 
 	:::php
 	class MyClass {}
-	
+
 If a class name is comprised of more than one word, the first letter of each new word must be capitalized. 
 Successive capitalized letters are not allowed, e.g. a class `XMLImporter` is not allowed while `XmlImporter` is acceptable.
 
@@ -102,7 +102,7 @@ while all words in a constant name must be separated by underscore characters.
 
 	:::php
 	define('INTEREST_RATE', 0.19);
-	
+
 Constants must be defined as class members with the `const` modifier. 
 Defining constants in the global scope with the `define` function is permitted but strongly discouraged.
 
@@ -150,7 +150,7 @@ When a string is literal (contains no variable substitutions), the apostrophe or
 	$a = 'Example String';
 
 #### String Literals Containing Apostrophes
-	
+
 When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation marks or "double quotes". 
 
 	:::php
@@ -170,7 +170,7 @@ For consistency, placing the dollar sign outside of the brackets is not permitte
 
 	:::php
 	$greeting = "Hello ${name}, welcome back!";
-	
+
 #### String Concatentation
 
 Strings must be concatenated using the "." operator. A space must always be added before and after the "." operator to improve readability:
@@ -185,7 +185,7 @@ In these cases, each successive line should be padded with white space such that
 	$sql = 'SELECT "ID", "Name" FROM "Person" '
 	     . 'WHERE "Name" = \'Susan\' '
 	     . 'ORDER BY "Name" ASC ';
-	
+
 ### Arrays
 
 #### Numerically Indexed Arrays
@@ -205,7 +205,7 @@ In this case, each successive line must be padded with spaces such that beginnin
 	$sampleArray = array(1, 2, 3, 'Zend', 'Studio',
 	                     $a, $b, $c,
 	                     56.44, $d, 500);
-		
+
 Alternately, the initial array item may begin on the following line. 
 If so, it should be padded at one indentation level greater than the line containing the array declaration, 
 and all successive lines should have the same indentation; 
@@ -217,7 +217,7 @@ the closing paren should be on a line by itself at the same indentation level as
 		$a, $b, $c,
 		56.44, $d, 500,
 	);
-	
+
 When using this latter declaration, we encourage using a trailing comma for the last item in the array; 
 this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
 
@@ -229,7 +229,7 @@ In this case, each successive line must be padded with white space such that bot
 	:::php
 	$sampleArray = array('firstKey'  => 'firstValue',
 	                     'secondKey' => 'secondValue');
-		
+
 Alternately, the initial array item may begin on the following line. 
 If so, it should be padded at one indentation level greater than the line containing the array declaration, 
 and all successive lines should have the same indentation; the closing paren should be on a line by itself at the 
@@ -241,7 +241,7 @@ For readability, the various "=>" assignment operators should be padded such tha
 		'firstKey'  => 'firstValue',
 		'secondKey' => 'secondValue',
 	);
-	
+
 ### Function and Method Declaration
 
 No method or function invocation is allowed to have spaces directly
@@ -265,7 +265,7 @@ Keep the opening brace on the same line as the statement.
 	{
 		// ...
 	}
-	
+
 In cases where the argument list exceeds the maximum line length, you may introduce line breaks. 
 Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. 
 A line break should then occur before the closing argument paren, 
@@ -278,7 +278,7 @@ or method with one space separating the two, and at the same indentation level a
 	) {
 		// indented code
 	}
-	
+
 Function and method arguments should be separated by a single trailing space after the comma delimiter,
 apart from the last argument.
 
@@ -296,7 +296,7 @@ Any content within the braces must be indented using a tab.
 	if ($a != 2) {
 	    $a = 2;
 	}
-	
+
 If the conditional statement causes the line length to exceed the maximum line length and has several clauses, 
 you may break the conditional into multiple lines. In such a case, break the line prior to a logic operator, 
 and pad the line such that it aligns under the first character of the conditional clause. 
@@ -349,7 +349,7 @@ Content under each "case" statement must be indented using an additional tab.
 		default:
 			break;
 	}
-	
+
 The construct `default` should never be omitted from a switch statement.
 
 #### for/foreach/while

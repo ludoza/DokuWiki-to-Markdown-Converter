@@ -16,9 +16,8 @@ as a .tar.gz file.
 2.  Change the site to the theme. You can do this either by:
 	- putting the following line in your ./mysite/_config.php: `SSViewer::set_theme("themename");`
 	- changing the theme in the Site Configuration panel in the CMS
-	
 3. Visit your homepage with ?flush=all appended to the URL. `http://yoursite.com?flush=all`
-	
+
 ## Developing your own theme
 
 See [Developing Themes](theme-development) to get an idea of how themes actually work and how you can develop your own. 
@@ -29,10 +28,8 @@ If you want to submit your theme to the silverstripe directory then check
 
 * You should ensure your templates are well structured, modular and commented so it's easy for other people to 
  customise them.
-	
 *  Templates should not contain text inside images and all images provided must be open source and not break any copyright or license laws. 
  This includes any icons your template uses in the frontend or the backend CMS.
-	
 *  A theme does not include any PHP files. Only CSS, HTML, Images and Javascript.
 
 Your theme file must be in a .tar.gz format. A useful tool for this is - [7 Zip](http://www.7-zip.org/). Using 7Zip you

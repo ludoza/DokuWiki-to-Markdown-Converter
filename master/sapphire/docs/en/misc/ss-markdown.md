@@ -78,7 +78,7 @@ Example for PHP:
 			// ...
 		}
 	}
-		
+
 For SilverStripe templates, please use `:::ss` as a brush.
 
 ### Images

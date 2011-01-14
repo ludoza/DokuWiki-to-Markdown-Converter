@@ -13,7 +13,7 @@ You can access SiteConfig options from any SS template by using the function $Si
 	$SiteConfig.Title 
 	$SiteConfig.Tagline
 	
-	Or 
+	// or 
 	
 	<% control SiteConfig %>
 	$Title $AnotherField
@@ -56,7 +56,6 @@ Create a mysite/code/CustomSiteConfig.php file.
 
 Then add a link to your extension in the _config.php file like below.
 
-	
 	Object::add_extension('SiteConfig', 'CustomSiteConfig');
 
 

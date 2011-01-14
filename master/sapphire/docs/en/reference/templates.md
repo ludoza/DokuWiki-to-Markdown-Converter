@@ -212,7 +212,6 @@ variable you will need to escape the specific variable. In the following example
 	
 	$Foopx // returns "" (as it looks for a Foopx value)
 	{$Foo}px  // returns "3px" (CORRECT)
-	
 
 
 Or when having a `$` sign in front of the variable

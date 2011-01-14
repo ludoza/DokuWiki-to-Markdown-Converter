@@ -11,9 +11,9 @@ from the commandline, use this command:
 
 	cd your-webroot/
 	php sapphire/cli-script.php dev/build
-	
+
 Make sure that your commandline php version uses the same configuration as your webserver (run `php -i` to find out more).
-	
+
 ## GET parameters as arguments
 
 You can add parameters to the command by using normal form encoding.
@@ -72,7 +72,6 @@ Sake will either run `./sapphire/cli-script.php` or `./cli-script.php`, dependin
 
 It's particularly useful for running build tasks...
 
-	
 	cd /your/site/folder
 	sake db/build
 	sake dev/tests/all
@@ -80,7 +79,6 @@ It's particularly useful for running build tasks...
 
 It can also be handy if you have a long running script.
 
-	
 	cd /your/site/folder
 	sake MyReallyLongTask
 
@@ -119,7 +117,6 @@ Step 2: Install the "daemon" command-line tool on your server.
 
 Step 3: Use sake to start and stop your process
 
-	
 	sake -start MyProcess
 	sake -stop MyProcess
 

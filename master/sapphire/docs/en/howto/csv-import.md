@@ -31,13 +31,13 @@ in your CSV file match `$db` properties in your dataobject. E.g. a simple import
 	FirstName,LastName,Email
 	Donald,Duck,donald@disney.com
 	Daisy,Duck,daisy@disney.com
-	
+
 The loader would be triggered through the `load()` method:
 
 	:::php
 	$loader = new CsvBulkLoader('Member');
 	$result = $loader->load('<my-file-path>');
-	
+
 By the way, you can import `[api:Member]` and `[api:Group]` data through `http://localhost/admin/security`
 interface out of the box.
 
@@ -57,7 +57,7 @@ The simplest way to use [api:CsvBulkLoader] is through a [api:ModelAdmin] interf
 	   static $url_segment = 'players';
 	}
 	?>
-	
+
 The new admin interface will be available under `http://localhost/admin/players`, the import form is located
 below the search form on the left.
 
@@ -102,7 +102,7 @@ You can have more customized logic and interface feedback through a custom contr
 			return $this->redirectBack();
 		}
 	}
-	
+
 Note: This interface is not secured, consider using [api:Permission::check()] to limit the controller to users
 with certain access rights.
 

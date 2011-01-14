@@ -18,17 +18,13 @@ as close to rendering as possible (e.g. in `[api:FormField]`
 If you're using the CSS method a second argument can be used. This argument defines the 'media' attribute of the `<link>`
 element, so you can define 'screen' or 'print' for example.
 
-	
 	Requirements::css("cms/css/TreeSelector.css", "screen,projection");
-
-
 
 ## Including inside Template files
 
 If you do not want to touch the PHP (for example you are constructing a generic theme) then you can include a file via
 the templates
 
-	
 	<% require css(cms/css/TreeSelector.css) %>
 	<% require themedCSS(TreeSelector) %>
 	<% require javascript(cms/javascript/LeftAndMain.js) %>
@@ -37,9 +33,7 @@ the templates
 Note that currently (as of 2.3) you cannot pass a second parameter to a function via the template parser so doing the
 following will not work. 
 
-	
 	<% require css(cms/css/TreeSelector.css, 'screen,projection') %>
-
 
 ## Combining Files
 

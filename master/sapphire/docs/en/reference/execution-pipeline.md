@@ -32,7 +32,7 @@ The basic .htaccess file after installing SilverStripe look like this:
 	### SILVERSTRIPE END ###
 
 	</file>
-	
+
 The `<Files>` section denies direct access to the template files from anywhere but the server itself.
 
 The next section enables the rewriting engine and rewrites requests to `sapphire/main.php` if they meet the following
@@ -72,9 +72,6 @@ When you create a function, you can access the ID like this:
 	  $obj->addNow();
 	 }
 
-
-
-
 ## Controllers and actions
 
 Controllers are the building blocks of your application.
@@ -91,7 +88,6 @@ You can access the following controller-method with /team/signup
 	    return $this->renderWith('MyTemplate');
 	  }
 	}
-
 
 ## SSViewer template rendering
 

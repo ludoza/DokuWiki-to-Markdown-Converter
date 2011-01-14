@@ -28,10 +28,8 @@ the form in a method on *HomePage_Controller*.
 *mysite/code/HomePage.php*
 
 	:::php
-	...
-	
 	class HomePage_Controller extends Page_Controller {
-	   ...
+	   // ...
 	
 		function BrowserPollForm() {
 			// Create fields
@@ -188,8 +186,7 @@ extending SiteTree (or `[api:Page]`) to create a page type, we extend DataObject
 *mysite/code/BrowserPollSubmission.php*
 
 	:::php
-	<?php
-	
+	<?php	
 	class BrowserPollSubmission extends DataObject {
 		static $db = array(
 			'Name' => 'Text',
@@ -203,24 +200,16 @@ that the *BrowserPollSubmission* table is created. Now we just need to define 'd
 
 *mysite/code/HomePage.php*
 
-	:::php
-	...
-	
+	:::php	
 	class HomePage_Controller extends Page_Controller {
-		...
-	
+		// ...
 		function doBrowserPoll($data, $form) {
 			$submission = new BrowserPollSubmission();
 			$form->saveInto($submission);
 			$submission->write();
-		
- 			Director::redirectBack();
+			Director::redirectBack();
 		}
-	
-		...
 	}
-	
-	...
 
 
 A function that processes a form submission takes two arguments - the first is the data in the form, the second is the

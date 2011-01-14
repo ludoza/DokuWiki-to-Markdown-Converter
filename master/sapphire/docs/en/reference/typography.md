@@ -10,8 +10,7 @@ This is done by setting up a CSS file called
 You also need to create a file called (projectname)/css/editor.css with the following content:
 
 	:::css
-	/**
-	
+	/**	
 	 * This support file is used to style the WYSIWYG editor in the CMS
 	 */
 	

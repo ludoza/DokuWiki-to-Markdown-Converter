@@ -127,14 +127,12 @@ example](http://open.silverstripe.com/browser/modules/cms/trunk/code/staticpubli
 .htaccess update simpler.
 
 Just look for this line:
-
 	
 	RewriteRule .* sapphire/main.php?url=%1&%{QUERY_STRING} [L]
 
 
 And change the PHP script from main.php to static-main.php:
 
-	
 	RewriteRule .* sapphire/static-main.php?url=%1&%{QUERY_STRING} [L]
 
 ## Using Static Publisher With Subsites Module
@@ -268,15 +266,11 @@ done by the `[api:RebuildStaticCacheTask]`
 
 Execution via URL
 
-	
 	http://www.example.com/dev/buildcache?flush=1
-
 
 Execution on CLI (via [sake](/topics/commandline))
 
-	
 	sake dev/buildcache flush=1
-
 
 Depending on which extension you've set up for your SiteTree (FilesystemPublisher or RsyncMultiHostPublisher), the
 method publishPages() either stores the generated HTML-files on the server's filesystem, or deploys them to other

@@ -70,9 +70,9 @@ Example `phpunit-unittests-only.xml`:
 		</testsuites>
 		<!-- ... -->
 	</phpunit>
-	
+
 You can run with this XML configuration simply by invoking `phpunit --configuration phpunit-unittests-only.xml`.
-	
+
 The same effect can be achieved with the `--group` argument and some PHPDoc (see [phpunit.de](http://www.phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.groups)).
 
 ## Adding/removing files for code coverage reports
@@ -90,7 +90,7 @@ This applies for all thirdparty code
 			<directory suffix=".php">mysite/thirdparty/</directory>
 		</blacklist>
 	</filter>
-	
+
 See [phpunit.de](http://www.phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.blacklist-whitelist) for more information.
 
 ## Speeding up your test execution with the SQLite3 module
@@ -118,6 +118,6 @@ Example `mysite/_config.php`:
 			if($db == 'sqlite3') $databaseConfig['type'] = 'SQLite3Database';
 		}
 	}
-	
+
 Note: It is recommended that you still run your tests with the original
 database driver (at least on continuous integration) to ensure a realistic test scenario.

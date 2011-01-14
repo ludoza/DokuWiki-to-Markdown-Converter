@@ -153,9 +153,7 @@ it. Change the *$db* array in the *ArticlePage* class so it looks like this:
 
 	:::php
 	<?php
-	
 	class ArticlePage extends Page {
-	
 		static $db = array(
 			'Date' => 'Date',
 			'Author' => 'Text'
@@ -179,9 +177,7 @@ method to the *ArticlePage* class.
 
 	:::php
 	<?php
-	
 	class ArticlePage extends Page {
-	
 		// ...
 	
 		function getCMSFields() {

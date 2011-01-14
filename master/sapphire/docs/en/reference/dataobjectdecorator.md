@@ -20,7 +20,6 @@ Your Decorator will nee to be a subclass of DataObjectDecorator or the Extension
 	
 	}
 
-
 This defines your own extension where you can add your own functions, database fields or other properties you want.
 After you create this extension however it does not yet apply it to your object. Next you need to tell SilverStripe what
 class you want to extend.
@@ -40,9 +39,7 @@ For example above we want to override Member with a Custom Member so we would wr
 	:::php
 	// add to mysite/_config.php	
 	Object::add_extension('Member', 'CustomMember');</code>
-	
-	
-	
+
 ##  Implementation
 
 
@@ -51,7 +48,7 @@ For example above we want to override Member with a Custom Member so we would wr
 Extra database fields can be added with a decorator by defining an **extraStatics()** method.  These will be added to the table of the base object - the decorator will actually edit the $db, $has_one, etc static variables on load.
 
 The function should return a map where the keys are the names of the static variables to update:
-	
+
 	:::php
 	class CustomMember extends DataObjectDecorator {
 	

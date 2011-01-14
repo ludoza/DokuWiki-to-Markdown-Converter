@@ -34,7 +34,7 @@ You might have to perform the following commands as root or super user (sudo).
 <del>We need a specific version of PHPUnit (3.3.x), as 3.4 or higher breaks our test runner (see [#4573](http://open.silverstripe.com/ticket/4573))</del>
 
 At your prompt, type the following commands:
-	
+
 	pear channel-discover pear.phpunit.de 
 	pear channel-discover pear.symfony-project.com
 	pear install phpunit/PHPUnit
@@ -51,7 +51,7 @@ their own:
 ### Via Command Line
 
 `cd` to the root level of your project and run [sake](/topics/commandline) (Sapphire Make) to execute the tests:
-	
+
 	/path/to/project$ sake dev/tests/all
 
 
@@ -59,17 +59,17 @@ their own:
 
 
 Run specific tests:
-	
+
 	dev/tests/MyTest,MyOtherTest
 
 
 Run all tests in a module folder, e.g. "sapphire"
-	
+
 	dev/tests/module/<modulename>
 
 
 Skip certain tests
-	
+
 	dev/tests/all SkipTests=MySkippedTest
 
 

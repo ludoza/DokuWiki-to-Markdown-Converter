@@ -2,13 +2,11 @@
 
 These instructions are also covered on the [Nginx Wiki](http://wiki.nginx.org/SilverStripe)
 
-
 The prerequisite is that you have already installed Nginx and you are able to run PHP files via the FastCGI-wrapper from
 Nginx.
 
 Now you need to setup a virtual host in Nginx with the following configuration settings:
 
-	
 	server {
 	        listen   80;
 	        server_name  yoursite.com;
