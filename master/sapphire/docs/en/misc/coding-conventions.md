@@ -80,10 +80,10 @@ Wherever possible, set up static variables like this:
 	protected static $simple_setting = 50;
 		static function set_simple_setting($v) {self::$simple_setting = $v;}
 		static function get_simple_setting() {return self::$simple_setting;}
-
+		
 	protected static $more_complex_variable = "default value";
 		static function set_more_complex_variable($v) {self::$more_complex_variable = $v;}
-
+		
 	static function get_more_complex_variable() {
 		//complex code here;
 		//complex code here;
@@ -94,7 +94,7 @@ Object variables should be `$this->lowerCamelCase`
 
 	:::php
 	$this->myObjectVariable = 'foo';
-	
+
 ### Constants
 
 All letters used in a constant name must be capitalized, 
@@ -105,7 +105,7 @@ while all words in a constant name must be separated by underscore characters.
 	
 Constants must be defined as class members with the `const` modifier. 
 Defining constants in the global scope with the `define` function is permitted but strongly discouraged.
-	
+
 ### File Naming and Directory Structure
 
 Classes need to be in a file of the same name. Multiple classes are allowed to be contained in one file,
@@ -116,11 +116,11 @@ Example: `mysite/code/MyClass.php`
 
 	:::php
 	<?php
-
+	
 	class MyClass {}
-
+	
 	class MyClass_Controller {}
-
+	
 	class MyClass_OtherRelatedClass {}
 
 To help with namespacing common class names (like Database) it is recommended to use a prefix convention `SS_ClassName` but the filename will remain `ClassName.php`. 
@@ -148,14 +148,14 @@ When a string is literal (contains no variable substitutions), the apostrophe or
 
 	:::php
 	$a = 'Example String';
-	
+
 #### String Literals Containing Apostrophes
 	
 When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation marks or "double quotes". 
 
 	:::php
 	$greeting = "She said 'hello'";
-		
+
 This syntax is preferred over escaping apostrophes as it is much easier to read.
 
 #### String Substitution
@@ -259,6 +259,7 @@ Keep the opening brace on the same line as the statement.
 		// ...
 	}
 
+	:::php
 	// bad
 	function bar() 
 	{
@@ -280,7 +281,7 @@ or method with one space separating the two, and at the same indentation level a
 	
 Function and method arguments should be separated by a single trailing space after the comma delimiter,
 apart from the last argument.
-	
+
 ### Control Structures
 
 #### if/else/elseif
@@ -341,14 +342,12 @@ Content under each "case" statement must be indented using an additional tab.
 
 	:::php
 	switch($numPeople) {
-	    case 1:
-	        break;
- 
-	    case 2:
-	        break;
- 
-	    default:
-	        break;
+		case 1:
+			break;
+		case 2:
+			break;
+		default:
+			break;
 	}
 	
 The construct `default` should never be omitted from a switch statement.
@@ -356,7 +355,7 @@ The construct `default` should never be omitted from a switch statement.
 #### for/foreach/while
 
 Loop constructs follow the same principles as "Control Structures: if/else/elseif".
-	
+
 ### Separation of Logic and Presentation
 
 Try to avoid using PHP's ability to mix HTML into the code.
@@ -366,7 +365,7 @@ Try to avoid using PHP's ability to mix HTML into the code.
 	function getTitle() {
 		return "<h2>Bad Example</h2>"; 
 	}
-
+	
 	// Template code
 	$Title
 
@@ -377,7 +376,7 @@ Better: Keep HTML in template files:
 	function getTitle() {
 		return "Better Example";
 	}
-
+	
 	// Template code
 	<h2>$Title</h2>
 
