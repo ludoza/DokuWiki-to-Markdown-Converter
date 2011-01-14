@@ -124,4 +124,4 @@ The [newsletter module](http://silverstripe.org/newsletter-module) provides a UI
 
 ## API Documentation
 
-[ Click here for API documentation](http://api.silverstripe.org/trunk/sapphire/Email.html)
+`[api:Email]`

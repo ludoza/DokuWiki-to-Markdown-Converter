@@ -90,8 +90,7 @@ You can use the **debug_request=1** switch from the [urlvariabletools](urlvariab
 
 ## API Documentation
 
-[Click here for the API documentation](http://api.silverstripe.org/trunk/sapphire/Controller.html).
-
+`[api:Controller]`
 
 ## Links
 

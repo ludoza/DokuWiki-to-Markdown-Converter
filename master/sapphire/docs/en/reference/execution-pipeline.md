@@ -54,8 +54,7 @@ All requests go through main.php, which sets up the environment and then hands c
 ## Director and URL patterns
 
 main.php relies on Director to work out which controller should handle this request.  Director will instantiate that
-controller object and then call
-[Controller::run()](http://api.silverstripe.org/trunk/sapphire/control/Controller.html#run).
+controller object and then call `[api:Controller::run()]`.
 
 **See:** The API documentation of `[api:Director]` for information about how Director parses URLs and hands control over to a controller object.
 

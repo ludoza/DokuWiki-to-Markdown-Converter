@@ -193,4 +193,4 @@ To include relations in your summaries, you can use a dot-notation.
 
 ## API Documentation
 
-[Click here for the API documentation](http://api.silverstripe.org/trunk/sapphire/core/DataObject.html).
+`[api:DataObject]`

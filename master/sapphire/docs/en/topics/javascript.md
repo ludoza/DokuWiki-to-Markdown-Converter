@@ -365,7 +365,7 @@ attributes, or the jQuery.metadata plugin). For returning status messages, pleas
 
 Only return evaluated JavaScript snippets if unavoidable. Most of the time you can just pass data around, and let the
 clientside react to changes appropriately without telling it directly through JavaScript in AJAX responses. Don't use
-the [:Form](http://api.silverstripe.org/trunk/forms/core/Form.html) SilverStripe class, which is built solely around
+the `[api:Form]` SilverStripe class, which is built solely around
 this inflexible concept.
 
 Example: Autocomplete input field loading page matches through AJAX

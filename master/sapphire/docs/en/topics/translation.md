@@ -365,7 +365,7 @@ To migrate a database that was built with SilverStripe 2.1.x or 2.2.x, follow th
 *  Run http://mysite.com/dev/build
 *  Run http://mysite.com/dev/tasks/MigrateTranslatableTask
 
-Please see the [class documentation](http://api.silverstripe.org/trunk/sapphire/dev/MigrateTranslatableTask.html) for
+Please see the `[api:MigrateTranslatableTask]` for
 limitations of this migration task - not all your data will be preserved.
 
 

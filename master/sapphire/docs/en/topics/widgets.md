@@ -225,7 +225,7 @@ This returns the value inputted in the CMS, if it's set or what is in the $title
 
 To implement a form inside a widget, you need to implement a custom controller for your widget to return this form. Make
 sure that your controller follows the usual naming conventions, and it will be automatically picked up by the
-[:WidgetArea](http://api.silverstripe.org/trunk/sapphire/widgets/WidgetArea.html) rendering in your *Page.ss* template.
+`[api:WidgetArea]` rendering in your *Page.ss* template.
 
 *mysite/code/MyWidget.php*
 

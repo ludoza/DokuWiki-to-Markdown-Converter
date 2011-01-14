@@ -137,8 +137,7 @@ Most of the time, you need to override the following methods:
 
 ## API Documentation
 
-[Click here for the API
-documentation](http://api.silverstripe.org/trunk/forms/fields-relational/ComplexTableField.html).
+`[api:ComplexTableField]`
 
 ## Todo
 
