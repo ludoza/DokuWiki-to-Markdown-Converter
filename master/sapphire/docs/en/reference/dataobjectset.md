@@ -78,11 +78,6 @@ the records to a compatible array:
 	:::php
 	$myArray = $mySet->toArray();
 
-### Output as HTML-list
-
-Use [buildNestedUL](http://doc.silverstripe.com/assets/classes/default/DataObjectSet.html#buildNestedUL) to return a
-nested unordered list out of a "chain" of DataObject-relations.
-
 ### Checking for existence
 
 It is good practice to check for empty sets before doing any iteration.

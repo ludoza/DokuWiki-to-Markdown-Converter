@@ -19,8 +19,8 @@ later
 
 ## Creating Custom Reports
 
-You can create reports for you own data quickly and easily. A general knowledge of Silverstripes
-[Datamodel](http://doc.silverstripe.com/doku.php?id=datamodel) would help before you attempt this. 
+You can create reports for you own data quickly and easily. A general knowledge of Silverstripe's
+[Datamodel](/topics/datamodel) would help before you attempt this. 
 
 Inside the Mysite/Code folder - your projects code, create a file called CustomSideReport or MyProjectSiteReport and
 inside this file we can add our site reports.

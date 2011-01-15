@@ -60,7 +60,7 @@ SilverStripe supports a simple set of conditional logic
 	<% end_if %>
 
 
-See more information on conditional logic on http://doc.silverstripe.org/doku.php?id=templates#if_blocks
+See more information on conditional logic on [templates](templates).
 
 ### Site wide settings
 
@@ -220,18 +220,18 @@ These controls detect the visitor's previous experience with the site:
 
 #### $Now.Nice, $Now.Year
 
-$Now returns the current date.  You can call any of the [date methods](http://doc.silverstripe.com/doku.php?id=date) on
+$Now returns the current date.  You can call any of the methods from the `[api:Date]` class on
 it. 
 
 #### $Created.Nice, $Created.Ago
 
 $Created returns the time the page was created, $Created.Ago returns how long ago the page was created. You can also
-call any of the [date methods](http://doc.silverstripe.com/doku.php?id=date) on it
+call any of methods of the `[api:Date]` class on it.
 
 #### $LastEdited.Nice, $LastEdited.Ago
 
-$LastEdited returns the time the page was modified, $LastEdited.Ago returns how long ago the page was modified.You can
-also call any of the [date methods](http://doc.silverstripe.com/doku.php?id=date) on it
+$LastEdited returns the time the page was modified, $LastEdited.Ago returns how long ago the page was modified.You can also
+call any of methods of the `[api:Date]` class on it.
 
 ### DataObjectSet Options
 

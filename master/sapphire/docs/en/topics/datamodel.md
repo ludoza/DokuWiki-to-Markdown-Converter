@@ -279,10 +279,6 @@ accessors available on both ends.**
 	}
 
 
-See [recipes:many_many-example](http://doc.silverstripe.org/recipes/many_many-example) for a more in-depth example
-
-
-
 ### Adding relations
 
 Inside sapphire it doesn't matter if you're editing a *has_many*- or a *many_many*-relationship. You need to get a

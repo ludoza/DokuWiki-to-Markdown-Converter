@@ -1,6 +1,6 @@
 This website documents high-level features of the [SilverStripe open source platform](http://www.silverstripe.org), aimed
 at developers.  
-Please read our [guide to contributing documentation](misc/contributing#Writing-Documentation) if you want to help out!
+Please read our [guide to contributing documentation](misc/contributing#writing-documentation) if you want to help out!
 
 ### Overview
 

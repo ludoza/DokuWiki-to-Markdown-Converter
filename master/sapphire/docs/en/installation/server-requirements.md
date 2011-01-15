@@ -1,7 +1,7 @@
 # Server Requirements
 
 We try to be as wide as possible in our server requirements.  However, there are some limitations.
-Please check our [suggested-web-hosts](http://doc.silverstripe.org/suggested-web-hosts) (and add your host if the installation was successful).
+Please check our [suggested-web-hosts](http://doc.silverstripe.org/old/suggested-web-hosts) (and add your host if the installation was successful).
 
 If you're running Windows, we recommend using the [Windows Platform Installer](windows-pi) or
 [WAMP](windows-wamp).

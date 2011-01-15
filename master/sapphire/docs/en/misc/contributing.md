@@ -42,7 +42,7 @@ step.
 changes
 *  Document your code inline through [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) syntax. See our 
 [API documentation](http://api.silverstripe.org/trunk) for good examples.
-* Also check and update documentation on [doc.silverstripe.com](http://doc.silverstripe.com). Check for any references to functionality deprecated or extended through your patch. Documentation changes should be included in the patch.
+* Also check and update documentation on [doc.silverstripe.org](http://doc.silverstripe.org). Check for any references to functionality deprecated or extended through your patch. Documentation changes should be included in the patch.
 
 ### Sending pull requests (for git) ###
 
@@ -157,9 +157,9 @@ are that you already have the documentation files - they are kept alongside the 
 
 ### Repositories
 
-*  End-user: [userhelp.silverstripe.com](http://userhelp.silverstripe.com): 
-*  Developer Guides: [doc.silverstripe.com](http://doc.silverstripe.com)
-*  Developer API Docuumentation: [api.silverstripe.com](http://api.silverstripe.com)
+*  End-user: [userhelp.silverstripe.org](http://userhelp.silverstripe.org)
+*  Developer Guides: [doc.silverstripe.org](http://doc.silverstripe.org)
+*  Developer API Docuumentation: [api.silverstripe.org](http://api.silverstripe.org)
 
 ### Source Control ###
 
@@ -167,7 +167,7 @@ In order to balance editorial control with effective colaboration, we keep
 documentation alongside the module source code, e.g. in `sapphire/docs/`,
 or as code comments within PHP code.
 Contributing documentation is the same process as providing any other patch
-(see [Patches and Bugfixes](#Patches-and-Bugfixes)).
+(see [Patches and Bugfixes](#submiting-patches-bugfixes-and-enhancements)).
 
 ### What to write
 

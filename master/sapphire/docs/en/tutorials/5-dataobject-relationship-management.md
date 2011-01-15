@@ -155,7 +155,7 @@ this tutorial.
 
 Now that we have created our *Project* page type and *Student* data object, let’s add some content. Go into the CMS
 and create one *Project* page for each project listed
-[above](#What_are_we_working_towards?) under a *ProjectsHolder* page named
+[above](#what-are-we-working-towards) under a *ProjectsHolder* page named
 **GSOC Projects** for instance.
 
 ![tutorial:gsoc-project-creation.png](_images/gsoc-project-creation.png)
@@ -168,7 +168,7 @@ modify this title, you have to add this code in the *getCMSFields* method of the
 
 
 Select now one of the *Project* page that you have created, go in the tab panel *Student* and add all the students
-listed [above](#What_are_we_working_towards?) by clicking on the link **Add
+listed [above](#what-are-we-working-towards) by clicking on the link **Add
 A Student** of your *HasOneComplexTableField* table.
 
 ![tutorial:gsoc-student-creation.png](_images/gsoc-student-creation.png)
@@ -308,7 +308,7 @@ Don't forget to rebuild the database using
 this tutorial.
 
 Now that we have created our *Mentor* page type, go into the CMS and create one *Mentor* page for each mentor listed
-[above](#What_are_we_working_towards?) under a simple *Page* named
+[above](#what-are-we-working-towards) under a simple *Page* named
 **Mentors** for instance.
 
 ![tutorial:gsoc-mentor-creation.png](_images/gsoc-mentor-creation.png)
@@ -420,7 +420,7 @@ Don't forget to rebuild the database using
 this tutorial.
 
 Select now one of the *Project* page, go in the tab panel *Modules* and add all the modules listed
-[above](#What_are_we_working_towards?) by clicking on the link **Add A
+[above](#what-are-we-working-towards) by clicking on the link **Add A
 Module** of your *ManyManyComplexTableField* table.
 
 ![tutorial:gsoc-module-creation.png](_images/gsoc-module-creation.png)
@@ -453,7 +453,7 @@ For every kind of *Page* or *DataObject*, you can access to their relations than
 **__1. GSOC Projects__**
 
 Let's start with the *ProjectsHolder* page created before. For this template, we are will display the same table than
-[above](#What_are_we_working_towards?).
+[above](#what-are-we-working-towards).
 
 ![tutorial:gsoc-projects-table.png](_images/gsoc-projects-table.png)
 

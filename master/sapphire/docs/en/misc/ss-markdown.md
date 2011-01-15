@@ -110,4 +110,4 @@ Of course, the `sapphiredocs` code is BSD licensed - we're looking forward to yo
 
 ## Related ##
 
- * [contributing](contributing#Writing-Documentation): The doc.silverstripe.org website has certain styling and writing conventions
+ * [contributing](contributing#writing-documentation): The doc.silverstripe.org website has certain styling and writing conventions

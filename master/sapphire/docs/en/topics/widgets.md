@@ -269,7 +269,7 @@ Note: The necessary controller actions are only present in subclasses of `[api:P
 widget forms in other controller subclasses, have a look at *ContentController->handleWidget()* and
 *ContentController::$url_handlers*.
 
-See an [alternative recipe for SilverStripe 2.3 or earlier](http://doc.silverstripe.org/recipes/widget-forms-2.3).
+See an [alternative recipe for SilverStripe 2.3 or earlier](http://doc.silverstripe.org/old/recipes/widget-forms-2.3).
 
 ##  But what if I have widgets on my blog currently??
 

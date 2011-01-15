@@ -5,7 +5,7 @@
 This page details notes on how to ensure that we develop secure SilverStripe applications. See [security](/topics/security) for
 the Silverstripe-class as a starting-point for most security-related functionality.
 
-See our [contributing guidelines](http://doc.silverstripe.org/doku.php?id=contributing#reporting_security_issues) on how
+See our [contributing guidelines](/misc/contributing#reporting-security-issues) on how
 to report security issues.
 
 ## SQL Injection
