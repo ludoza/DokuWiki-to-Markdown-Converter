@@ -136,5 +136,6 @@ includes, rather than entire templates.
 
  * [themes](/topics/themes)
  * [widgets](/topics/widgets)
+ * [images](/reference/image)
  * [Tutorial 1: Building a basic site](/tutorials/1-building-a-basic-site)
  * [Tutorial 2: Extending a basic site](/tutorials/2-extending-a-basic-site)

@@ -1,7 +1,7 @@
 # Built-in Page Controls
 
  
-Ever wonder when you use $Title and `<% Control Children %>` what else you can do / call in the templates?. This page is
+Ever wonder when you use `$Title` and `<% Control Children %>` what else you can call in the templates?. This page is
 here to help with a guide on what template controls you can call.
 
 **Note for advanced users:** These built-in page controls are defined in the `[api:SiteTree]` classes, which are the

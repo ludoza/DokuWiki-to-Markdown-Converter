@@ -1,8 +1,6 @@
 # Form Field Types
 
-## Introduction
-
-This is a highlevel overview of available FormFields. An automatically generated list is available through our [API](api:FormField)
+This is a highlevel overview of available `[apiFormField]` subclasses. An automatically generated list is available through our [API](api:FormField)
 
 ## Formatted Input
 
