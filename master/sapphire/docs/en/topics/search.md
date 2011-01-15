@@ -21,4 +21,6 @@ dedicated search service like the [sphinx module](http://silverstripe.org/sphinx
 *  `[api:ModelAdmin]`
 *  `[api:RestfulServer]`
 *  [Tutorial: Site Search](/tutorials/4-site-search)
-*  [genericviews Module](http://silverstripe.org/generic-views-module)
+*  [genericviews module](http://silverstripe.org/generic-views-module)
+*  [sphinx module](http://silverstripe.org/sphinx-module)
+*  [lucene module](http://silverstripe.org/lucene-module)
