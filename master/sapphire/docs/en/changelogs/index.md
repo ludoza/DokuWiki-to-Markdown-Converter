@@ -6,6 +6,7 @@ For information on how to upgrade to newer versions consult the [upgrading](upgr
 
 ## Stable Releases
 
+ * [2.4.4](2.4.4)
  * [2.4.3](2.4.3)
  * [2.4.2](2.4.2)
  * [2.4.1](2.4.1)
@@ -25,3 +26,21 @@ For information on how to upgrade to newer versions consult the [upgrading](upgr
  * [2.2.2](2.2.2)
  * [2.2.1](2.2.1)
  * [2.2.0](2.2.0)
+
+## Alpha/beta/release candidate ##
+
+* [2.4.4-rc2](2.4.4-rc2)
+* [2.4.4-rc1](2.4.4-rc1)
+* [2.4.3-rc2](2.4.3-rc2)
+* [2.4.3-rc1](2.4.3-rc1)
+* [2.4.2-rc2](2.4.2-rc2)
+* [2.4.2-rc1](2.4.2-rc1)
+* [2.4.1-rc2](2.4.1-rc2)
+* [2.4.1-rc1](2.4.1-rc1)
+* [2.4.0-rc3](2.4.0-rc3)
+* [2.4.0-rc2](2.4.0-rc2)
+* [2.4.0-rc1](2.4.0-rc1)
+* [2.4.0-beta2](2.4.0-beta2)
+* [2.4.0-beta1](2.4.0-beta1)
+* [2.4.0-alpha1](2.4.0-alpha1)
+* [2.3.8-rc1](2.3.8-rc1)
