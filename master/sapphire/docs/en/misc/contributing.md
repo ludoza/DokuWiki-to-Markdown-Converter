@@ -155,6 +155,10 @@ Modifying documentation requires basic [PHPDoc](http://en.wikipedia.org/wiki/PHP
 If you have downloaded SilverStripe or a module, chances
 are that you already have the documentation files - they are kept alongside the source code.
 
+The [doc.silverstripe.org](http://doc.silverstripe.org) website itself is powered by a
+SilverStripe project that uses the ["sapphiredocs" module](http://open.silverstripe.org/browser/modules/sapphiredocs/trunk)
+to convert Markdown formatted files into searchable HTML pages with index lists.
+
 ### Repositories
 
 *  End-user: [userhelp.silverstripe.org](http://userhelp.silverstripe.org)
@@ -186,7 +190,8 @@ Contributing documentation is the same process as providing any other patch
 * **Misc**: "Meta" documentation like coding conventions that doesn't directly relate to a feature or API. 
 
 See [What to write (jacobian.org)](http://jacobian.org/writing/great-documentation/what-to-write/) for an excellent
-introduction to the different types of documentation.
+introduction to the different types of documentation, and [Producing OSS: "Documentation"](http://producingoss.com/en/getting-started.html#documentation)
+for good rules of thumb for documenting opensource software.
 
 ### Structure
 

@@ -1,4 +1,7 @@
-# Release Process
+# Release Process #
+
+Describes the process followed for "core" releases (mainly the `sapphire` and `cms` modules).
+For other modules, we've compiled a helpful guide for a good [module release proceess](module-release-proceess).
 
 ## Release Maintainer
 
