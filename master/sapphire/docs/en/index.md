@@ -57,3 +57,7 @@ Please read our [guide to contributing documentation](misc/contributing#writing-
 
 * [Contributing](http://www.silverstripe.org/contributing-to-silverstripe/)
 * [Coding Conventions](misc/coding-conventions)
+
+<div class="hint" markdown="1">
+Looking for the old DokuWiki installation? See [doc.silverstripe.org/old](http://doc.silverstripe.org/old).
+</div>
