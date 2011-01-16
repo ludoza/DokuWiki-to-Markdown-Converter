@@ -1,111 +1,47 @@
-# Server Requirements
+# Requirements
 
-We try to be as wide as possible in our server requirements.  However, there are some limitations.
-Please check our [suggested-web-hosts](http://doc.silverstripe.org/old/suggested-web-hosts) (and add your host if the installation was successful).
+SilverStripe CMS needs to be installed on a web server. Content authors and website administrators use their web browser to access a web-based GUI to 
+do their day-to-day work. Website designers and developers require access to the files on the server to update templates, 
+website logic, and perform upgrades or maintainance.
 
-If you're running Windows, we recommend using the [Windows Platform Installer](windows-pi) or
-[WAMP](windows-wamp).
+## Web server software requirements
 
-If you're using Mac OS X, we recommend the [MAMP package](http://www.mamp.info/en/mamp.html), see
-[Installing on Mac OSX](mac-osx) for instructions on installation. If you are using any other packages or
-setups, or you are on linux, please pay careful attention to the requirements below.
+ * PHP 5.2.0+
+ * We recommend using a PHP accelerator or opcode cache, such as [xcache](xcache) or [WinCache](http://www.iis.net/download/wincacheforphp).
+ * Allocate at least 48MB of memory to each PHP process. (SilverStripe can be resource hungry for some intensive operations.)
+ * Required modules: dom, gd2, hash, iconv, mbstring, mysql (or other database driver), session, simplexml, tokenizer, xml.
+ * Recommended configuration
 
-## PHP
+		safe_mode = Off
+		magic_quotes_gpc = Off
+		memory_limit = 48M
 
-PHP5 is required. The following are further details and recommendations for how to properly set up PHP for use with
-SilverStripe.
+ * See [phpinfo()](http://php.net/manual/en/function.phpinfo.php) for more information about your environment
+ * One of the following databases: 
+  * MySQL 5.0+
+  * PostgreSQL 8.3+ (requires ["postgresql" module](http://silverstripe.org/postgresql-module))
+  * SQL Server 2008. (requires ["mssql" module](http://silverstripe.org/microsoft-sql-server-database/))
+  * Support for [Oracle](http://www.silverstripe.org/oracle-database-module/) and [SQLite](http://silverstripe.org/sqlite-database/) is not commercially supported, but is under development by our open source community.
+ * One of the following web server products: 
+  * Apache 1.3+ with mod_rewrite and "AllowOverride All" set
+  * IIS 5.x+ (Version 7.5+ and URL Rewrite Module recommended)
+  * Support for Lighttpd and other webservers may work if you are familiar with configuring those products.
+ * We recommend enabling content compression (for example with mod_deflate) to speed up the delivery of HTML, CSS, and JavaScript.
+ * One of the following operating systems:
+  * Linux/Unix/BSD
+  * Microsoft Windows XP SP3, Vista, Windows 7, Server 2008, Server 2008 R2
+  * Mac OS X 10.4+
 
-*  **PHP 5.2.0+ recommended**, PHP as low as 5.1.0 have been known to work, but for best results 5.2.0+ is recommended.
-(see http://www.gophp5.org)
-*  Required modules. Most of the time these modules can just be enabled in the php.ini, however support for these need
-to be compiled into PHP, which may not be the case if you are not using [WAMP](http://www.wampserver.com/en/) or
-[MAMP](http://www.mamp.info/en/mamp.html).
-    * dom
-    * gd2
-    * hash
-    * iconv
-    * mbstring
-    * mysql or pgsql, if you use one of these databases
-    * session
-    * simplexml
-    * tokenizer
-    * xml
-*  Set the maximum memory to at least 48 mb.  SilverStripe can be resource hungry for some intensive operations. Note:
-You can sometimes increase the maximum memory by adding a "ini_set("memory_limit","48M");" line to sapphire/main.php
-*  Using a PHP accelerator or opcode cache (e.g. [xcache](http://trac.lighttpd.net/xcache/)) is **strongly**
-recommended to for performance reasons - SilverStripe creates large cache files as PHP code that are quite slow to open
-without an opcode cache.
-*  Gentoo Linux distribution USE-Flags ([related forum
-topic](http://silverstripe.org/installing-silverstripe/show/281700)): `berkdb bzip2 cgi cli crypt ctype curl exif
-flatfile ftp gd gdbm hash iconv imap ipv6 mysql mysqli ncurses nls pcre readline reflection session simplexml snmp spell
-spl ssl threads tokenizer truetype unicode xml xmlreader xmlwriter xpm zip zlib`
-*  PHP safe mode off.
-* If you have issues with sessions and cookies ensure magic_quotes_gpc is disabled in your php.ini.
+## Web server hardware requirements
 
-If you need information on your PHP configuration, create a php file with the following content:
+Hardware requirements vary widely depending on the traffic to your website, the complexity its logic (i.e., PHP), and its size (i.e., database.) By default, all pages are dynamic, and thus access both the database and execute PHP code to generate. SilverStripe can cache full pages and segments of templates to dramatically increase performance.
 
-	:::php
-	<?php
-	phpinfo();
+A typical website page on a conservative single CPU machine (e.g., Intel 2Ghz) takes roughly 300ms to generate. This comfortably allows over a million page views per month. Caching and other optimisations can improve this by a factor of ten or even one hundred times. SilverStripe CMS can be used in multiple-server architectures to improve scalability and redunancy.
 
+## Client side (CMS) requirements
 
-If you visit this file in your web browser, it will give a full list of the configuration of PHP.
+SilverStripe CMS is designed to work well with Firefox 3.0+ and Internet Explorer 7.0+. We aim to provide satisfactory experiences in Apple Safari and Google Chrome. SilverStripe CMS works well across Windows, Linux, and Mac operating systems.
 
-## Database
+## End user requirements ##
 
-*  **MySQL 5.0+** (out of the box)
-*  **PostgreSQL 8.3+** ([download](http://www.silverstripe.org/postgresql-module/))
-*  **SQLite 3+** ([download](http://silverstripe.org/sqlite-database/))
-*  **SQL Server 2008** ([download](http://www.silverstripe.org/microsoft-sql-server-database))
-
-Note: MySQL 4.1 has been known to work, but is no longer supported.
-
-## HTTP Server
-
-SilverStripe will work on the following web servers:
-
-*  Apache with mod_rewrite and "AllowOverride All" set
-*  IIS 7.x with [URL Rewrite Module](http://www.iis.net/expand/URLRewrite) (installer supported in SilverStripe 2.4+)
-
-SilverStripe *may* work on the following, but it has not been tested by the core team:
-
-*  IIS 5 and 6
-*  lighttpd
-
-Some detailed notes on web server setup:
-
-*  Apache 1.3+/2.0+/2.2+ with [mod_rewrite](http://www.workingwith.me.uk/articles/scripting/mod_rewrite), and the
-ability to set rewriting rules in .htaccess files via "Allow Override".
-
-* The following is an example of the Directory directive from the Apache configuration file:
-
-	    <Directory "/location/of/silverstripe">
-	        Options FollowSymLinks SymLinksifOwnerMatch
-	        AllowOverride All
-	        Order allow,deny
-	        Allow from all
-	    </Directory>
-
-
-* The Apache server needs to be restarted for the configuration changes to take effect.
-* We suggest using mod_deflate/gzip to compress HTML/CSS/JS etc and thus improve page loading times *this applies to
-any website constructed , not just to SilverStripe*
-*  lighttpd 1.4+ with access to the server configuration. (See [installation-on-lighttpd](/topics/installation/installation-on-lighttpd)
-*  Silverstripe makes uses the geoiplookup to get the visitors' location (with an ip2country function).  In order for
-this to work, you must have the geoiplookup application installed on your server. Silverstripe will run fine without it.
-
-## Operating System
-
-SilverStripe can run on OS X, Windows, Linux and BSD.
-
-*  Windows XP SP3+ (Windows 7 or Server 2008 is recommended)
-*  Mac OS X 10.4+.  Earlier versions may work but we haven't tested them and can't provide support.
-*  Linux/BSD.  The kernel doesn't really matter as long as you're running the correct HTTP server.
-
-* File permissions: To install and run SilverStripe, You need to be able to set some files (e.g. the 'assets'
-folder) to be writable by the user the webserver is running as (e.g. wwwrun). Having shell access or a control panel (or
-an FTP server that allows file permission changing) is helpful.
-
-## Browser
-
-Make sure that Cookies have been enabled for the web site for the installation and management of the SilverStripe CMS.
+SilverStripe CMS is designed to make excellent, standards-compliant websites that are compatible with a wide range of industry standard browsers and operating systems. A competent developer is able to produce websites that meet W3C guidelines for HTML, CSS, JavaScript, and accessibility, in addition to meeting specific guildelines, such as e-government requirements.
