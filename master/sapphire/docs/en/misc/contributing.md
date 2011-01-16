@@ -281,5 +281,5 @@ an online editor for translators (like you!). Every now and then, translations w
 the codebase from there, and released alongside other PHP code.
 
 SilverStripe is already translated in over 60 languages, and we're relying on native speakers
-to keep these up to date, and of course add new languages. Please [register](http://translate.silverstripe.org/register)
+to keep these up to date, and of course add new languages. Please [register](http://translate.silverstripe.org/apply)
 a free translator account to get started, even if you just feel like fixing up a few sentences.
