@@ -56,7 +56,7 @@ There are a number of points to note in this code fragment:
 
 There are many assertions available:
 
-  * See [[http://www.phpunit.de/pocket_guide/3.2/en/api.html#api.assert.tables.assertions|the PHPUnit manual chapter 22]] for a listing of all PHPUnit's built-in assertions.
+  * See [[http://www.phpunit.de/manual/current/en/api.html#api.assert|the PHPUnit manual chapter 21]] for a listing of all PHPUnit's built-in assertions.
   * **$this->assertEmailSent($to, $from, $subject, $content)**:  When an email is "sent" during a test run, it's not actually sent.  Instead, it is logged in an internal register.  You can use assertEmailSent() to verify that an email was sent.  Each of the arguments can be a string, for an exact match, or, a preg_match() compatible regular expression, if it starts with "/".
 
 ==== The Database YAML file ====

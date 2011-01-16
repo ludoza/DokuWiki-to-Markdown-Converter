@@ -136,4 +136,4 @@ We don't have any easy answers here, but here are some ideas:
   * Do lazy fetching of scripts within an ajax-call. This seems to be possible, but very tricky due to the asynchronous nature of an ajax-request. Needs some more research
 
 ====== API Documentation ======
-[[http://api.silverstripe.org/trunk/sapphire/Requirements.html|Full method documentation available here]]
+[[http://api.silverstripe.org/trunk/sapphire/view/Requirements.html|Full method documentation available here]]

@@ -454,6 +454,8 @@ Here are some examples
 **Get logged in member:**
       * **as object**: Member::currentUser()
       * **as ID**: Member::currentUserID()
+**Formatting:**
+      * **as object**: $member->Title;
 **Basic security concept:**
   * There is a list of permissions and associated groups.
   * One or more goups can have the same permission code.
