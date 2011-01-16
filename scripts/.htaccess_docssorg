@@ -51,6 +51,7 @@
 	RewriteRule ^deprecation$ http://doc.silverstripe.org/current/en/sapphire/misc/release-process [R=301,L]
 	RewriteRule ^director$ http://api.silverstripe.org/search/lookup/?q=Director&module=sapphire [R=301,L]
 	RewriteRule ^directory-structure$ http://doc.silverstripe.org/current/en/sapphire/topics/directory-structure [R=301,L]
+	RewriteRule ^documentation-guidelines$ http://doc.silverstripe.org/current/en/sapphire/misc/contributing [R=301,L]
 	RewriteRule ^dropdownfield$ http://api.silverstripe.org/search/lookup/?q=DropdownField&module=sapphire [R=301,L]
 	RewriteRule ^email$ http://doc.silverstripe.org/current/en/sapphire/topics/email [R=301,L]
 	RewriteRule ^emailfield$ http://api.silverstripe.org/search/lookup/?q=EmailField&module=sapphire [R=301,L]
