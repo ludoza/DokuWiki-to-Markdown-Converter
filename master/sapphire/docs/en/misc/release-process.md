@@ -80,3 +80,37 @@ merged back to trunk regularly).
 *  Applicable bugfixes on trunk will also be merged back to the last minor release branch, to be released as the next
 micro release.
 *  Security fixes will be applied to the current trunk and the previous two minor releases (e.g. *2.3.8* and *2.4.1*).
+
+This page details the processes by which we (should) make APIs deprecated.
+
+## Deprecation ##
+
+Needs of developers (both on core framework and custom projects) might outgrow the capabilities
+of a certain API. Existing APIs might turn out to be hard to understand, maintain, test or stabilize.
+In these cases, it is best practice to "refactor" these APIs into something more useful.
+SilverStripe acknowledges that developers have built a lot of code on top of existing APIs,
+so we strive for giving ample warning on any upcoming changes through a "deprecation cycle".
+
+How to deprecate an API:
+
+*  Add a `@deprecated` item to the docblock tag, with a `{@link <class>}` item pointing to the new API to use.
+*  Update the deprecated code to throw an `E_USER_NOTICE` error, with a message starting with the string 'DEPRECATED:'.  
+In time, we may use that string to identify deprecation errors, so please ensure that you add this string to the notice level error.
+*  Make sure that the old deprecated function works by calling the new function - don't have duplicated code!
+*  Mark in which release the function was deprecated (find out next release in the [roadmap](http://open.silverstripe.com/roadmap)), so we can determine when to finally remove it.
+Here's an example for replacing `Director::isDev()` with a (theoretical) `Env::is_dev()`:
+
+	:::php
+	/**
+	 * Returns true if your are in development mode
+	 * @deprecated (since 2.2.2) Use {@link Env::is_dev()} instead.
+	 */
+	function isDev() {
+		user_error("DEPRECATED: Use Env::is_dev() instead.", E_USER_NOTICE);
+		return Env::is_dev();
+	}
+* Deprecated APIs can be removed after developers had a chance to react to the changes. As a rule of thumb, leave the code with the deprecation warning in for at least three micro releases. Only remove code in a minor or major release. For example:
+   * Deprecated as of in 2.2.2
+   * Still deprecated in 2.2.3
+   * Still deprecated in 2.2.4
+   * Removed from 2.3.0

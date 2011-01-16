@@ -48,6 +48,7 @@
 	RewriteRule ^dataobjectset$ http://doc.silverstripe.org/current/en/sapphire/reference/dataobjectset [R=301,L]
 	RewriteRule ^datefield$ http://api.silverstripe.org/search/lookup/?q=DateField&module=sapphire [R=301,L]
 	RewriteRule ^debugging$ http://doc.silverstripe.org/current/en/sapphire/topics/debugging [R=301,L]
+	RewriteRule ^deprecation$ http://doc.silverstripe.org/current/en/sapphire/misc/release-process [R=301,L]
 	RewriteRule ^director$ http://api.silverstripe.org/search/lookup/?q=Director&module=sapphire [R=301,L]
 	RewriteRule ^directory-structure$ http://doc.silverstripe.org/current/en/sapphire/topics/directory-structure [R=301,L]
 	RewriteRule ^dropdownfield$ http://api.silverstripe.org/search/lookup/?q=DropdownField&module=sapphire [R=301,L]
