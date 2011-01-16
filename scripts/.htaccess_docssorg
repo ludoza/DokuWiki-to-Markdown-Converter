@@ -96,6 +96,7 @@
 	RewriteRule ^member$ http://doc.silverstripe.org/current/en/sapphire/reference/member [R=301,L]
 	RewriteRule ^modeladmin$ http://doc.silverstripe.org/current/en/sapphire/reference/modeladmin [R=301,L]
 	RewriteRule ^module-releases$ http://doc.silverstripe.org/current/en/sapphire/misc/module-release-process [R=301,L]
+	RewriteRule ^module-maintainers$ http://doc.silverstripe.org/current/en/sapphire/misc/module-release-process [R=301,L]
 	RewriteRule ^multilingualcontent$ http://doc.silverstripe.org/current/en/sapphire/topics/translation [R=301,L]
 	RewriteRule ^numericfield$ http://api.silverstripe.org/search/lookup/?q=NumericField&module=sapphire [R=301,L]
 	RewriteRule ^object$ http://api.silverstripe.org/search/lookup/?q=Object&module=sapphire [R=301,L]
