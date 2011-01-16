@@ -4,6 +4,8 @@ SilverStripe CMS needs to be installed on a web server. Content authors and webs
 do their day-to-day work. Website designers and developers require access to the files on the server to update templates, 
 website logic, and perform upgrades or maintainance.
 
+Our web-based [PHP installer](/installation) can check if you meet the requirements listed below.
+
 ## Web server software requirements
 
  * PHP 5.2.0+
