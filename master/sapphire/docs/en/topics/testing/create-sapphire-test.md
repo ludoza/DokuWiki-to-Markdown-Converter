@@ -69,7 +69,7 @@ fails if and only if one or more of the assertions fail.
 
 There are many assertions available:
 
-*  See [the PHPUnit manual chapter 22](http://www.phpunit.de/pocket_guide/3.2/en/api.html#api.assert.tables.assertions)
+*  See [the PHPUnit manual chapter 22](http://www.phpunit.de/manual/current/en/api.html#api.assert)
 for a listing of all PHPUnit's built-in assertions.
 *  **$this->assertEmailSent($to, $from, $subject, $content)**:  When an email is "sent" during a test run, it's not
 actually sent.  Instead, it is logged in an internal register.  You can use assertEmailSent() to verify that an email

@@ -25,7 +25,7 @@ for our modules and core codebase.
 ### Setup your project for contributions ###
 
 In contrast to running a SilverStripe website, you can't use the standard download archive for this purpose.
-Our [module list on silverstripe.org](http://silverstripe.org/module) lists the repository locations alongside
+Our [module list on silverstripe.org](http://silverstripe.org/modules) lists the repository locations alongside
 the archive downloads, typically using a version control system like "git" or "subversion".
 
 General guidelines:
@@ -66,7 +66,7 @@ If you want to learn more about git, please have a look at the [free online git 
 Other modules will be hosted on [subversion](subversion.tigris.org), in which case you have to
 package your changes as a "patch" file. Please read the [official Subversion book](http://svnbook.red-bean.com/) (available free online) for a general introduction to subversion. 
 
-To submit a patch, [register](http://open.silverstripe.com/register) and attach the patch to the appropriate ticket. 
+To submit a patch, [register](http://open.silverstripe.com/apply) and attach the patch to the appropriate ticket. 
 Please include in the comment the revision number that the patch is applicable for and a brief outline of what you fixed and how. 
 Only use the provided link to submit patches, as it prefills information about owner and ticket-type:
 
@@ -89,8 +89,7 @@ Some gotchas when using subversion and the patch format:
 *  Submit your patch in *diff -u* or *diff -c format*. 
 *  If your patch involves new files, create a compressed archive for them (including any required directory-structures)
 *  Create patches relative to the working copy (*sapphire/main.php* instead of */Users/myuser/sapphire/main.php*)
-*  Remember the [shortcomings](http://subversion.tigris.org/project_tasks.html#svn-augmented-diff) of *svn diff*: Please
-document moved files and created/deleted directories separately
+*  Remember the shortcomingsof *svn diff*: Please document moved files and created/deleted directories separately
 
 ### Commit Messages ###
 
@@ -175,7 +174,7 @@ Contributing documentation is the same process as providing any other patch
 
 ### What to write
 
-* **API Docs**: Written alongside source code and displayed on [api.silverstripe.com](http://api.silverstripe.php). 
+* **API Docs**: Written alongside source code and displayed on [api.silverstripe.com](http://api.silverstripe.org). 
   This documents the low-level, technical usage of a class, method or property.
   Not suited for longer textual descriptions, due to the limited support of PHPDoc formatting for headlines. 
 * **Tutorials**: The first contact for new users, guiding them step-by-step through achievable projects, in a book-like style.

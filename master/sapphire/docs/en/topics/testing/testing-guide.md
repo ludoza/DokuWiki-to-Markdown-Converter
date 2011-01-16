@@ -8,7 +8,7 @@ If you are familiar with PHP coding but new to unit testing, you should read the
 check out Mark's presentation [Getting to Grips with SilverStripe
 Testing](http://www.slideshare.net/maetl/getting-to-grips-with-silverstripe-testing).
 
-You should also read over [the PHPUnit manual](http://www.phpunit.de/manual/current/en/index.html). It provides a lot of
+You should also read over [the PHPUnit manual](http://www.phpunit.de/manual/current/en/). It provides a lot of
 fundamental concepts that we build on in this documentation.
 
 If you're more familiar with unit testing, but want a refresher of some of the concepts and terminology, you can browse

@@ -111,5 +111,5 @@ customized for each DataObject's search results using `$summary_fields`.
 ## Related
 
 *  `[api:SearchContext]`
-*  [genericviews Module](http://silverstripe.org/genericviews-module)
+*  [genericviews Module](http://silverstripe.org/generic-views-module)
 *  [Presentation about ModelAdmin at SupperHappyDevHouse Wellington](http://www.slideshare.net/chillu/modeladmin-in-silverstripe-23)

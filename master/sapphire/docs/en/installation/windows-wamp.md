@@ -9,8 +9,6 @@ Note: Installing on Microsoft's IIS webserver through Microsoft WebPI is likely 
 
 ## Install WAMP
 
-*  [Watch as video.](http://www.silverstripe.com/assets/screencasts/silverstripe-installation-wamp/index.html)
-
 1.  Download WampServer from http://www.wampserver.com/en/download.php
 2.  Run the installer.  By default, it will install to C:\wamp.  You can choose your own install path if you wish; the
 directories mentioned below will also be different.

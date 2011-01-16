@@ -13,7 +13,7 @@ In case you need multiple contexts, consider namespacing your request parameters
 the $fields constructor parameter.
 
 SearchContext is mainly used by `[api:ModelAdmin]`, our generic data administration interface. Another
-implementation can be found in generic frontend search forms through the [genericviews](http://silverstripe.org/genericviews-module) module.
+implementation can be found in generic frontend search forms through the [genericviews](http://silverstripe.org/generic-views-module) module.
 
 ## Requirements
 

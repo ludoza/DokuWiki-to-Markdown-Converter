@@ -4,7 +4,7 @@ Please read our [guide to contributing documentation](misc/contributing#writing-
 
 ### Overview
 
- * [Why SilverStripe?](http://silverstripe.com/overview/) | [Feature Overview](http://silverstripe.com/overview/) | [Demo](http://demo.silverstripe.org/)
+ * [Getting started](http://silverstripe.org/getting-started/) | [Feature Overview](http://silverstripe.com/overview/) | [Demo](http://demo.silverstripe.org/)
  * [Download and Installation](installation/) | [Upgrading](upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
  * [API documentation](http://api.silverstripe.org/current) | [Official english book](http://www.silverstripe.org/silverstripe-book) | [Official german book](http://www.silverstripe.org/das-silverstripe-buch)  
 

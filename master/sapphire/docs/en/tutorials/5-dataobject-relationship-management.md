@@ -34,9 +34,6 @@ This is a table which sums up the relations between them :
  | Usability           | Elijah Lofgren      | Sean Harvey   | Cms, Sapphire, UsabilityElijah                | 
  | Safari 3 Support    | Meg Risen           | Sean Harvey   | Cms, Sapphire, UsabilityMeg                   | 
 
-You can also play with the table display on the
-[demo](http://demo.silverstripe.com/gsoc-projects) website of Silverstripe.
-
 ## GSOC Projects
 
 Before starting the relations management, we need to create a *ProjectsHolder* class where we will save the GSOC Project

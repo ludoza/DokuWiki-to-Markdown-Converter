@@ -272,8 +272,8 @@ Adds a new text field called FavouriteColour next to the Content field in the CM
 
 *  [form-field-types](/reference/form-field-types)
 *  `[api:FormField]` class
-*  [multiform module](http://silverstripe.org/multiform-module)
+*  [multiform module](http://silverstripe.org/multi-form-module)
 
 ##  API Documentation
 
-[Click here for the API documentation](http://api.silverstripe.org/trunk/sapphire/forms/Form.html)
+`[api:Form]`

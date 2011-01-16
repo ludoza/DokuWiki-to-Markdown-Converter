@@ -49,8 +49,7 @@ guidelines.
 
 ### Download
 
-To install a module you need to download the tar.gz file from the [modules page](http://www.silverstripe.org/modules) or
-a generated [dailybuild](http://dailybuilds.silverstripe.org) and extract this tar.gz to the root folder mentioned
+To install a module you need to download the tar.gz file from the [modules page](http://www.silverstripe.org/modules) and extract this tar.gz to the root folder mentioned
 above.
 
 Note some times the folders extracted from the tar.gz contain the version number or some other folders. You need to make
