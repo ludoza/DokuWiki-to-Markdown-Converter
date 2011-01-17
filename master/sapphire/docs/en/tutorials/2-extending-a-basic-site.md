@@ -31,20 +31,11 @@ final page. Lets look at each one individually:
 
 ### Model
 
-The `[api:DataObject]` class is the **"model"**. Every data object corresponds to a table in your database and this is 
-where the content is stored. A page type has a data object that represents all the data for your page - rather than inheriting 
+All content on your site is stored in a database. There is a table in the database corresponding for every class that is
+a child of the `[api:DataObject]` class. Every object of that class corresponds to a row in that table -
+this is your "data object", the **"model"** of Model-View-Controller. A page type has a data object that represents all the data for your page - rather than inheriting 
 directly from data object it inherits from `[api:SiteTree]`.  We generally create a "Page" data object, and subclass this for 
 the rest of the page types. This allows us to define behavior that is consistent across all pages in our site.
-
-*Questions: Do we assume they know what a class is or what subclassing means?*
-
-Origional text:
-(All content on your site is stored in a database. There is a table in the database corresponding for every class that is
-a child of the `[api:DataObject]` class. Every object of that class corresponds to a row in that table -
-this is your "data object", the **"model"** of Model-View-Controller. A page type has a data object that represents all the
-data for your page - rather than inheriting directly from `[api:DataObject]` it inherits from
-`[api:SiteTree]`. We generally create a "Page" data object, and subclass this for the rest of the page types.
-This allows us to define behavior that is consistent across all pages in our site.)
 
 ### View
 
@@ -179,13 +170,13 @@ method to the *ArticlePage* class.
 	<?php
 	class ArticlePage extends Page {
 		// ...
-	
+		
 		function getCMSFields() {
 			$fields = parent::getCMSFields();
-
+			
 			$fields->addFieldToTab('Root.Content.Main', new DateField('Date'), 'Content');
 			$fields->addFieldToTab('Root.Content.Main', new TextField('Author'), 'Content');
-
+			
 			return $fields;
 		}
 	}
@@ -235,18 +226,18 @@ To make the date field a bit more user friendly, you can add a dropdown calendar
 	<?php
 
 	class ArticlePage extends Page {
-
+	
 	// .....
-
+	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-
+		
 		$fields->addFieldToTab('Root.Content.Main', $dateField = new DateField('Date','Article Date (for example: 20/12/2010)'), 'Content');
 		$dateField->setConfig('showcalendar', true);
 		$dateField->setConfig('dateformat', 'dd/MM/YYYY');
 		
 		$fields->addFieldToTab('Root.Content.Main', new TextField('Author','Author Name'), 'Content');
-
+		
 		return $fields;
 	}
 
@@ -393,9 +384,9 @@ Do the same with the breadcrumbs:
 
 	:::ss
 	<% if Level(2) %>
-	  <div class="breadcrumbs">
-	    $Breadcrumbs
-	  </div>
+	<div class="breadcrumbs">
+		$Breadcrumbs
+	</div>
 	<% end_if %>
 
 
@@ -569,16 +560,16 @@ with the *StaffHolder* page type.
 
 	:::php
 	<?php
-
+	
 	class StaffHolder extends Page {
 		static $db = array(
 		);
 		static $has_one = array(
 		);
-
+		
 		static $allowed_children = array('StaffPage');
 	}
-
+	
 	class StaffHolder_Controller extends Page_Controller {
 		
 	}
@@ -602,9 +593,9 @@ insert an image in the *$Content* field).
 		
 		function getCMSFields() {
 			$fields = parent::getCMSFields();
-
+			
 			$fields->addFieldToTab("Root.Content.Images", new ImageField('Photo'));
-
+			
 			return $fields;
 		}
 	}
@@ -642,11 +633,11 @@ The staff section templates aren't too difficult to create, thanks to the utilit
 
 	:::ss
 	<% include Menu2 %>
-	 
+	
 	<div id="Content" class="typography">
 		<% include Breadcrumbs %>
 		$Content
-
+		
 		<ul id="StaffList">
 			<% control Children %>
 			<li>
@@ -671,14 +662,14 @@ The *StaffPage* template is also very straight forward.
 
 	:::ss
 	<% include Menu2 %>
-
+	
 	<div id="Content" class="typography">
 		<% include Breadcrumbs %>
-
+		
 		<div id="StaffPhoto">
 			$Photo.SetWidth(150)
 		</div>
-
+		
 		$Content
 	</div>
 

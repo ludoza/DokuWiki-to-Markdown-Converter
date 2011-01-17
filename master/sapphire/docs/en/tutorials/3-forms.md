@@ -29,7 +29,7 @@ the form in a method on *HomePage_Controller*.
 
 	:::php
 	class HomePage_Controller extends Page_Controller {
-	   // ...
+		// ...
 	
 		function BrowserPollForm() {
 			// Create fields
@@ -44,12 +44,12 @@ the form in a method on *HomePage_Controller*.
 					'Lynx' => 'Lynx'
 				))
 			);
-
+			
 			// Create actions
 			$actions = new FieldSet(
 				new FormAction('doBrowserPoll', 'Submit')
 			);
-	
+		
 			return new Form($this, 'BrowserPollForm', $fields, $actions);
 		}
 	
@@ -237,12 +237,12 @@ Change the end of the 'BrowserPollForm' function so it looks like this:
 
 	:::php
 	function BrowserPollForm() {
-	   ...
+		...
 	
-	   // Create validator
-	   $validator = new RequiredFields('Name', 'Browser');
-	
-	   return new Form($this, 'BrowserPollForm', $fields, $actions, $validator);
+		// Create validator
+		$validator = new RequiredFields('Name', 'Browser');
+		
+		return new Form($this, 'BrowserPollForm', $fields, $actions, $validator);
 	}
 
 
@@ -270,17 +270,17 @@ First modify the 'doBrowserPoll' to set the session variable 'BrowserPollVoted' 
 	
 	HomePage_Controller extends Page_Controller {
 		...
-
+		
 		function doBrowserPoll($data, $form) {
 			$submission = new BrowserPollSubmission();
 			$form->saveInto($submission);
 			$submission->write();
-		
+			
 			Session::set('BrowserPollVoted', true);
-
+			
 			Director::redirectBack();
 		}
-
+		
 		...
 	}
 
@@ -293,7 +293,7 @@ it is.
 		if(Session::get('BrowserPollVoted')) {
 			return false;
 		}
-	
+		
 		...
 
 
@@ -323,7 +323,7 @@ then create our graph using a page control in the template. Create the function 
 	function BrowserPollResults() {
 		$submissions = DataObject::get('BrowserPollSubmission');
 		$total = $submissions->Count();
-
+		
 		$doSet = new DataObjectSet();
 		foreach($submissions->groupBy('Browser') as $browser => $data) {
 			$percentage = (int) ($data->Count() / $total * 100);
@@ -333,7 +333,7 @@ then create our graph using a page control in the template. Create the function 
 			);
 			$doSet->push(new ArrayData($record));
 		}
-
+		
 		return $doSet;
 	}
 
