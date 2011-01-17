@@ -96,10 +96,6 @@ The information documented in this page is reflected in a few places in the code
 updating the database to have the required schema.
 
 
-## Common Problems
-
-See [database-troubleshooting](/howto/database-troubleshooting) for common issues that happen with our database structure.
-
 ## Future work
 
 *  We realise that a fixed mapping between the database and object-model isn't appropriate in all cases.  In particular,

@@ -359,7 +359,7 @@ mailinglist](http://groups.google.com/group/silverstripe-dev/browse_thread/threa
 
 To migrate a database that was built with SilverStripe 2.1.x or 2.2.x, follow these steps:
 
-*  Upgrade your SilverStripe installation to at least 2.3.2 (see [upgrading](upgrading))
+*  Upgrade your SilverStripe installation to at least 2.3.2 (see [upgrading](/installation/upgrading))
 *  Backup your database content
 *  Login as an administrator
 *  Run http://mysite.com/dev/build

@@ -31,7 +31,7 @@ the archive downloads, typically using a version control system like "git" or "s
 General guidelines:
 
 *  Adhere to our [coding conventions](coding-conventions)
-*  If your patch is extensive, discuss it first on the [silverstripe forum]([[http///www.silverstripe.com/silverstripe-forum/) (ideally before doing any serious coding)
+*  If your patch is extensive, discuss it first on the [silverstripe forum](http///www.silverstripe.com/silverstripe-forum/) (ideally before doing any serious coding)
 *  Check your patches against the latest "trunk" or "master", as well as the latest release. 
 Please not that the latest stable release will often not be sufficient! (of all modules)
 *  Provide complete [unit test coverage](/topics/testing) - depending on the complexity of your work, this is a required
@@ -63,7 +63,7 @@ If you want to learn more about git, please have a look at the [free online git 
 
 ### Submitting patches (for subversion)
 
-Other modules will be hosted on [subversion](subversion.tigris.org), in which case you have to
+Other modules will be hosted on [subversion](http://subversion.tigris.org), in which case you have to
 package your changes as a "patch" file. Please read the [official Subversion book](http://svnbook.red-bean.com/) (available free online) for a general introduction to subversion. 
 
 To submit a patch, [register](http://open.silverstripe.com/apply) and attach the patch to the appropriate ticket. 
@@ -202,7 +202,7 @@ of text somewhere?
 * Provide context: Give API documentation the "bigger picture" by referring to Developer Guides inside your PHPDoc.
 * Make your documentation findable: Documentation lives by interlinking content, so please make sure your contribution doesn't become an
 inaccessible island. Your page should at least be linked on the index page in the same folder. It can also appear
-as "related content" on other resource (e.g. [topics/search](/topics/search) might link to [howto/search-dataobjects](/howto/search-dataobjects)).
+as "related content" on other resource (e.g. `/topics/search` might link to `howto/search-dataobjects`).
 * Avoid FAQs: FAQs are not a replacement of a coherent, well explained documentation. If you've done a good job
 documenting, there shouldn't be any "frequently asked questions" left ;)
 * Commit early and often: You don't need to completely finish documentation, as long as you mark areas needing refinement.
@@ -275,7 +275,7 @@ The [sapphiredocs](http://open.silverstripe.org/browser/modules/sapphiredocs/tru
 ## Translating the User Interface ##
 
 The content for UI elements (button labels, field titles) and instruction texts shown in the CMS and
-elsewhere is stored in the PHP code for a module (see [i18n](/i18n)). All content can be extracted as a "language file"
+elsewhere is stored in the PHP code for a module (see [i18n](/topics/i18n)). All content can be extracted as a "language file"
 which is then uploaded to [translate.silverstripe.org](http://translate.silverstripe.org). This website provides
 an online editor for translators (like you!). Every now and then, translations will be merged back into
 the codebase from there, and released alongside other PHP code.

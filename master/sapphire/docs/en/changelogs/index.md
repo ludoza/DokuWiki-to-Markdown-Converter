@@ -2,7 +2,7 @@
 
 Keep up to date with new releases subscribe to the [SilverStripe Release Announcements](https://groups.google.com/group/silverstripe-announce) group.
 
-For information on how to upgrade to newer versions consult the [upgrading](upgrading) guide.
+For information on how to upgrade to newer versions consult the [upgrading](/installation/upgrading) guide.
 
 ## Stable Releases
 

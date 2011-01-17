@@ -10,7 +10,7 @@ Page Types are the basic building blocks of any SilverStripe website. A page typ
 when the form is submitted
 
 All the pages on the base installation are of the page type "Page". See
-[tutorial:2-extending-a-basic-site](tutorial/2-extending-a-basic-site) for a good introduction to page-types.
+[tutorial:2-extending-a-basic-site](/tutorial/2-extending-a-basic-site) for a good introduction to page-types.
 
 Each page type on your website is a sub-class of the SiteTree class. Usually, you’ll define a class called ‘Page’
 and use this template to lay out the basic design elements that don’t change. Take a look at mysite/templates/Page.ss.
@@ -50,7 +50,7 @@ added on the object class. For example, Page or StaffPage. Every time you run db
 checks if any new entries are added to the `$db` array and adds any fields to the database that are missing.
 
 For example, you may want an additional field on a StaffPage class which extends Page, called Author. Author is a
-standard text field, and can be [casted](objectmodel) as a variable character object in php (VARCHAR in SQL). In the
+standard text field, and can be [casted](/topics/datamodel) as a variable character object in php (VARCHAR in SQL). In the
 following example, our Author field is casted as a variable character object with maximum characters of 50. This is
 especially useful if you know how long your source data needs to be.
 
@@ -72,7 +72,7 @@ model works.
 
 ## Adding formfields and tabs
 
-See [form](/topics/forms) and [tutorial:2-extending-a-basic-site](tutorial/2-extending-a-basic-site)
+See [form](/topics/forms) and [tutorial:2-extending-a-basic-site](/tutorial/2-extending-a-basic-site)
 
 ## Removing inherited form fields and tabs
 

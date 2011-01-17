@@ -440,7 +440,7 @@ module which will make your *Project* page without any module affected to it.
 
 ## Displaying the data on your website
 
-Now that we have created all the *Page* and *DataObject* classes necessary and the [RelationTables](/relationtable) to
+Now that we have created all the *Page* and *DataObject* classes necessary and the relational tables to
 manage the [relations](../topics/datamodel#relations) between them, we would like to see these relations on the website.
 
 We will see in this section how to display all these relations but also how to create a template for a *DataObject*.

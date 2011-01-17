@@ -18,6 +18,6 @@ a simple data relationships
 
 # Help: If you get stuck
 
- * [Common Problems](/topics/common-problems): Review some existing solutions to common problems.
+ * [Common Problems](/installation/common-problems): Review some existing solutions to common problems.
  * [SilverStripe Forums](http://www.silverstripe.com/silverstripe-forum/): Head over to the forums and ask the community
 for help

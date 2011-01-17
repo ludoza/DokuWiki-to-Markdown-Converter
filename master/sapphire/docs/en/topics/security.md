@@ -35,7 +35,7 @@ result in *double escaping* and alters the actually saved data (e.g. by adding s
 ### Manual escaping
 
 As a rule of thumb, whenever you're creating raw queries (or just chunks of SQL), you need to take care of escaping
-yourself. See [coding-conventions](/misc/coding-conventions) and [escape-types](escape-types) for ways to cast and convert
+yourself. See [coding-conventions](/misc/coding-conventions) and [datamodel](/topics/datamodel) for ways to cast and convert
 your data.
 
 *  SQLQuery
@@ -142,7 +142,7 @@ outputting through SSViewer.
 
 ### Overriding default escaping in templates
 
-You can force escaping on a casted value/object by using an [escape type](escape-types) method in your template, e.g.
+You can force escaping on a casted value/object by using an [escape type](/topics/datamodel) method in your template, e.g.
 "XML" or "ATT". 
 
 Template (see above):
@@ -223,7 +223,7 @@ Template:
 
 Whenever you insert a variable into an HTML attribute within a template, use $VarName.ATT, no not $VarName.
 
-You can also use the built-in casting in PHP by using the *obj()* wrapper, see [objectmodel](objectmodel)  .
+You can also use the built-in casting in PHP by using the *obj()* wrapper, see [datamodel](/topics/datamodel)  .
 
 ### Escaping URLs
 

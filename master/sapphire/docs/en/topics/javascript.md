@@ -14,7 +14,7 @@ files, rather than including `<script>` and `<link>` tags in your templates. Thi
 of requirements can be built up from different places outside of the main controller, for example included `FormField`
 instances.
 
-See [:Requirements](/Requirements) documentation.
+See [requirements](/reference/requirements) documentation.
 
 ## jQuery, jQuery UI and jQuery.entwine: Our libraries of choice
 
@@ -437,8 +437,7 @@ JavaScript:
 
 Although they are the minority of cases, there are times when a simple HTML fragment isn't enough.  For example, if you
 have server side code that needs to trigger the update of a couple of elements in the CMS left-hand tree, it would be
-inefficient to send back the HTML of entire tree. SilverStripe can serialize to and from JSON (see the [Convert
-class](/Convert)), and jQuery deals very well with it through
+inefficient to send back the HTML of entire tree. SilverStripe can serialize to and from JSON (see the `[api:Convert]` class), and jQuery deals very well with it through
 [jQuery.getJSON()](http://docs.jquery.com/Ajax/jQuery.getJSON#urldatacallback), as long as the HTTP content-type is
 properly set.
 

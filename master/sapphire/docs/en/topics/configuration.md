@@ -25,7 +25,7 @@ This file is detected in each folder by `[api:ManifestBuilder]`. This way, every
 can have independent configuration-rules.
 
 //Please note that this is the only place where you can put in procedural code - all other functionality is wrapped in
-classes (see [common-problems](/topics/common-problems)).//
+classes (see [common-problems](/installation/common-problems)).//
 
 You can call most static methods from _config.php - classes will be loaded as required. Here's a list - **this is
 incomplete - please add to it** *Try to keep it in alphabetical order too! :)*

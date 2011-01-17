@@ -5,7 +5,7 @@ Please read our [guide to contributing documentation](misc/contributing#writing-
 ### Overview
 
  * [Getting started](http://silverstripe.org/getting-started/) | [Feature Overview](http://silverstripe.org/introduction/) | [Demo](http://demo.silverstripe.org/)
- * [Download and Installation](installation/) | [Upgrading](upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
+ * [Download and Installation](installation/) | [Upgrading](/installation/upgrading) | [Requirements](server-requirements) | [Changelog](http://open.silverstripe.org/wiki/ChangeLog) | [Roadmap](http://open.silverstripe.com/roadmap)  
  * [API documentation](http://api.silverstripe.org/current) | [Official english book](http://www.silverstripe.org/silverstripe-book) | [Official german book](http://www.silverstripe.org/das-silverstripe-buch)  
 
 
@@ -23,13 +23,13 @@ Please read our [guide to contributing documentation](misc/contributing#writing-
    * [3. Forms](tutorials/3-forms)
    * [4. Site Search](tutorials/4-site-search)
    * [5. Relationships](tutorials/5-dataobject-relationship-management)
- * [Common Problems](topics/common-problems)
+ * [Common Problems](installation/common-problems)
 
 ### Level 2: SilverStripe fundamentals
 
 *  [Templates](reference/templates): SilverStripe has its own templating engine
 *  [Themes](topics/themes): How to customize your site with themes
-*  [Controllers](topics/controllers): Coordination from a URL-request to finding the controller-class
+*  [Controllers](topics/controller): Coordination from a URL-request to finding the controller-class
 *  [Pagetypes](topics/page-types): Clarifying the relationship between a page-object and a silverstripe-class
 *  [Datamodel](topics/datamodel): Object-relational database model with MVC
 *  [Database Structure](reference/database-structure): Breakdown of a typical SilverStripe database
@@ -48,10 +48,10 @@ Please read our [guide to contributing documentation](misc/contributing#writing-
 *  [RSS Feeds](reference/rssfeed)
 *  [Debugging](topics/debugging)
 *  [Errorhandling](topics/error-handling)
-*  [Testing Guide](testing/testing-guide): Framework for automated testing like Unittests
+*  [Testing Guide](topics/testing/testing-guide): Framework for automated testing like Unittests
 *  [Built-in Page Controls](reference/built-in-page-controls)
 *  [Execution Pipeline](reference/execution-pipeline): Tracking a request from director to template-rendering
-*  [Recipes/Howtos](howtos/)
+*  [Recipes/Howtos](howto/)
 
 ### Level 4: Contributing to the SilverStripe core
 

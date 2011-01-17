@@ -48,7 +48,7 @@ every page on the site, if that's easier.
 
 Please make sure all code inside '*.php' files is wrapped in classes. Due to the way `[api:ManifestBuilder]`
 includes all files with this extension, any **procedural code will be executed on every call**. Most common error here
-is putting a test.php/phpinfo.php file in the document root. See [datamodel](/topics/datamodel) and [controllers](/topics/controllers)
+is putting a test.php/phpinfo.php file in the document root. See [datamodel](/topics/datamodel) and [controllers](/topics/controller)
 for ways how to structure your code.
 
 Also, please check that you have PHP enabled on the webserver, and you're at least running PHP 5.1.

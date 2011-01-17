@@ -38,8 +38,7 @@ so they are very helpful. In case you need to fall back to plain-jane SQL, have 
 	:::php
 	$record = DataObject::get_by_id($obj, $id);
 
-**CAUTION: Please make sure to properly escape your SQL-snippets (see [security](/topics/security) and
-[escape-types](escape-types)).**
+**CAUTION: Please make sure to properly escape your SQL-snippets (see [security](/topics/security).**
 
 ## Joining 
 
