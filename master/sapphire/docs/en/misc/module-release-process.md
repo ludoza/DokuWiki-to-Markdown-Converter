@@ -26,8 +26,8 @@ available for opensource projects, including wiki and bugtracker functionality (
 
 * Add your module to [silverstripe.org/modules](http://silverstripe.org/modules) (and keep the version compatibility information current)
 * Follow our [coding-conventions](coding-conventions)
-* Write unit tests and functional tests covering code bundled with the module - see [testing-guide](testing-guide)
-* Ensure your code is [localizable](/topics/i18n) and [translatable](/topcs/translation)
+* Write unit tests and functional tests covering code bundled with the module - see [testing-guide](/topics/testing)
+* Ensure your code is [localizable](/topics/i18n) and [translatable](/topics/translation)
 
 ### Maintenance
 
@@ -154,7 +154,7 @@ might be overkill.
 	svn co http://svn.silverstripe.com/open/modules/(modulename)/tags/rc/(releasenumber)-rc1 (modulename)
 	tar czf (modulename)_(releasenumber)-rc1.tar.gz (modulename)
 
-See ["ReleaseBranches" chapter]([[http///svnbook.red-bean.com/en/1.5/svn.branchmerge.commonpatterns.html#svn.branchmerge.commonpatterns.release)
+See ["ReleaseBranches" chapter](http///svnbook.red-bean.com/en/1.5/svn.branchmerge.commonpatterns.html#svn.branchmerge.commonpatterns.release)
 and ["Tags" chapter](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.tags.html).
 
 ### Stabilizing A Release

@@ -27,8 +27,7 @@ SilverStripe CMS uses [jQuery UI](http://ui.jquery.com) on top of jQuery.
 For any custom code developed with jQuery, you have four choices to structure it: Custom jQuery Code, a jQuery Plugin, a
 jQuery UI Widget, or a `jQuery.entwine` behaviour. We'll detail below where each solution is appropriate.
 
-**Important**: Historically we have been using [PrototypeJS](http://prototypejs.com), which is now discouraged (see
-[legacy documentation](/javascript/prototypejs)). SilverStripe as a framework doesn't impose a choice of library. It
+**Important**: Historically we have been using [PrototypeJS](http://prototypejs.com), which is now discouraged. SilverStripe as a framework doesn't impose a choice of library. It
 tries to generate meaningful markup which you can alter with other JavaScript libraries as well. Only the CMS itself and
 certain form widgets require jQuery to function correctly. You can also use jQuery in parallel with other libraries, see
 [here](http://docs.jquery.com/Using_jQuery_with_Other_Libraries).

@@ -93,10 +93,10 @@ Some people may note that we have used the same naming convention as Ruby on Rai
 
 Tutorials and recipes for creating tests using the Sapphire framework:
 
-*  **[Create a Sapphire Test](/topics/testing//create-sapphire-test)**
+*  **[Create a Sapphire Test](/topics/testing/create-sapphire-test)**
 *  **Load Test Fixtures**
-*  **[Create a Functional Test](/topics/testing//create-functional-test)**
-*  **[Test Outgoing Email Sending](/topics/testing//test-email-sending)**
+*  **[Create a Functional Test](/topics/testing/create-functional-test)**
+*  **[Test Outgoing Email Sending](/topics/testing/email-sending)**
 
 ## Glossary {#glossary}
 

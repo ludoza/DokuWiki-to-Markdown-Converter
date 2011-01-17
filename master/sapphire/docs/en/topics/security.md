@@ -115,7 +115,7 @@ for in-depth information about "Cross-Site-Scripting".
 ### Escaping model properties
 
 `[api:SSViewer]` (the SilverStripe template engine) automatically takes care of escaping HTML tags from specific
-object-properties by [casting](casting) its string value into a `[api:DBField]` object.
+object-properties by [casting](/topics/datamodel#casting) its string value into a `[api:DBField]` object.
 
 PHP:
 
@@ -316,7 +316,7 @@ cast types can be found here:
 *  `(object)` - cast to object
 
 Note that there is also a 'SilverStripe' way of casting fields on a class, this is a different type of casting to the
-standard PHP way. See [ casting](casting ).
+standard PHP way. See [casting](/topics/datamodel#casting).
 
 
 

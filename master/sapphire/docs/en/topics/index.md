@@ -27,7 +27,7 @@ It is where most documentation should live, and is the natural "second step" aft
  * [Security](security): How to develop secure SilverStripe applications with good code examples
  * [Templates](templates): SilverStripe template syntax: Variables, loops, includes and much more
  * [Testing](testing): Functional and Unit Testing with PHPUnit and SilverStripe's testing framework
- * [Developing Themes](theme-developement): Package templates, images and CSS to a reusable theme
+ * [Developing Themes](theme-development): Package templates, images and CSS to a reusable theme
  * [Translation](translation): Creating content in multiple languages
  * [Widgets](widgets): Small feature blocks which can be placed on a page by the CMS editor
 

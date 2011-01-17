@@ -62,4 +62,4 @@ subdirectories inside the *code*-directory.
 ## Best Practices
 
 ### Making /assets readonly
-See [secure-development#filesystem](secure-development#filesystem)
+See [secure-development#filesystem](/topics/security#filesystem)

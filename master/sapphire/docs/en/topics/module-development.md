@@ -46,7 +46,7 @@ adherence to conventions, writing documentation, and releasing updates. See [con
 ## Reference
 
 **How To:**
-*  [Add a link to your module in the main SilverStripe Admin Menu](leftandmain)
+*  [Add a link to your module in the main SilverStripe Admin Menu](/reference/leftandmain)
 **
 Useful Links:**
 

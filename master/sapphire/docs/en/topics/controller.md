@@ -86,7 +86,7 @@ action (the shift point is set to start parsing variables and the appropriate co
 after it.  If the URLSegment is **order** then '/order/tag/34' and '/order/tag/asdf' match but '/order/tag/' will not
 
 
-You can use the **debug_request=1** switch from the [urlvariabletools](urlvariabletools) to see these in action.
+You can use the **debug_request=1** switch from the [urlvariabletools](/reference/urlvariabletools) to see these in action.
 
 ## API Documentation
 

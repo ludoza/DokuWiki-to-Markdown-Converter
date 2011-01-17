@@ -8,7 +8,6 @@ the viewer and/or perform processing steps.
 
 ## Best Practices
 
-*  Forcing a site to run in SSL mode: see [ssl](/howto/ssl)
 *  Checking for an Ajax-Request: Use Director::is_ajax() instead of checking for $_REQUEST['ajax'].
 
 ## Redirection

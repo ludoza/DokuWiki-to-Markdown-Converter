@@ -8,9 +8,7 @@ core.
 
 **General Usage**
 
-Append the option and corresponding value to your URL in your browser's address bar.  You may find the [Firefox
-UrlParams extension](https///addons.mozilla.org/en-US/firefox/addon/1290) useful in order to debug a POST requests (Like
-Forms).
+Append the option and corresponding value to your URL in your browser's address bar.  You may find the [Firefox UrlParams extension](https///addons.mozilla.org/en-US/firefox/addon/1290) useful in order to debug a POST requests (Like Forms).
 
     http://yoursite.com/page?option_name=value
     http://yoursite.com/page?option_1=value&option_2=value
@@ -54,7 +52,7 @@ Forms).
  | URL Variable     | | Values | | Description                                                                                      | 
  | ------------     | | ------ | | -----------                                                                                      | 
  | debug_memory     | | 1      | | Output the number of bytes of memory used for this request                                       | 
- | debug_profile    | | 1      | | Enable the [profiler](profiler) for the duration of the request                                  | 
+ | debug_profile    | | 1      | | Enable the [profiler](/topics/debugging) for the duration of the request                                  | 
  | profile_trace    | | 1      | | Includes full stack traces, must be used with **debug_profile**                                  | 
  | debug_behaviour  | | 1      | | Get profiling of [Behaviour.js](http://bennolan.com/behaviour) performance (Firebug recommended) | 
  | debug_javascript | | 1      | | Force debug-output on live-sites                                                                 | 

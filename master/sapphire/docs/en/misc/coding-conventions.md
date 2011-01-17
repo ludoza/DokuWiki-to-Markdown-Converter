@@ -447,7 +447,7 @@ Use [ANSI SQL](http://en.wikipedia.org/wiki/SQL#Standardization) format where po
 
 ### Secure Development 
 
-See [secure-development](secure-development) for conventions related to handing security permissions.
+See [security](/topics/security) for conventions related to handing security permissions.
 
 ## License
 

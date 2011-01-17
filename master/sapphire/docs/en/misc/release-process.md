@@ -19,7 +19,7 @@ reviewing the [release milestone](http://open.silverstripe.com/roadmap) on open.
 announced on the [release announcements mailing list](http://groups.google.com/group/silverstripe-announce).
 
 Releases of the *cms* and *sapphire* modules are coupled at the moment, they follow the same numbering scheme. Module
-releases are documented separately in [module-releases](module-releases).
+releases are documented separately in [module-release-process](module-release-process).
 
 ## Release Numbering
 
@@ -57,9 +57,9 @@ An example: Say we'd want to rename *BasicAuth::requireLogin()* to follow our co
 *BasicAuth::require_login()*. The method was introduced in *2.1*, we've made the change in *2.3*?
 
 *  *2.3* would've marked the method as *@deprecated*, and documents it as an *API CHANGE* in our
-[:changelog](/changelog). The old method continues to work, but will throw an *E_USER_NOTICE*.
+[changelog](/changelogs). The old method continues to work, but will throw an *E_USER_NOTICE*.
 *  *2.4* would've removed the method, also documenting it as an *API CHANGE*, and mentioning it in the
-[:upgrading](/upgrading) guidelines.
+[upgrading](/installation/upgrading) guidelines.
 
 Exceptions to the deprecation cycle are APIs that have been moved into their own module, and continue to work with the
 new minor release. These changes can be performed in a single minor release without a deprecation period.
@@ -67,7 +67,7 @@ new minor release. These changes can be performed in a single minor release with
 ### Micro releases
 
 Micro releases are issued about every two months for the latest release, typically for security reasons.
-You can safely upgrade to those releases (after reading the [:upgrading](/upgrading) guidelines).
+You can safely upgrade to those releases (after reading the [upgrading](/installation/upgrading) guidelines).
 For example, *2.3.6* was released in February 2010, followed by *2.3.7* in March 2010.
 
 ### Supported versions

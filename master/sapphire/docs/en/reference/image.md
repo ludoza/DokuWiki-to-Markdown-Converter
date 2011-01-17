@@ -11,7 +11,6 @@ including resizing.
 
 *  `[api:Image]`. Designed to provide a complex image uploader for the CMS.
 *  `[api:SimpleImageField]`. A Simple Image Upload Form
-*  See [imageupload](/howto/image-upload) for a example
 
 ### Resizing Images in PHP
 

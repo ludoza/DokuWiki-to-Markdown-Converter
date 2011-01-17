@@ -3,7 +3,7 @@
 In this section you will find a collection of guides to answer your "How do I?" questions. These are designed to be informal and focused 
 on tasks and goals rather than going into deep details.
 
-You will find it useful to read the introduction [tutorials](tutorials) before tackling these How-Tos so you can understand some of 
+You will find it useful to read the introduction [tutorials](/tutorials) before tackling these How-Tos so you can understand some of 
 the language and functions which are used in the guides.
 
 * [Import CSV Data](csv-import). Build a simple CSV importer using either ModelAdmin or a custom controller

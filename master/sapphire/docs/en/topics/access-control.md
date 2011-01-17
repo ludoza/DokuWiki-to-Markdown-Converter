@@ -6,7 +6,7 @@ site you have to figure this stuff out, and it's not entirely obvious.
 ## Ways to restrict access
 
 There are a number of ways to restrict access in SilverStripe.  In the security tab in the CMS you can create groups
-that have access to certain parts.  The options can be found on the [permissions](/reference/permissions) documentation. 
+that have access to certain parts.  The options can be found on the [permissions](/reference/permission) documentation. 
 
 Once you have groups, you can set access for each page for a particular groups.  This can be:
 - anyone
@@ -45,8 +45,7 @@ works.
 ### Loading the admin page: looking at security
 
 If you go to [your site]/admin -- how does that work?
-*Director.php* maps the 'admin' URL request through a *Director* rule to the CMSMain controller (see
-[cmsmain](cmsmain), with no arguments. 
+*Director.php* maps the 'admin' URL request through a *Director* rule to the CMSMain controller (see `[api:CMSMain]`, with no arguments. 
 
 *CMSMain.init()* calls its parent which, of all things is called *LeftAndMain*. It's in *LeftAndMain* that the
 important security checks are made by calling *Permission::check*. 

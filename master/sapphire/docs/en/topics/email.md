@@ -114,10 +114,6 @@ $value)**
 
 See http://en.wikipedia.org/wiki/E-mail#Message_header for a list of header names.
 
-### Bounced Emails
-
-[email_bouncehandler](email_bouncehandler)
-
 ### Newsletters
 
 The [newsletter module](http://silverstripe.org/newsletter-module) provides a UI and logic to send batch emails.

@@ -345,7 +345,7 @@ You can use a widget on your website to provide a list of links for switching la
 ### Enabling the _t() function in templates 
 
 If you're looking to use [the _t() function](http://doc.silverstripe.com/doku.php?id=i18n#the_t_function) in template
-files, you'll need to [set the i18n locale](multilingualcontent#setting_the_i18n_locale) first. 
+files, you'll need to [set the i18n locale](/topics/translation#setting_the_i18n_locale) first. 
 
 (The reasoning is as follows: Translatable doesn't set the i18n locale. Historically these were two separate systems,
 but they're reasonably interchangeable for a front-end website. The distinction is mainly valid for the CMS, because you

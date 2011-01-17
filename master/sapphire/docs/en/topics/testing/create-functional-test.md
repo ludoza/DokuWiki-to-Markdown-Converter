@@ -63,5 +63,5 @@ and body.
 
 We can use string processing on the body of the response to then see if it fits with our expectations.
 
-If you're testing for natural language responses like error messages, make sure to use [i18n](i18n) translations through
+If you're testing for natural language responses like error messages, make sure to use [i18n](/topics/i18n) translations through
 the *_t()* method to avoid tests failing when i18n is enabled.
