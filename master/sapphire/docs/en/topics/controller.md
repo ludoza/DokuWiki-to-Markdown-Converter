@@ -65,28 +65,28 @@ The RequestHandler class will parse all rules you specify against the following 
 
  | Pattern |							| Description | 
  | ----------- |						| --------------- | 
- | **$**       |						| **Param Variable** - Starts the name of a paramater variable, it is optional to match this unless ! is used | 
- | **!**       | 						| **Require Variable** - Placing this after a parameter variable requires data to be present for the rule to match | 
- | **%%//%%**  | 						| **Shift Point** - Declares that only variables denoted with a $ are parsed into the $params AFTER this point in the regex | 
+ | `$`       |						| **Param Variable** - Starts the name of a paramater variable, it is optional to match this unless ! is used | 
+ | `!`       | 						| **Require Variable** - Placing this after a parameter variable requires data to be present for the rule to match | 
+ | `//`  | 						| **Shift Point** - Declares that only variables denoted with a $ are parsed into the $params AFTER this point in the regex | 
 
 ## Examples
 
 See maetl's article in the Links below of a detailed explanation. 
 
-**'$Action%%//%%$ID/$OtherID'** - Standard URL handler for a Controller.  Take whatever URLSegment it is set to, find
-the Action to match a function in the Controller, and parse two optional $param variables that will be named ID and
-OtherID.
+`$Action/$ID/$OtherID` - Standard URL handler for a Controller.  Take whatever `URLSegment` it is set to, find
+the Action to match a function in the controller, and parse two optional `$param` variables that will be named `ID` and
+`OtherID`.
 
 
-**'admin/help%%//%%$Action/$ID'** - Match an url starting with /admin/help/, but don't include /help/ as part of the
-action (the shift point is set to start parsing variables and the appropriate controller action AFTER the //)
+`admin/help//$Action/$ID` - Match an url starting with `/admin/help/`, but don't include `/help/` as part of the
+action (the shift point is set to start parsing variables and the appropriate controller action AFTER the `//`)
 
 
-**'tag/$Tag!'** - Match an URL starting with /tag/ after the controller's URLSegment and require it to have something
-after it.  If the URLSegment is **order** then '/order/tag/34' and '/order/tag/asdf' match but '/order/tag/' will not
+`tag/$Tag!` - Match an URL starting with `/tag/` after the controller's `URLSegment` and require it to have something
+after it.  If the URLSegment is **order** then `/order/tag/34` and `/order/tag/asdf` match but `/order/tag/` will not
 
 
-You can use the **debug_request=1** switch from the [urlvariabletools](/reference/urlvariabletools) to see these in action.
+You can use the `debug_request=1` switch from the [urlvariabletools](/reference/urlvariabletools) to see these in action.
 
 ## API Documentation
 
