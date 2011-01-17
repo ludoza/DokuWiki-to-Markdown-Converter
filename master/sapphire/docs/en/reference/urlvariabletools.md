@@ -8,7 +8,7 @@ core.
 
 **General Usage**
 
-Append the option and corresponding value to your URL in your browser's address bar.  You may find the [Firefox UrlParams extension](https///addons.mozilla.org/en-US/firefox/addon/1290) useful in order to debug a POST requests (Like Forms).
+Append the option and corresponding value to your URL in your browser's address bar.  You may find the [Firefox UrlParams extension](https://addons.mozilla.org/en-US/firefox/addon/1290) useful in order to debug a POST requests (Like Forms).
 
     http://yoursite.com/page?option_name=value
     http://yoursite.com/page?option_1=value&option_2=value

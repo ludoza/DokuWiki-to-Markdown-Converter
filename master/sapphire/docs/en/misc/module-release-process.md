@@ -154,7 +154,7 @@ might be overkill.
 	svn co http://svn.silverstripe.com/open/modules/(modulename)/tags/rc/(releasenumber)-rc1 (modulename)
 	tar czf (modulename)_(releasenumber)-rc1.tar.gz (modulename)
 
-See ["ReleaseBranches" chapter](http///svnbook.red-bean.com/en/1.5/svn.branchmerge.commonpatterns.html#svn.branchmerge.commonpatterns.release)
+See ["ReleaseBranches" chapter](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.commonpatterns.html#svn.branchmerge.commonpatterns.release)
 and ["Tags" chapter](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.tags.html).
 
 ### Stabilizing A Release
@@ -173,7 +173,7 @@ export to a tar.gz.
 
 *  See [Producing OSS: "Announcing Releases"](http://producingoss.com/en/testing-and-releasing.html#release-announcement)
 *  Update your [documentation](#documentation) in the sourcecode, wiki and README
-*  Add your release to the [silverstripe.org/modules](silverstripe.org/modules) listing
+*  Add your release to the [silverstripe.org/modules](http://silverstripe.org/modules) listing
 *  Announce the release on [silverstripe-announce](http://groups.google.com/group/silverstripe-announce).  Include a
 [changelog](#changelogs), the download link and instructions for filing bug reports.
 *  If this release is a major release, our [marketing guys](http://silverstripe.com/contact/) will strive to announce it

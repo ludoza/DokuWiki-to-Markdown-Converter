@@ -200,9 +200,8 @@ Some subclasses of `[api:FormField]` for ways to create sophisticated report-tab
 
 ## Related
 
-*  [datamodel](/topics/datamodel) **Broken Link**
+*  [datamodel](/topics/datamodel)
 *  `[api:DataObject]`
-*  [database-troubleshooting](database-troubleshooting) **Broken Link**
 *  [database-structure](database-structure)
 
 ## API Documentation

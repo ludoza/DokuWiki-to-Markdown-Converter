@@ -31,7 +31,7 @@ the archive downloads, typically using a version control system like "git" or "s
 General guidelines:
 
 *  Adhere to our [coding conventions](coding-conventions)
-*  If your patch is extensive, discuss it first on the [silverstripe forum](http///www.silverstripe.com/silverstripe-forum/) (ideally before doing any serious coding)
+*  If your patch is extensive, discuss it first on the [silverstripe forum](http///www.silverstripe.org/forums/) (ideally before doing any serious coding)
 *  Check your patches against the latest "trunk" or "master", as well as the latest release. 
 Please not that the latest stable release will often not be sufficient! (of all modules)
 *  Provide complete [unit test coverage](/topics/testing) - depending on the complexity of your work, this is a required

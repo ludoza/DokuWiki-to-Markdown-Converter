@@ -100,7 +100,7 @@ For output of an image tag with the image automatically resized to 80px width, y
 
 ### Form Upload
 
-For usage on a website form, see [imageupload](howto/image-upload) and `[api:SimpleImageField]`.
+For usage on a website form, see `[api:SimpleImageField]`.
 If you want to upload images within the CMS, see `[api:ImageField]`.
 
 ### Clearing Thumbnail Cache
