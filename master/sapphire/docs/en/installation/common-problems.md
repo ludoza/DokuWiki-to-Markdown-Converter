@@ -2,6 +2,8 @@
 
 From time to time, things will go wrong.  Here's a few things to try when you're confused.
 
+See ["8 Common SilverStripe Errors Explain (and solved!) (ssbits.com)"](http://www.leftandmain.com/silverstripe-tips/2010/09/08/8-common-silverstripe-errors-explained-and-solved/) for more common problems.
+
 ## The output shows only "Website Error"
 
 This first and foremost means that your environment is set to "live mode" (see [environment-management]), which disallows detailed error messages for security reasons. You'll typically need to get your environment into "dev mode" to see more information.
