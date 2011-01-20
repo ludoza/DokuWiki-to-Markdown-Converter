@@ -28,6 +28,7 @@ All command-line arguments are documented on [phpunit.de](http://www.phpunit.de/
  * `phpunit sapphire/tests/`: Run all tests of the sapphire module
  * `phpunit sapphire/tests/filesystem`: Run all filesystem tests within the sapphire module
  * `phpunit sapphire/tests/filesystem/FolderTest.php`: Run a single test
+ * `phpunit sapphire/tests '' flush=all`: Run tests with optional `$_GET` parameters (you need an empty second argument)
 
 ## Coverage reports
 
@@ -118,6 +119,21 @@ Example `mysite/_config.php`:
 			if($db == 'sqlite3') $databaseConfig['type'] = 'SQLite3Database';
 		}
 	}
+	
+You can either use the database on a single invocation:
+
+	phpunit sapphire/tests "" db=sqlite3
+	
+or through a `<php>` flag in your `phpunit.xml` (see [Appenix C: "Setting PHP INI settings"](http://www.phpunit.de/manual/current/en/appendixes.configuration.html)):
+
+	<phpunit>
+		<!-- ... -->
+		
+		<php>
+			<var name="db" value="sqlite3"/>
+		</php>
+
+	</phpunit>
 
 Note: It is recommended that you still run your tests with the original
 database driver (at least on continuous integration) to ensure a realistic test scenario.
