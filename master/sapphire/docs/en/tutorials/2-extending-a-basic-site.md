@@ -224,7 +224,7 @@ To make the date field a bit more user friendly, you can add a dropdown calendar
 
 	:::php
 	<?php
-
+	
 	class ArticlePage extends Page {
 	
 	// .....
