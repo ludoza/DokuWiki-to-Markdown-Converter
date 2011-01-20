@@ -150,7 +150,7 @@ Documentation for a software project is a continued and collaborative effort,
 we encourage everybody to contribute, from simply fixing spelling mistakes, to writing recipes/howtos,
 reviewing existing documentation, and translating the whole thing.
 Modifying documentation requires basic [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) and
-[Markdown](http://daringfireball.net/projects/markdown/)/[SSMarkdown][ss-markdown] knowledge. 
+[Markdown](http://daringfireball.net/projects/markdown/)/[SSMarkdown](ss-markdown) knowledge. 
 If you have downloaded SilverStripe or a module, chances
 are that you already have the documentation files - they are kept alongside the source code.
 
