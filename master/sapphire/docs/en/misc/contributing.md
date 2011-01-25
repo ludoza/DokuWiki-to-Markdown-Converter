@@ -26,7 +26,7 @@ for our modules and core codebase.
 
 In contrast to running a SilverStripe website, you can't use the standard download archive for this purpose.
 Our [module list on silverstripe.org](http://silverstripe.org/modules) lists the repository locations alongside
-the archive downloads, typically using a version control system like "git" or "subversion".
+the archive downloads, typically using a version control system like "git" or "subversion". 
 
 General guidelines:
 

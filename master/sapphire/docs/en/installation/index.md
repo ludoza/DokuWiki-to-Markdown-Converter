@@ -5,7 +5,7 @@
 SilverStripe is a web application. This means that you will need to have a webserver and database meeting its 
 [requirements](server-requirements). We will take you through the setup of the server environment as well the application itself.
 
-You can [download](http://silverstripe.org/download) SilverStripe as an archive or from version control.
+You can [download](http://silverstripe.org/download) SilverStripe as an archive or from [version control](from-source).
 
 If you already have an installed version of SilverStripe, please see our [upgrading](upgrading) guide.
 
