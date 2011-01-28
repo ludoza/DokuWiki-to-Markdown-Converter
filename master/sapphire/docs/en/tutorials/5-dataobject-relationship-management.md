@@ -94,7 +94,7 @@ The first step is to create the student and project objects.
 	   );
 	
 	}
-
+	class Project_Controller extends Page_Controller {}
 
 This code will create a relationship between the *Project* table and the *Student* table by storing the id of the
 respective *Student* in the *Project* table.
@@ -248,6 +248,7 @@ The first step is to create the mentor object and set the relation with the *Stu
 	   }
 	
 	}
+	class Mentor_Controller extends Page_Controller {}
 
 	:::php
 	class Student extends DataObject {
@@ -629,12 +630,13 @@ because these two classes have the same fields ( FirstName, Surname and National
 Now the template is created, we need to establish the link between the *Student* and *Mentor* classes with their common
 template.
 
-To do so, add this code in the two classes.
+To do so, add this code in the two classes.  This will create a control on each of those objects which can be called 
+from templates either within a control block or dot notation.
 
 ** tutorial/code/Student.php, tutorial/code/Mentor.php **
 
 	:::php
-	   function forTemplate() {
+	   function PersonalInfo() {
 	      $template = 'GSOCPerson';
 	      return $this->renderWith( $template );
 	   }
@@ -647,13 +649,13 @@ We can now modify the *Project* template.
 	    ...
 	
 	    <% if MyStudent %>
-	        $MyStudent
+	        $MyStudent.PersonalInfo
 	
 	        <h3>Mentor</h3>
 		
 	        <% control MyStudent %>
 	            <% if MyMentor %>
-	                $MyMentor
+	                $MyMentor.PersonalInfo
 	            <% else %>
 	                <p>This student doesn't have any mentor.</p>
 	            <% end_if %>
@@ -776,7 +778,6 @@ This tutorial has demonstrated how easy it is to manage all the type of relation
 CMS and how to display them on the website.
 
 
-
 ## Download the code
 
-You can download all the ![complete code](_images/tutorial5-completecode.zip) of this tutorial.
+You can download all the complete code [update forthcoming] of this tutorial.
