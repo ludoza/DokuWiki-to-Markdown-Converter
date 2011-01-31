@@ -38,22 +38,23 @@ For information on how to upgrade to newer versions consult the [upgrading](/ins
 
 ## Alpha/beta/release candidate ##
 
-* [2.4.4-rc2](rc/2.4.4-rc2) - 20 December 2010
-* [2.4.4-rc1](rc/2.4.4-rc1) - 10 December 2010
-* [2.4.3-rc2](rc/2.4.3-rc2) - 4 November 2010
-* [2.4.3-rc1](rc/2.4.3-rc1) - 1 November 2010
-* [2.4.2-rc2](rc/2.4.2-rc2) - 20 September 2010
-* [2.4.2-rc1](rc/2.4.2-rc1) - 16 September 2010
-* [2.4.1-rc2](rc/2.4.1-rc2) - 21 July 2010
-* [2.4.1-rc1](rc/2.4.1-rc1) - 16 July 2010
-* [2.4.0-rc3](rc/2.4.0-rc3) - 4 May 2010
-* [2.4.0-rc2](rc/2.4.0-rc2) - 30 April 2010
-* [2.4.0-rc1](rc/2.4.0-rc1) - 1st April 2010
-* [2.4.0-beta2](beta/2.4.0-beta2) - 17 March 2010
-* [2.4.0-beta1](beta/2.4.0-beta1) - 29 January 2010
-* [2.4.0-alpha1](alpha/2.4.0-alpha1) - 11 November 2009
-* [2.3.10-rc2](rc/2.3.10-rc2) - 20 December 2010
-* [2.3.10-rc1](rc/2.3.10-rc1) - 10 December 2010
-* [2.3.9-rc2](rc/2.3.9-rc2) - 4 November 2010
-* [2.3.9-rc1](rc/2.3.9-rc1) - 1 November 2010
-* [2.3.8-rc1](rc/2.3.8-rc1) - 16 July 2010
+ * [2.4.5-rc1](rc/2.4.5-rc1) - 31 January 2011
+ * [2.4.4-rc2](rc/2.4.4-rc2) - 20 December 2010
+ * [2.4.4-rc1](rc/2.4.4-rc1) - 10 December 2010
+ * [2.4.3-rc2](rc/2.4.3-rc2) - 4 November 2010
+ * [2.4.3-rc1](rc/2.4.3-rc1) - 1 November 2010
+ * [2.4.2-rc2](rc/2.4.2-rc2) - 20 September 2010
+ * [2.4.2-rc1](rc/2.4.2-rc1) - 16 September 2010
+ * [2.4.1-rc2](rc/2.4.1-rc2) - 21 July 2010
+ * [2.4.1-rc1](rc/2.4.1-rc1) - 16 July 2010
+ * [2.4.0-rc3](rc/2.4.0-rc3) - 4 May 2010
+ * [2.4.0-rc2](rc/2.4.0-rc2) - 30 April 2010
+ * [2.4.0-rc1](rc/2.4.0-rc1) - 1st April 2010
+ * [2.4.0-beta2](beta/2.4.0-beta2) - 17 March 2010
+ * [2.4.0-beta1](beta/2.4.0-beta1) - 29 January 2010
+ * [2.4.0-alpha1](alpha/2.4.0-alpha1) - 11 November 2009
+ * [2.3.10-rc2](rc/2.3.10-rc2) - 20 December 2010
+ * [2.3.10-rc1](rc/2.3.10-rc1) - 10 December 2010
+ * [2.3.9-rc2](rc/2.3.9-rc2) - 4 November 2010
+ * [2.3.9-rc1](rc/2.3.9-rc1) - 1 November 2010
+ * [2.3.8-rc1](rc/2.3.8-rc1) - 16 July 2010
