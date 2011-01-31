@@ -53,6 +53,7 @@ For information on how to upgrade to newer versions consult the [upgrading](/ins
  * [2.4.0-beta2](beta/2.4.0-beta2) - 17 March 2010
  * [2.4.0-beta1](beta/2.4.0-beta1) - 29 January 2010
  * [2.4.0-alpha1](alpha/2.4.0-alpha1) - 11 November 2009
+ * [2.3.11-rc1](rc/2.3.11-rc1) - 31 January 2011
  * [2.3.10-rc2](rc/2.3.10-rc2) - 20 December 2010
  * [2.3.10-rc1](rc/2.3.10-rc1) - 10 December 2010
  * [2.3.9-rc2](rc/2.3.9-rc2) - 4 November 2010
