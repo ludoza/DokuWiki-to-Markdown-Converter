@@ -6,11 +6,13 @@ For information on how to upgrade to newer versions consult the [upgrading](/ins
 
 ## Stable Releases
 
+ * [2.4.5](2.4.5) - 2 February 2011
  * [2.4.4](2.4.4) - 21 December 2010
  * [2.4.3](2.4.3) - 11 November 2010
  * [2.4.2](2.4.2) - 22 September 2010
  * [2.4.1](2.4.1) - 23 July 2010
  * [2.4.0](2.4.0)
+ * [2.3.11](2.3.11) - 2 February 2011
  * [2.3.10](2.3.10) - 21 December 2010
  * [2.3.9](2.3.9) - 11 November 2010
  * [2.3.8](2.3.8) - 23 July 2010
