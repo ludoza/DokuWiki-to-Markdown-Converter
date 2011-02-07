@@ -39,12 +39,14 @@ This is a table which sums up the relations between them :
 Before starting the relations management, we need to create a *ProjectsHolder* class where we will save the GSOC Project
 pages.
 
-** tutorial/code/ProjectsHolder.php **
+*tutorial/code/ProjectsHolder.php*
 
 	:::php
+	<?php
+	
 	class ProjectsHolder extends Page {
 	
-	    static $allowed_children = array( 'Project' );
+		static $allowed_children = array( 'Project' );
 	
 	}
 	
@@ -62,36 +64,40 @@ This relation is called a **1-to-1** relation.
 
 The first step is to create the student and project objects.
 
-** tutorial/code/Student.php **
+*tutorial/code/Student.php*
 
 	:::php
+	<?php
+	
 	class Student extends DataObject {
 	
-	   static $db = array(
-	      'FirstName' => 'Text',
-	      'Lastname' => 'Text',
-	      'Nationality' => 'Text'
-	   );
+		static $db = array(
+			'FirstName' => 'Text',
+			'Lastname' => 'Text',
+			'Nationality' => 'Text'
+		);
 	
-	   function getCMSFields_forPopup() {
-	      $fields = new FieldSet();
-	      $fields->push( new TextField( 'FirstName', 'First Name' ) );
-	      $fields->push( new TextField( 'Lastname' ) );
-	      $fields->push( new TextField( 'Nationality' ) );
-	      return $fields;
-	   }
+		function getCMSFields_forPopup() {
+			$fields = new FieldSet();
+			$fields->push( new TextField( 'FirstName', 'First Name' ) );
+			$fields->push( new TextField( 'Lastname' ) );
+			$fields->push( new TextField( 'Nationality' ) );
+			return $fields;
+		}
 	
 	}
 
 
-** tutorial/code/Project.php **
+*tutorial/code/Project.php*
 
 	:::php
+	<?php
+	
 	class Project extends Page {
 	
-	   static $has_one = array(
-	      'MyStudent' => 'Student'
-	   );
+		static $has_one = array(
+			'MyStudent' => 'Student'
+		);
 	
 	}
 	class Project_Controller extends Page_Controller {}
@@ -104,32 +110,33 @@ The second step is to add the table in the method *getCMSFields* which will allo
 	:::php
 	class Project extends Page {
 	
-	   ...
+		...
 	
-	   function getCMSFields() {
-	      $fields = parent::getCMSFields();
-	
-	      $tablefield = new HasOneComplexTableField(
-	         $this,
-	         'MyStudent',
-	         'Student',
-	         array(
-		    'FirstName' => 'First Name',
-		    'Lastname' => 'Family Name',
-		    'Nationality' => 'Nationality'
-	         ),
-	         'getCMSFields_forPopup'
-	      );
-	      $tablefield->setParentClass('Project');
-	
-	      $fields->addFieldToTab( 'Root.Content.Student', $tablefield );
-	
-	      return $fields;
-	   }
+		function getCMSFields() {
+			$fields = parent::getCMSFields();
+			
+			$tablefield = new HasOneComplexTableField(
+				$this,
+				'MyStudent',
+				'Student',
+				array(
+					'FirstName' => 'First Name',
+					'Lastname' => 'Family Name',
+					'Nationality' => 'Nationality'
+				),
+				'getCMSFields_forPopup'
+			);
+			$tablefield->setParentClass('Project');
+			
+			$fields->addFieldToTab( 'Root.Content.Student', $tablefield );
+			
+			return $fields;
+		}
 	
 	}
 
 Let’s walk through the parameters of the *HasOneComplexTableField* constructor.
+
 1.  **$this** : The first object concerned by the relation
 2.  **'MyStudent'** : The name of the second object of the relation
 3.  **'Student'** : The type of the second object of the relation
@@ -143,17 +150,18 @@ You can also directly replace the last parameter by this code :
 	      new TextField( 'FirstName', 'First Name' ),
 	      new TextField( 'Lastname' ),
 	      new TextField( 'Nationality' )
-	   ),
+	   );
 
 
-Don't forget to rebuild the database using
-[http://localhost:3000/db/build?flush=1](http://localhost:3000/db/build?flush=1) before you proceed to the next part of
-this tutorial.
+<div class="tip" markdown='1'>
+	Don't forget to rebuild the database using *dev/build?flush=1* before you 
+	proceed to the next part of this tutorial.
+</div>
 
-Now that we have created our *Project* page type and *Student* data object, let’s add some content. Go into the CMS
-and create one *Project* page for each project listed
-[above](#what-are-we-working-towards) under a *ProjectsHolder* page named
-**GSOC Projects** for instance.
+Now that we have created our *Project* page type and *Student* data object, let’s add some content.
+
+Go into the CMS and create one *Project* page for each project listed [above](#what-are-we-working-towards) under a 
+*ProjectsHolder* page named **GSOC Projects** for instance.
 
 ![tutorial:gsoc-project-creation.png](_images/gsoc-project-creation.png)
 
@@ -161,12 +169,12 @@ As you can see in the tab panel *Student*, the adding functionality is titled *A
 modify this title, you have to add this code in the *getCMSFields* method of the *Project* class :
 
 	:::php
-	      $tablefield->setAddTitle( 'A Student' );
+	$tablefield->setAddTitle( 'A Student' );
 
 
 Select now one of the *Project* page that you have created, go in the tab panel *Student* and add all the students
-listed [above](#what-are-we-working-towards) by clicking on the link **Add
-A Student** of your *HasOneComplexTableField* table.
+listed [above](#what-are-we-working-towards) by clicking on the link **Add A Student** of your 
+*HasOneComplexTableField* table.
 
 ![tutorial:gsoc-student-creation.png](_images/gsoc-student-creation.png)
 
@@ -189,18 +197,20 @@ To use your *HasOneComplexTableField* table for a **1-to-1** relation, make this
 	:::php
 	class Project extends Page {
 	
-	   ...
+		...
 	
-	   function getCMSFields() {
-	
-	      ...
-	
-	      $tablefield->setOneToOne();
-	
-	      $fields->addFieldToTab( 'Root.Content.Student', $tablefield );
-	
-	      return $fields;
-	   }
+		function getCMSFields() {
+		
+			...
+			
+			$tablefield->setParentClass('Project');
+			
+			$tablefield->setOneToOne();
+			
+			$fields->addFieldToTab( 'Root.Content.Student', $tablefield );
+			
+			return $fields;
+		}
 	
 	}
 
@@ -222,30 +232,32 @@ This relation is called a **1-to-many** relation.
 
 The first step is to create the mentor object and set the relation with the *Student* data object.
 
-** tutorial/code/Mentor.php **
+*tutorial/code/Mentor.php*
 
 	:::php
+	<?php
+	
 	class Mentor extends Page {
 	
-	   static $db = array(
-	      'FirstName' => 'Text',
-	      'Lastname' => 'Text',
-	      'Nationality' => 'Text'
-	   );
-	
-	   static $has_many = array(
-	      'Students' => 'Student'
-	   );
-	
-	   function getCMSFields() {
-	      $fields = parent::getCMSFields();
-	
-	      $fields->addFieldToTab( 'Root.Content.Main', new TextField( 'FirstName' ) );
-	      $fields->addFieldToTab( 'Root.Content.Main', new TextField( 'Lastname' ) );
-	      $fields->addFieldToTab( 'Root.Content.Main', new TextField( 'Nationality' ) );
-	
-	      return $fields;
-	   }
+		static $db = array(
+			'FirstName' => 'Text',
+			'Lastname' => 'Text',
+			'Nationality' => 'Text'
+		);
+		
+		static $has_many = array(
+			'Students' => 'Student'
+		);
+		
+		function getCMSFields() {
+			$fields = parent::getCMSFields();
+			
+			$fields->addFieldToTab( 'Root.Content.Main', new TextField( 'FirstName' ) );
+			$fields->addFieldToTab( 'Root.Content.Main', new TextField( 'Lastname' ) );
+			$fields->addFieldToTab( 'Root.Content.Main', new TextField( 'Nationality' ) );
+		
+			return $fields;
+		}
 	
 	}
 	class Mentor_Controller extends Page_Controller {}
@@ -253,11 +265,11 @@ The first step is to create the mentor object and set the relation with the *Stu
 	:::php
 	class Student extends DataObject {
 	
-	   ...
+		...
 	
-	   static $has_one = array(
-	      'MyMentor' => 'Mentor'
-	   );
+		static $has_one = array(
+			'MyMentor' => 'Mentor'
+		);
 	
 	}
 
@@ -270,40 +282,40 @@ The second step is to add the table in the method *getCMSFields* which will allo
 	:::php
 	class Mentor extends Page {
 	
-	   ...
+		...
 	
-	   function getCMSFields() {
-	      $fields = parent::getCMSFields();
-	
-	      ...
-	
-	      $tablefield = new HasManyComplexTableField(
-	         $this,
-	         'Students',
-	         'Student',
-	         array(
-		    'FirstName' => 'FirstName',
-		    'Lastname' => 'Family Name',
-		    'Nationality' => 'Nationality'
-	         ),
-	         'getCMSFields_forPopup'
-	      );
-	      $tablefield->setAddTitle( 'A Student' );
-	
-	      $fields->addFieldToTab( 'Root.Content.Students', $tablefield );
-	
-	      return $fields;
-	   }
+		function getCMSFields() {
+			$fields = parent::getCMSFields();
+		
+			...
+		
+			$tablefield = new HasManyComplexTableField(
+				$this,
+				'Students',
+				'Student',
+				array(
+					'FirstName' => 'FirstName',
+					'Lastname' => 'Family Name',
+					'Nationality' => 'Nationality'
+				),
+				'getCMSFields_forPopup'
+			);
+			$tablefield->setAddTitle( 'A Student' );
+		
+			$fields->addFieldToTab( 'Root.Content.Students', $tablefield );
+		
+			return $fields;
+		}
 	
 	}
 
-To know more about the parameters of the *HasManyComplexTableField* constructor,
-[check](#project_-_student_relation) those of the *HasOneComplexTableField*
-constructor.
+To know more about the parameters of the *HasManyComplexTableField* constructor, [check](#project_-_student_relation)
+those of the *HasOneComplexTableField* constructor.
 
-Don't forget to rebuild the database using
-[http://localhost:3000/db/build?flush=1](http://localhost:3000/db/build?flush=1) before you proceed to the next part of
-this tutorial.
+<div class="tip" markdown='1'>
+	Don't forget to rebuild the database using *dev/build?flush=1* before you 
+	proceed to the next part of this tutorial.
+</div>
 
 Now that we have created our *Mentor* page type, go into the CMS and create one *Mentor* page for each mentor listed
 [above](#what-are-we-working-towards) under a simple *Page* named
@@ -312,8 +324,7 @@ Now that we have created our *Mentor* page type, go into the CMS and create one 
 ![tutorial:gsoc-mentor-creation.png](_images/gsoc-mentor-creation.png)
 
 For each *Mentor* page, you can now affect **many** students created previously ( see the
-[list](#What_are_we_working_towards?) ) by going in the tab panel
-*Students*.
+[list](#What_are_we_working_towards?) ) by going in the tab panel *Students*.
 
 ![tutorial:gsoc-mentor-student-selection.png](_images/gsoc-mentor-student-selection.png)
 
@@ -342,7 +353,7 @@ This relation is called a **many-to-many** relation.
 
 The first step is to create the module object and set the relation with the *Project* page type.
 
-** tutorial/code/Module.php **
+*tutorial/code/Module.php*
 
 	:::php
 	class Module extends DataObject {
@@ -455,7 +466,7 @@ Let's start with the *ProjectsHolder* page created before. For this template, we
 
 ![tutorial:gsoc-projects-table.png](_images/gsoc-projects-table.png)
 
-** tutorial/templates/Layout/ProjectsHolder.ss **
+*tutorial/templates/Layout/ProjectsHolder.ss*
 
 	:::ss
 	<div class="typography">
@@ -532,7 +543,7 @@ Let's start with the *ProjectsHolder* page created before. For this template, we
 	</div>
 
 
-** tutorial/templates/Includes/SideBar.ss **
+*tutorial/templates/Includes/SideBar.ss*
  You might want to move the include above the typography div in your layouts to get rid of the bullets.
 
 	:::ss
@@ -553,7 +564,7 @@ We can now do the same for every *Project* page by creating its own template.
 
 ![tutorial:gsoc-project.png](_images/gsoc-project.png)
 
-** tutorial/templates/Layout/Project.ss **
+*tutorial/templates/Layout/Project.ss*
 
 	:::ss
 	<div class="typography">
@@ -619,7 +630,7 @@ What we would like now is to create a special template for the *DataObject* *Stu
 be used when we will call directly the variable in the *Project* template. In our case, we will use the same template
 because these two classes have the same fields ( FirstName, Surname and Nationality ).
 
-** tutorial/templates/Includes/GSOCPerson.ss **
+*tutorial/templates/Includes/GSOCPerson.ss*
 
 	:::ss
 	<p>First Name: <strong>$FirstName</strong></p>
@@ -633,7 +644,7 @@ template.
 To do so, add this code in the two classes.  This will create a control on each of those objects which can be called 
 from templates either within a control block or dot notation.
 
-** tutorial/code/Student.php, tutorial/code/Mentor.php **
+*tutorial/code/Student.php, tutorial/code/Mentor.php*
 
 	:::php
 	   function PersonalInfo() {
@@ -708,7 +719,7 @@ it *MyProject* for instance.
 We can now use this value in the same way that we have used the other relations.
 That's how we can use this function in the *Mentor* template.
 
-** tutorial/templates/Layout/Mentor.ss **
+*tutorial/templates/Layout/Mentor.ss*
 
 	:::ss
 	<div class="typography">

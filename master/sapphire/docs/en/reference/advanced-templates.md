@@ -1,37 +1,4 @@
-# Templates
-
-## Introduction
-
-SilverStripe templates consist of HTML code augmented with special control codes, described below.  Because of this, you
-can have as much control of your site's HTML code as you like.
-
-Because the SilverStripe templating language is a string processing language it can therefore be used to make other
-text-based data formats, such as XML or RTF.
-
-Here is a very simple template:
-
-	:::ss
-	<html>
-	<head>
-	  <% base_tag %>
-	  <title>$Title</title>
-	</head>
-	<body>
-	  <h1>$Title</h1>
-	  <p>
-	  <% control Menu(1) %>
-	  <a href="$Link" title="$Description.JS">$Title</a>
-	  <% end_control %>
-	  </p>
-	  <div class="typography">
-	     $Content
-	  </div>
-	</body>
-	</html>
-	<%-- comment --%>
-
-
-## Template Syntax
+# Advanced Template Syntax
 
 The following control codes are available. For a more details list see [built-in-page-controls](/reference/built-in-page-controls):
 
@@ -57,7 +24,22 @@ Note you also cannot past a variable into a variable, so using `$Property($Value
 
 ###  Includes
 
-You can perform includes using the Requirements Class via the template controls.  See the section on [Includes in Templates](requirements#including_inside_template_files) for more details and examples.
+Within SilverStripe templates we have the ability to include other templates from the Includes directory using the SS
+'include' tag. For example, the following code would include the `Includes/SideBar.ss` code:
+
+	:::ss
+	<% include SideBar %>
+
+The "include" tag can be particularly helpful for nested functionality. In this example, the include only happens if
+a variable is true
+
+	:::ss
+	<% if CurrentMember %>
+		<% include MembersOnlyInclude %>
+	<% end_if %>
+
+You can also perform includes using the Requirements Class via the template controls. See the section on
+[Includes in Templates](requirements#including_inside_template_files) for more details and examples.
 
 	:::ss
 	<% require themedCSS(LeftNavMenu) %>
@@ -88,8 +70,8 @@ In this example, `$A` and `$B` refer to `$obj->Property()->A()` and `$obj->Prope
 
 	:::ss
 	<% control Property %>
-	  <span>$A</span>
-	  <span>$B</span>
+		<span>$A</span>
+		<span>$B</span>
 	<% end_control %>
 
 
@@ -102,7 +84,7 @@ tag is repeated once for each main menu item, and the `$Link` and `$Title` value
 
 	:::ss
 	<% control Menu(1) %>
-	<a href="$Link">$Title</a>
+		<a href="$Link">$Title</a>
 	<% end_control %>
 
 
@@ -207,7 +189,6 @@ for a "FooBar" value rather than a "Foo" and then "Bar" value or when you have a
 variable you will need to escape the specific variable. In the following example `$Foo` is `3`.
 
 	:::ss
-	
 	$Foopx // returns "" (as it looks for a Foopx value)
 	{$Foo}px  // returns "3px" (CORRECT)
 
@@ -345,18 +326,18 @@ default if it exists and there is no action in the url parameters.
 	:::php
 	class MyPage_Controller extends Page_Controller {
 	
-	 function init(){
-	  parent::init();  
-	 }
+		function init(){
+			parent::init();  
+		}
 	 
-	 function index() {
-	  if(Director::is_ajax()) {
-	   return $this->renderWith("myAjaxTemplate");
-	  }
-	  else {
-	   return Array();// execution as usual in this case...
-	  }
-	 }
+		function index() {
+			if(Director::is_ajax()) {
+				return $this->renderWith("myAjaxTemplate");
+			}
+			else {
+				return Array();// execution as usual in this case...
+			}
+		}
 	}
 
 
@@ -380,8 +361,8 @@ For, example, we might have this on http://www.example.com/my-long-page/
 
 	:::ss
 	<ul>
-	<li><a href="#section1">Section 1</a></li>
-	<li><a href="#section2">Section 2</a></li>
+		<li><a href="#section1">Section 1</a></li>
+		<li><a href="#section2">Section 2</a></li>
 	</ul>
 
 
@@ -395,8 +376,8 @@ would be created:
 
 	:::ss
 	<ul>
-	<li><a href="my-long-page/#section1">Section 1</a></li>
-	<li><a href="my-long-page/#section2">Section 2</a></li>
+		<li><a href="my-long-page/#section1">Section 1</a></li>
+		<li><a href="my-long-page/#section2">Section 2</a></li>
 	</ul>
 
 
@@ -407,6 +388,26 @@ situations, you can disable fragment link rewriting like so:
 	SSViewer::setOption('rewriteHashlinks', false);
 
 
-## Related Pages
+## Casting and Escaping
 
- * [Themes](../topics/themes)
+Method and variables names that deal with strings or arrays of strings should have one of the following 5 prefixes:
+
+*  **RAW_** Raw plain text, as a user would like to see it, without any HTML tags
+*  **XML_** Text suitable for insertion into an HTML or XML data-set.  This may contain HTML content, for example if the
+content came from a WYSIWYG editor.
+*  **JS_** Data that can safely be inserted into JavaScript code.
+*  **ATT_** Data that can safely be inserted into an XML or HTML attribute.
+
+The same prefixes are used for both strings and arrays of strings.  We did this to keep things simple: passing a string
+with the wrong encoding is a far subtler a problem than passing an array instead of a string, and therefore much harder
+to debug.
+
+
+## Related
+* [Templates](/topics/templates)
+* [Themes](/topics/themes)
+* [Developing Themes](theme-development)
+* [Widgets](/topics/widgets)
+* [Images](/reference/image)
+* [Built in page controls](/reference/built-in-page-controls)
+* [Including Templates](/reference/requirements)

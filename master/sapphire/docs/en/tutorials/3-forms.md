@@ -139,7 +139,7 @@ Add the following code to the form style sheet:
 		margin: 20px 10px 0 0;
 		width: 20%;
 	}
-		#BrowserPoll form fieldset {
+		form fieldset {
 			border:0;
 		}
 		#BrowserPoll .message {

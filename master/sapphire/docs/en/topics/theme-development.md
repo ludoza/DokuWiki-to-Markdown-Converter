@@ -111,6 +111,8 @@ All you have to do now is tell your site to use your new theme - This is defined
 Go to yoursite.com/?flush=1 and check it out. You should be using your new theme! Not really that awesome or amazing is
 it? Next we need to add some CSS Magic!
 
+See [Templates](/reference/themes) for more information about templates.
+
 
 ### CSS Files
 

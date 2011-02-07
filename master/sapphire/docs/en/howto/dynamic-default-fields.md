@@ -13,6 +13,7 @@ A simple example is to set a field to the current date and time:
 	/**
 	 * Sets the Date field to the current date.
 	 */
+	
 	public function populateDefaults() {
 		$this->Date = date('Y-m-d');
 		parent::populateDefaults();
@@ -26,12 +27,13 @@ methods. For example:
 	 * This method combines the Title of the parent object with the Title of this
 	 * object in the FullTitle field.
 	 */
+	
 	public function populateDefaults() {
 		if($parent = $this->Parent()) {
 			$this->FullTitle = $parent->Title . ': ' . $this->Title;
 		} else {
 			$this->FullTitle = $this->Title;
 		}
-
+		
 		parent::populateDefaults();
 	}
