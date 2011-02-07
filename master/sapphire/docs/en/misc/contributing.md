@@ -9,24 +9,23 @@ See our [high level overview on silverstripe.org](http://silverstripe.org/contri
 
 *  [silverstripe.org/forums](http://silverstripe.org/forums): Forums on silverstripe.org
 *  [silverstripe-dev](http://groups.google.com/group/silverstripe-dev): Core development mailinglist
-*  [silverstripe-documentation](http://groups.google.com/group/silverstripe-documentation): Documentation team mailinglist
+*  [silverstripe-documentation](http://groups.google.com/group/silverstripe-documentation): Documentation team mailing list
 
-## Reporting Bugs ##
+## Reporting Bugs
 
 If you have discovered a bug in SilverStripe, we'd be glad to hear about it -
 well written bug reports can be half of the solution already!
 Our bugtracker is located on [open.silverstripe.org](http://open.silverstripe.org/) (create a [new ticket](http://open.silverstripe.org/newticket)).
 
-## Submiting Patches, Bugfixes and Enhancements ##
+## Submiting Patches, Bugfixes and Enhancements
 
-We're not perfect, and need your help - for example in the form of patches
-for our modules and core codebase. 
+We're not perfect, and need your help - for example in the form of patches for our modules and core codebase.
 
-### Setup your project for contributions ###
+### Setup your project for contributions
 
 In contrast to running a SilverStripe website, you can't use the standard download archive for this purpose.
 Our [module list on silverstripe.org](http://silverstripe.org/modules) lists the repository locations alongside
-the archive downloads, typically using a version control system like "git" or "subversion". 
+the archive downloads, typically using a version control system like "git" or "[subversion](subversion)". 
 
 General guidelines:
 
@@ -44,7 +43,7 @@ changes
 [API documentation](http://api.silverstripe.org/trunk) for good examples.
 * Also check and update documentation on [doc.silverstripe.org](http://doc.silverstripe.org). Check for any references to functionality deprecated or extended through your patch. Documentation changes should be included in the patch.
 
-### Sending pull requests (for git) ###
+### Sending pull requests (for git)
 
 The SilverStripe core (`sapphire` and `cms`), as well as some of the more popular modules are in
 git version control. SilverStripe hosts its modules on [github.com/silverstripe](http://github.com/silverstripe).
@@ -91,26 +90,27 @@ Some gotchas when using subversion and the patch format:
 *  Create patches relative to the working copy (*sapphire/main.php* instead of */Users/myuser/sapphire/main.php*)
 *  Remember the shortcomingsof *svn diff*: Please document moved files and created/deleted directories separately
 
-### Commit Messages ###
+### Commit Messages
 
 We try to maintain a consistent record of descriptive commit messages. As we automatically generate changelogs from them, we need a way to categorize and filter. Please prefix **all** commit messages with one of the following tags: 
 
-  * `API CHANGE`: You've added or modified the functions available to developers writing custom PHP.
-  * `ENHANCEMENT`: You've added something to the user-visible aspects of SilverStripe.
-  * `BUGFIX`: You've fixed something that was broken.
-  * `MINOR` Mark things that are so trivial they're not even worth telling users about; specifically, to prevent adding clutter to our automatically generated changelogs. MINOR is not used to mark a minor bugfix or feature, see above.   
-  Some examples:
-    * a subsequent commit to a bugfix/feature that you committed earlier that day
-    * adding unit tests (that are more interesting to developers of SilverStripe than users of it)
-    * subversion/codebase plumbing (changing externals, blocking revisions, moving files around, etc)
-  * In summary: if it's worth including in the changelog, it's not `MINOR`.
+* `API CHANGE`: You've added or modified the functions available to developers writing custom PHP.
+* `ENHANCEMENT`: You've added something to the user-visible aspects of SilverStripe.
+* `BUGFIX`: You've fixed something that was broken.
+* `MINOR` Mark things that are so trivial they're not even worth telling users about; specifically, to prevent adding
+clutter to our automatically generated changelogs. MINOR is not used to mark a minor bugfix or feature, see above.
+Some examples:
+	* a subsequent commit to a bugfix/feature that you committed earlier that day
+	* adding unit tests (that are more interesting to developers of SilverStripe than users of it)
+	* subversion/codebase plumbing (changing externals, blocking revisions, moving files around, etc)
+	* In summary: if it's worth including in the changelog, it's not `MINOR`.
 
 Further guidelines:
 
-  * Each commit should form a logical unit - if you fix two unrelated bugs, commit each one separately
-  * If you are fixing a ticket from our [bugtracker](http://open.silverstripe.com), please append `(fixes #<ticketnumber>)`
-  * If your change is related to another changeset, reference it with `r<revisionnumber>`. 
-  * Please mention the changed classes and methods in your comment - the message should be understandable on its own without browsing any sourcecode
+* Each commit should form a logical unit - if you fix two unrelated bugs, commit each one separately
+* If you are fixing a ticket from our [bugtracker](http://open.silverstripe.com), please append `(fixes #<ticketnumber>)`
+* If your change is related to another changeset, reference it with `r<revisionnumber>`. 
+* Please mention the changed classes and methods in your comment - the message should be understandable on its own without browsing any sourcecode
 
 Example: Bad commit message
 
@@ -144,7 +144,7 @@ You can help us determine the problem and speed up responses by providing us wit
 the issue: SilverStripe version (incl. any installed modules), PHP/webserver version and configuration, anonymized
 webserver access logs (if a hack is suspected), any other services and web packages running on the same server.
 
-## Writing Documentation ##
+## Writing Documentation
 
 Documentation for a software project is a continued and collaborative effort,
 we encourage everybody to contribute, from simply fixing spelling mistakes, to writing recipes/howtos,
@@ -164,7 +164,7 @@ to convert Markdown formatted files into searchable HTML pages with index lists.
 *  Developer Guides: [doc.silverstripe.org](http://doc.silverstripe.org)
 *  Developer API Docuumentation: [api.silverstripe.org](http://api.silverstripe.org)
 
-### Source Control ###
+### Source Control
 
 In order to balance editorial control with effective colaboration, we keep
 documentation alongside the module source code, e.g. in `sapphire/docs/`,
@@ -258,7 +258,7 @@ Code:
 See [Markdown Extra Documentation](http://michelf.com/projects/php-markdown/extra/#html) for more restriction
 on placing HTML blocks inside Markdown.
 
-### Translating Documentation ###
+### Translating Documentation
 
 Documentation is kept alongside the source code, typically in a module subdirectory like `sapphire/docs/en/`.
 Each language has its own subfolder, which can duplicate parts or the whole body of documentation.
@@ -272,7 +272,7 @@ The [sapphiredocs](http://open.silverstripe.org/browser/modules/sapphiredocs/tru
 * [How tech writing sucks: Five Sins](http://www.slash7.com/articles/2006/11/15/tech-writing-the-five-sins)
 * [What is good documentation?](http://www.techscribe.co.uk/techw/whatis.htm)
 
-## Translating the User Interface ##
+## Translating the User Interface
 
 The content for UI elements (button labels, field titles) and instruction texts shown in the CMS and
 elsewhere is stored in the PHP code for a module (see [i18n](/topics/i18n)). All content can be extracted as a "language file"

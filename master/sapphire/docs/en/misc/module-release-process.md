@@ -2,12 +2,15 @@
 
 ## Creating a module
 
-One of the best ways that you can contribute to SilverStripe is by developing a module for SilverStripe.  If you do, we would love to host your module and have you become an official module maintainer on our site. Please read our ["Contributing to SilverStripe"](http://silverstripe.org/contributing-to-silverstripe/) overview.
+One of the best ways that you can contribute to SilverStripe is by developing a module for SilverStripe.  
+If you do, we would love to host your module and have you become an official module maintainer on our site. 
+Please read our ["Contributing to SilverStripe"](http://silverstripe.org/contributing-to-silverstripe/) overview.
 
-Once you have created a module, login at [silverstripe.org](http://silverstripe.org) and [submit your module](http://silverstripe.org/modules/manage/add)
+Once you have created a module, login at [silverstripe.org](http://silverstripe.org) and 
+[submit your module](http://silverstripe.org/modules/manage/add)
 
-It's very important to us that users of SilverStripe can come to expect a level of quality from the core product and any modules running on it. 
-In order to provide this, we require certain things from module maintainers.
+It's very important to us that users of SilverStripe can come to expect a level of quality from the core product and any 
+modules running on it. In order to provide this, we require certain things from module maintainers.
 
 <div class="hint" markdown="1">
 The following documentation describes aspects of subversion, you can read about similiar
@@ -16,13 +19,18 @@ strategies for git on a [free online book](http://progit.org/book).
 
 ### Principles
 
-Strive for features you add to the CMS to be innovatively usable by a content editor rather than a web-developer. Think Wordpress and Apple. Most modules should work by merely placing the code in your SilverStripe installation and running /dev/build. Provide a default set of configuration options that are easily changed in `_config.php` (for instance the `ecommerce` module works out of the box, and you can easily set up a payment provider), aiding a pleasant user experience.
+Strive for features you add to the CMS to be innovatively usable by a content editor rather than a web-developer.
+Think Wordpress and Apple. Most modules should work by merely placing the code in your SilverStripe installation and
+running /dev/build. Provide a default set of configuration options that are easily changed in `_config.php`
+(for instance the `ecommerce` module works out of the box, and you can easily set up a payment provider), aiding a pleasant
+user experience.
 
 ### Code
 
-Each line of code you write should be version controlled, in version control systems like
+Each line of code you write should be version controlled, in version control systems like 
 [subversion](http://subversion.tigris.org) or [Git](http://gitscm.com). There's lots of services that are freely
-available for opensource projects, including wiki and bugtracker functionality (e.g. [Google Code for Subversion](http://code.google.com) or [Github for Git](http://github.com)).
+available for opensource projects, including wiki and bugtracker functionality 
+(e.g. [Google Code for Subversion](http://code.google.com) or [Github for Git](http://github.com)).
 
 * Add your module to [silverstripe.org/modules](http://silverstripe.org/modules) (and keep the version compatibility information current)
 * Follow our [coding-conventions](coding-conventions)
@@ -32,7 +40,8 @@ available for opensource projects, including wiki and bugtracker functionality (
 ### Maintenance
 
 * Create releases (see ["Module Releases"](#module-releases) below)
-* Ensure that your module is patched to always work with the latest SilverStripe release, and note these compatibilities on your modules page on silverstripe.org
+* Ensure that your module is patched to always work with the latest SilverStripe release, and note these compatibilities on 
+your modules page on silverstripe.org
 * Be involved in our community 
     * Subscripe to our developer mailing list and be available to answer questions on the forum. 
     * Attend [irc:our weekly core discussions on IRC](irc/our weekly core discussions on IRC) as regularly as you can.
@@ -41,13 +50,12 @@ available for opensource projects, including wiki and bugtracker functionality (
 
 ### Feedback and Bugtracking
 
-Both Google Code and github.com provide their own bugtracker - we encourage you to use any built-in
-tools that come with your version control hoster. Most Silverstripe-maintained modules have
-their bugtracker on [open.silverstripe.org](http://open.silverstripe.org).
+Both Google Code and github.com provide their own bugtracker - we encourage you to use any built-in tools that come with
+your version control hoster. Most Silverstripe-maintained modules have their bugtracker on 
+[open.silverstripe.org](http://open.silverstripe.org).
 
-Providing bugtracking is a major form of communicating with your users in an efficient way,
-and will provide a good overview of outstanding work and the stability of your code
-to an interested user.
+Providing bugtracking is a major form of communicating with your users in an efficient way, and will provide a good overview
+of outstanding work and the stability of your code to an interested user.
 
 If the user community finds bugs that shouldn't be included in the next stable release, you will need to release another
 release candidate.  If your release candidate is found to be stable, then you can create the stable release.
@@ -55,17 +63,19 @@ release candidate.  If your release candidate is found to be stable, then you ca
 ### Documentation
 
 You should have both **developer documentation** and **user documentation**, and keep them updated with your releases.
-See [Producing OSS: "Documentation"](http://producingoss.com/en/getting-started.html#documentation) and our [contributing guide](contributing#writing-documentation).
+See [Producing OSS: "Documentation"](http://producingoss.com/en/getting-started.html#documentation) and our 
+[contributing guide](contributing#writing-documentation).
 
 ### README file
 
-Each module should have a `README.md file` in the project root in [markdown format](http://daringfireball.net/projects/markdown/), roughly following this template:
+Each module should have a `README.md file` in the project root in 
+[markdown format](http://daringfireball.net/projects/markdown/), roughly following this template:
 
 	
 	# <MODULENAME> Module
-
+		
 	## Maintainer Contact	
-
+	
 	 * <FULLNAME> (Nickname: <NICKNAME>, <EMAIL>)
 	
 	## Requirements
@@ -107,11 +117,15 @@ to be readable in plain text as well).
 
 ### What do you get?
 
-In return for all your hard work in putting a high-quality module on the site, the SilverStripe project has the following options to support you:
+In return for all your hard work in putting a high-quality module on the site, the SilverStripe project has the following 
+options to support you:
 
 *  Use of [trac](http://open.silverstripe.org) to keep your bugs and feature requests organised
-*  Advertising of your module on the http://silverstripe.org/modules/ modules page once it has reached a beta stage and shown to meet our requirements above.
-*  We might showcase your module on our blog and/or newsletter, when it's first released and/or when a major version with significant new features is released. We'll work with you to publicise it on other blogs too (it helps if you deliver screenshots and screencasts)
+*  Advertising of your module on the http://silverstripe.org/modules/ modules page once it has reached a beta stage and shown
+to meet our requirements above.
+*  We might showcase your module on our blog and/or newsletter, when it's first released and/or when a major version with
+significant new features is released. We'll work with you to publicise it on other blogs too (it helps if you deliver 
+screenshots and screencasts)
 *  More influence in suggesting changes to the core product
 *  Kudos on [Ohloh](http://www.ohloh.net/projects/5034?p=SilverStripe+CMS)
 
@@ -129,7 +143,8 @@ bugfixes to this branch**.  This lets you focus on getting a stable version of m
 features can still be added to trunk.
 
 Creating a release branch is a simple `svn cp` command.  In the example below, (modulename) would be something like
-"ecommerce" or "flickrservice", and (releasenumber) would be something like "0.2.1" (see [Producing OSS: Release Numbering](http://producingoss.com/en/development-cycle.html#release-numbering))
+"ecommerce" or "flickrservice", and (releasenumber) would be something like "0.2.1" (see 
+[Producing OSS: Release Numbering](http://producingoss.com/en/development-cycle.html#release-numbering))
 
 	svn cp http://svn.silverstripe.com/open/modules/(modulename)/trunk http://svn.silverstripe.com/open/modules/(modulename)/branches/(releasenumber)
 
@@ -137,7 +152,8 @@ Once you have created a release branch, you should do some testing of the module
 site, and existing site, use the different features, and if possible, install on a couple of different servers.
 
 See [SVN Book: "Release Branches"](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.commonpatterns.html#svn.branchmerge.commonpatterns.release),
-[Producing OSS: "Release Branches"](http://producingoss.com/en/release-branches.html) and [Producing OSS: "Stabilizing a release"](http://producingoss.com/en/stabilizing-a-release.html) for more details.
+[Producing OSS: "Release Branches"](http://producingoss.com/en/release-branches.html) and 
+[Producing OSS: "Stabilizing a release"](http://producingoss.com/en/stabilizing-a-release.html) for more details.
 
 ### Release Candidates
 
@@ -185,8 +201,8 @@ on the main [silverstripe.com blog](http://silverstripe.com/blog) as well
 Each release you make should contain `CHANGELOG` file in the project root with a highlevel overview of additions and
 bugfixes in this release. The `svn log` command gives you all commit messages for a specific project, and is a good
 start to build a changelog (see ["Examining historical changes" chapter](http://svnbook.red-bean.com/en/1.5/svn.tour.history.html)). 
-Depending on the volume of changes, it is preferred
-that you summarize these messages in a more "digestible" form (see [Producing OSS: "Changes vs. Changelog"](http://producingoss.com/en/packaging.html#changelog)).
+Depending on the volume of changes, it is preferred that you summarize these messages in a more "digestible" 
+form (see [Producing OSS: "Changes vs. Changelog"](http://producingoss.com/en/packaging.html#changelog)).
 
 A good `CHANGELOG` example from the subversion project itself:
 
@@ -195,13 +211,13 @@ A good `CHANGELOG` example from the subversion project itself:
 	http://svn.collab.net/repos/svn/tags/1.5.2
 	
 	 User-visible changes:
-
+	
 	  * Set correct permissions on created fsfs shards (r32355, -7)
 	  * Pass client capabilities to start-commit hook (issue #3255)
 	  * Disallow creating nested repositories (issue #3269)
 	
 	 Developer-visible changes:
-
+	
 	  * make libsvn_ra_neon initialization thread-safe (r32497, r32510)
 	
 	Version 1.5.1
@@ -217,3 +233,10 @@ This is also the time to remove the release branch from the subversion tree - we
 the source tree to confuse everyone.  However, before you do this, you will need to merge your changes back to the
 trunk.
 
+## See Also
+
+[Module Development](/topics/module-development)
+[Documentation Guide](contributing#writing-documentation)
+[Contributing to SilverStripe](http://silverstripe.org/contributing-to-silverstripe/)
+[Submit your Module](http://silverstripe.org/modules/manage/add)
+[subversion](subversion)

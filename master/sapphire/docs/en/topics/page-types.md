@@ -140,7 +140,7 @@ and [tutorial:3-forms](/tutorials/3-forms).
 	$page->publish('Stage', 'Live');
 
 
-## updating a page:
+## Updating a page:
 
 	:::php
 	$page = DataObject::get_one("Page", "ParentID = 18");
@@ -150,12 +150,11 @@ and [tutorial:3-forms](/tutorials/3-forms).
 	$page->Status = "Published";
 
 
-
-## Deleting pages
+## Deleting pages:
 
 	:::php
-	$id = $page->ID;
-	$stageRecord = Versioned::get_one_by_stage('SiteTree', 'Stage', "SiteTree.ID = $id");
+	$pageID = $page->ID;
+	$stageRecord = Versioned::get_one_by_stage('SiteTree', 'Stage', "SiteTree.ID = $pageID");
 	if ($stageRecord) $stageRecord->delete();
-	$liveRecord = Versioned::get_one_by_stage('SiteTree', 'Live', "SiteTree_Live.ID = $id");
+	$liveRecord = Versioned::get_one_by_stage('SiteTree', 'Live', "SiteTree_Live.ID = $pageID");
 	if ($liveRecord) $liveRecord->delete();
