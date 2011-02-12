@@ -1,7 +1,0 @@
-Permission:
-  permission1:
-    Code: CODE1
-Group:
-  existinggroup:
-    Code: existinggroup
-    Permissions: =>Permission.permission1

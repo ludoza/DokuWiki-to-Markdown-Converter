@@ -1,7 +1,0 @@
-Group:
-  existinggroup:
-    Code: existinggroup
-Member:
-  existingauthor:
-    Email: existingauthor@test.com
-    FirstName: Existing Author

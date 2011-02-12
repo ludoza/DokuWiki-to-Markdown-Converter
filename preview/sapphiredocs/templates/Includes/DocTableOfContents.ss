@@ -1,1 +1,0 @@
-<div id="table-of-contents" class="sidebar-box"></div>

@@ -1,6 +1,0 @@
-"FirstName","Biography","Birthday","IsRegistered"
-"John","He's a good guy","31/01/1988","1"
-"Jane","She is awesome.
-So awesome that she gets multiple rows and \"escaped\" strings in her biography","31/01/1982","0"
-"Jamie","Pretty old\, with an escaped comma","31/01/1882","1"
-"Järg","Unicode FTW","31/06/1982","1"
