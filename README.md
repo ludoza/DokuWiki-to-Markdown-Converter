@@ -3,7 +3,7 @@
 Tools to convert the original SilverStripe documentation wiki (based on DokuWiki syntax)
 to the new Markdown-driven [doc.silverstripe.org](http://doc.silverstripe.org).
 
-*UPDATE: The conversion has been completed*
+**UPDATE: The conversion has been completed. Please apply any content changes against the [github.com/silverstripe/sapphire](http://github.com/silverstripe/sapphire) and [github.com/silverstripe/silverstripe-cms](http://github.com/silverstripe/silverstripe-cms) repositories.**
 
  * [Mailinglist](http://groups.google.com/group/silverstripe-documentation)
  * [Planning wiki page](http://doc.silverstripe.org/tmp:documentation-restructuring)
