@@ -1,7 +1,0 @@
-===== Feature Changes =====
-
-
-
-===== API Changes =====
-
-  * DataObjectDecorator::extraStatics() can no longer refer to $this because it's called statically

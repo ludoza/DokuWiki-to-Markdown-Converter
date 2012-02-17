@@ -1,8 +1,0 @@
-====== Upgrading 2.3.10 ======
-===== Changelogs =====
-
- * http://open.silverstripe.org/wiki/ChangeLog/2.3.10-rc1
-
-===== Upgrading Notes ====
-
-See [[upgrading:2.4.4|upgrading:2.4.4]]

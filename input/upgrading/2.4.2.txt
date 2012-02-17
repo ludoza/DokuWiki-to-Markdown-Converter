@@ -1,8 +1,0 @@
-====== Upgrading 2.4.2 ======
-===== Changelogs =====
-
- * http://open.silverstripe.org/wiki/ChangeLog/2.4.2-rc1
-
-===== Upgrading Notes =====
-
-See [[http://open.silverstripe.org/wiki/ChangeLog/2.4.2-rc1#APIChanges|API Changes]].

@@ -1,5 +1,0 @@
-====== Introduction  ======
-
-The ''Hierarchy'' class is a [[http://api.silverstripe.org/trunk/sapphire/model/DataObject.html|DataObject]] objects. It controls how pages related to each other in a nested tree structure, as well as determining order within tree leafs.
-
-See [[http://api.silverstripe.org/trunk/cms/SiteTree.html|SiteTree]] for the most common usage patterns.
