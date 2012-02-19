@@ -6,11 +6,9 @@ Tools to convert the DokuWiki syntax to Markdown syntax. Please note it has some
 
 ## Usage
 
-*Note: The following scripts should no longer be used, as they were designed for an earlier stage in the project.*
-
 ### Import DokuWiki files
 
-I don't have a idea how DokuWiki store its files so I'm leaving this note here if it might help.
+*I don't have a idea how DokuWiki store its files so I'm leaving this note here, maybe it might be useful.*
 
 Note: This is only possible by SilverStripe staff. 
 
