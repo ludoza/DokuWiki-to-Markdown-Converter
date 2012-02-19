@@ -48,8 +48,15 @@ class DocuwikiToMarkdownExtra {
 
 		// Misc checks
 		'/^\d*\.\s/'				=>	array("notice" => "Possible numbered list item that is not docuwiki format, not handled"),
-		'/^=+\s*.*$/'				=>	array("notice" => "Line starts with an =. Possibly an untranslated heading. Check for = in the heading text")	
+		'/^=+\s*.*$/'				=>	array("notice" => "Line starts with an =. Possibly an untranslated heading. Check for = in the heading text"),	
 		// <x@y.xom>						email
+            
+                // extra rules for liquibase wiki
+                // remove liquibase.org
+                '/]\(http:\/\/liquibase\.org\/([^\)]*)\)/'	=>	array("rewrite" => '](\1)'),
+            
+                // add .html and site template variables
+                '/]\(([^\)]*)\)/'				=>	array("rewrite" => ']({{ site.url }}/{{ page.lang }}/\1.html)')
 	);
 
 	// Contains the name of current input file being processed.
@@ -316,13 +323,13 @@ class DocuwikiToMarkdownExtra {
 	// Convert a docuwiki file in the input directory and called
 	// $filename, and re-created it in the output directory, translated
 	// to markdown extra.
-	function convertFile($inputFile, $outputFile = null) {
+	function convertFile($inputFile, $outputFile = null, $flags = 0) {
 		$this->fileName = $inputFile;
 		$s = file_get_contents($inputFile);
 		$s = $this->convert($s);
 
 		if($outputFile) {
-			if (file_put_contents($outputFile, $s) === FALSE)
+			if (file_put_contents($outputFile, $s, $flags) === FALSE)
 				echo "Could not write file {$outputFile}\n";
 		} 
 		

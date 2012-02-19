@@ -13,6 +13,8 @@
 $args = @$_SERVER['argv'];
 $inputDir = (isset($args[1])) ? realpath($args[1]) : "../input/";
 $outputDir = (isset($args[2])) ? realpath($args[2]) : false;
+echo "Output Path " , $outputDir,  "\n";
+$template = (isset($args[3])) ? file_get_contents(realpath($args[3])) : false;
 
 require_once("DocuwikiToMarkdownExtra.php");
 
@@ -39,14 +41,28 @@ foreach($objects as $name => $object) {
 	$inputDir = $object->getPath();
 	if (is_dir($object->getPathname())) continue;
 
+	
+		
 	if($outputDir) {
 		// Create output subfolder (optional)
+                // Was this here gor recursive code?
 		$outputDir = str_replace($path, substr($path, 0, -5) . "output", $inputDir);
+            
 		if (!file_exists($outputDir)) mkdir($outputDir, 0777, true);
 		$outFilename = preg_replace('/\.txt$/', '.md', $filename);
+		if ($template) {
+			$flags = FILE_APPEND; 
+                        echo "Writing file ",  "{$outputDir}/{$outFilename}" , "\n";
+			if (file_put_contents("{$outputDir}/{$outFilename}", $template) === FALSE)
+				echo "Could not write file {$outputFile}\n";
+	
+		} else {
+			$flags = 0; 
+		}
 		$converter->convertFile(
 			"{$inputDir}/{$filename}",
-			"{$outputDir}/{$outFilename}"
+			"{$outputDir}/{$outFilename}",
+			$flags
 		);
 	} else {
 		echo $converter->convertFile(

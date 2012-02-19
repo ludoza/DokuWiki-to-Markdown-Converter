@@ -1,18 +1,8 @@
-# SilverStripe Documentation Restructuring Project
+# Liquibase DokuWiki to Markdown Converter
 
-Tools to convert the original SilverStripe documentation wiki (based on DokuWiki syntax)
-to the new Markdown-driven [doc.silverstripe.org](http://doc.silverstripe.org).
+## Introduction
 
-**UPDATE: The conversion has been completed. Please apply any content changes against the [github.com/silverstripe/sapphire](http://github.com/silverstripe/sapphire) and [github.com/silverstripe/silverstripe-cms](http://github.com/silverstripe/silverstripe-cms) repositories.**
-
- * [Mailinglist](http://groups.google.com/group/silverstripe-documentation)
- * [Planning wiki page](http://doc.silverstripe.org/tmp:documentation-restructuring)
- * [TODO list and bugtracker](http://open.silverstripe.org/query?status=inprogress&status=new&status=replyneeded&status=reviewed&component=Documentation&order=priority&col=id&col=summary&col=status&col=type&col=priority&col=milestone&col=component)
-
-## Contact
-
- * Documentation questions: Ingo Schommer (ingo at silverstripe dot com)
- * Markdown Conversion: Mark Stephens (mark at silverstripe dot com)
+Tools to convert the DokuWiki syntax to Markdown syntax. Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
 
 ## Usage
 
@@ -20,11 +10,21 @@ to the new Markdown-driven [doc.silverstripe.org](http://doc.silverstripe.org).
 
 ### Import DokuWiki files
 
-Note: This is only possible by SilverStripe staff.
+I don't have a idea how DokuWiki store its files so I'm leaving this note here if it might help.
+
+Note: This is only possible by SilverStripe staff. 
 
 	scp -P 2222 -r <username>@doc.silverstripe.org:/sites/ss2doc/www/assets/data/pages/* input/
 
 ### Convert to Markdown files
 
 	cd scripts
-	php TranslateSSDocs.php ../input ../output
+	php TranslateSSDocs.php ../input <../output> < template.txt>
+
+`../output` - if output is not supplied it will print the conversion to `stdout`.
+
+`template.txt` - at the moment it only prepends the content of the template to each file it converts. 
+
+## Credit
+
+This project was shamelessly forked from the [SilverStripe Documentation Restructuring Project](https://github.com/chillu/silverstripe-doc-restructuring) and was hacked/broken apart to add some extra functionality.
