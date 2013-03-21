@@ -11,6 +11,8 @@ Please note it has some specific Liquibase regular expressions in `scripts/Docuw
 
 	<del> is replaced by `<del>`. It should re replaced by <strike> - without the `` wrap
 	\\ should be replaced by 4 spaces and a line break
+	Links should be encapsulated by <>
+	bullets (like * or -) should have no spaces in front of them, and only one after
 
 
 
