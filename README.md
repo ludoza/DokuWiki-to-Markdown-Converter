@@ -1,18 +1,15 @@
-# Liquibase DokuWiki to Markdown Converter
+# DokuWiki to Markdown Converter
 
 ## Introduction
 
-Tools to convert the DokuWiki syntax to Markdown syntax. Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
+Tools to convert the DokuWiki syntax to Markdown syntax.    
+Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
 
 ## Usage
 
-### Import DokuWiki files
+### Import an entire wiki
 
-*I don't have a idea how DokuWiki store its files so I'm leaving this note here, maybe it might be useful.*
-
-Note: This is only possible by SilverStripe staff. 
-
-	scp -P 2222 -r <username>@doc.silverstripe.org:/sites/ss2doc/www/assets/data/pages/* input/
+	scp -P 2222 -r <username>@myserver:/sites/mysite/www/assets/data/pages/* input/
 
 ### Convert to Markdown files
 
@@ -25,4 +22,8 @@ Note: This is only possible by SilverStripe staff.
 
 ## Credit
 
-This project was shamelessly forked from the [SilverStripe Documentation Restructuring Project](https://github.com/chillu/silverstripe-doc-restructuring) and was hacked/broken apart to add some extra functionality.
+This project was forked from the [SilverStripe Documentation Restructuring Project](https://github.com/chillu/silverstripe-doc-restructuring) 
+and was edited to add some extra functionality by [ludoza](https://github.com/ludoza).    
+It has subsequently been forked from [ludoza's fork](https://github.com/ludoza/Liquibase-DokuWiki-to-Markdown-Converter) with the
+aim of creating a common way to export dokuwiki files to markdown (which is what we need in our 2013 restructuring here
+at title.dk).
