@@ -5,6 +5,15 @@
 Tools to convert the DokuWiki syntax to Markdown syntax.    
 Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
 
+## TODOS
+
+### Fix the following conversion inconsistencies
+
+	<del> is replaced by `<del>`. It should re replaced by <strike> - without the `` wrap
+	\\ should be replaced by 4 spaces and a line break
+
+
+
 
 ## Convert single files
 
