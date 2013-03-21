@@ -5,7 +5,17 @@
 Tools to convert the DokuWiki syntax to Markdown syntax.    
 Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
 
-## Usage
+
+## Convert single files
+
+Place a file in the input dir, and run:    
+`php convert.php input/myfile.txt`
+
+This will convert your file, and place a `myfile.md` next to your file.
+
+
+## Advanced usage (not yet tested)
+
 
 ### Import an entire wiki
 
@@ -14,7 +24,7 @@ Please note it has some specific Liquibase regular expressions in `scripts/Docuw
 ### Convert to Markdown files
 
 	cd scripts
-	php TranslateSSDocs.php ../input <../output> < template.txt>
+	php Translate.php ../input <../output> < template.txt>
 
 `../output` - if output is not supplied it will print the conversion to `stdout`.
 

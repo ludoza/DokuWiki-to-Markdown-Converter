@@ -1,6 +1,6 @@
 <?php
 /**
- * php TranslateSSDocs.php <inputfile|inputdir> <outputdir>
+ * php Translate.php <inputfile|inputdir> <outputdir>
  * 
  * If no <outputdir> is given, writes to stdout.
  * 
@@ -12,7 +12,11 @@
 
 $args = @$_SERVER['argv'];
 $inputDir = (isset($args[1])) ? realpath($args[1]) : "../input/";
-$outputDir = (isset($args[2])) ? realpath($args[2]) : false;
+//NOTE (Anselm March 2013): There seems to be an inconsistency in the script, so that when 
+//single files are converted, they are always placed in the input dir nomatter what the settings are.
+//Thus I just changed the default to true, so they'll alway be placed there anyway
+$outputDir = (isset($args[2])) ? realpath($args[2]) : true;
+
 echo "Output Path " , $outputDir,  "\n";
 $template = (isset($args[3])) ? file_get_contents(realpath($args[3])) : false;
 
