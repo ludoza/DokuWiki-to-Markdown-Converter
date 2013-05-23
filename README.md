@@ -2,22 +2,40 @@
 
 ## Introduction
 
-Tools to convert the DokuWiki syntax to Markdown syntax. Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
+Tools to convert the DokuWiki syntax to Markdown syntax.    
+Please note it has some specific Liquibase regular expressions in `scripts/DocuwikiToMarkdownExtra.php`.
 
-## Usage
+## TODOS
 
-### Import DokuWiki files
+### Fix the following conversion inconsistencies
 
-*I don't have a idea how DokuWiki store its files so I'm leaving this note here, maybe it might be useful.*
+	<del> is replaced by `<del>`. It should re replaced by <strike> - without the `` wrap
+	\\ should be replaced by 4 spaces and a line break
+	Links should be encapsulated by <>
+	bullets (like * or -) should have no spaces in front of them, and only one after
 
-Note: This is only possible by SilverStripe staff. 
 
-	scp -P 2222 -r <username>@doc.silverstripe.org:/sites/ss2doc/www/assets/data/pages/* input/
+
+
+## Convert single files
+
+Place a file in the input dir, and run:    
+`php convert.php input/myfile.txt`
+
+This will convert your file, and place a `myfile.md` next to your file.
+
+
+## Advanced usage (not yet tested)
+
+
+### Import an entire wiki
+
+	scp -P 2222 -r <username>@myserver:/sites/mysite/www/assets/data/pages/* input/
 
 ### Convert to Markdown files
 
 	cd scripts
-	php TranslateSSDocs.php ../input <../output> < template.txt>
+	php Translate.php ../input <../output> < template.txt>
 
 `../output` - if output is not supplied it will print the conversion to `stdout`.
 
@@ -25,4 +43,8 @@ Note: This is only possible by SilverStripe staff.
 
 ## Credit
 
-This project was shamelessly forked from the [SilverStripe Documentation Restructuring Project](https://github.com/chillu/silverstripe-doc-restructuring) and was hacked/broken apart to add some extra functionality.
+This project was forked from the [SilverStripe Documentation Restructuring Project](https://github.com/chillu/silverstripe-doc-restructuring) 
+and was edited to add some extra functionality by [ludoza](https://github.com/ludoza).    
+It has subsequently been forked from [ludoza's fork](https://github.com/ludoza/Liquibase-DokuWiki-to-Markdown-Converter) by [titledk](https://github.com/titledk) with the
+aim of creating a common way to export dokuwiki files to markdown (which is what we need in our 2013 restructuring here
+at title.dk).

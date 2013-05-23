@@ -53,10 +53,10 @@ class DocuwikiToMarkdownExtra {
             
                 // extra rules for liquibase wiki
                 // remove liquibase.org
-                '/]\(http:\/\/liquibase\.org\/([^\)]*)\)/'	=>	array("rewrite" => '](\1)'),
+                //'/]\(http:\/\/liquibase\.org\/([^\)]*)\)/'	=>	array("rewrite" => '](\1)'),
             
                 // add .html and site template variables
-                '/]\(([^\)]*)\)/'				=>	array("rewrite" => ']({{ site.url }}/{{ page.lang }}/\1.html)')
+                //'/]\(([^\)]*)\)/'				=>	array("rewrite" => ']({{ site.url }}/{{ page.lang }}/\1.html)')
 	);
 
 	// Contains the name of current input file being processed.
