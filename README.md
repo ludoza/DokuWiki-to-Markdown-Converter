@@ -1,4 +1,4 @@
-# Liquibase DokuWiki to Markdown Converter
+# DokuWiki to Markdown Converter
 
 ## Introduction
 
