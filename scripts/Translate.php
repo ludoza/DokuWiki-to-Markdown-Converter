@@ -12,10 +12,8 @@
 
 $args = @$_SERVER['argv'];
 $inputDir = (isset($args[1])) ? realpath($args[1]) : "../input/";
-//NOTE (Anselm March 2013): There seems to be an inconsistency in the script, so that when 
-//single files are converted, they are always placed in the input dir nomatter what the settings are.
-//Thus I just changed the default to true, so they'll alway be placed there anyway
-$outputDir = (isset($args[2])) ? realpath($args[2]) : true;
+
+$outputDir = (isset($args[2])) ? realpath($args[2]) : false;
 
 echo "Output Path " , $outputDir,  "\n";
 $template = (isset($args[3])) ? file_get_contents(realpath($args[3])) : false;
@@ -49,8 +47,6 @@ foreach($objects as $name => $object) {
 		
 	if($outputDir) {
 		// Create output subfolder (optional)
-                // Was this here gor recursive code?
-		$outputDir = str_replace($path, substr($path, 0, -5) . "output", $inputDir);
             
 		if (!file_exists($outputDir)) mkdir($outputDir, 0777, true);
 		$outFilename = preg_replace('/\.txt$/', '.md', $filename);

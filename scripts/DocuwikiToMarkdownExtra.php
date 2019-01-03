@@ -303,7 +303,7 @@ class DocuwikiToMarkdownExtra {
 	// of identifiers with ":" separators ("namespaces"), which are really
 	// folders. The input is any link. This only alters internal links.
 	function translateInternalLink($s) {
-		if (substr($s, 0, 5) == "http:" || substr($s, 0, 6) == "https") return $s;
+		if (substr($s, 0, 5) == "http:" || substr($s, 0, 6) == "https:") return $s;
 		return str_replace(":", "/", $s);
 	}
 
